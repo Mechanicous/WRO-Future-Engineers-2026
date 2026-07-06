@@ -1,0 +1,31 @@
+# Local Codex/app files
+.agents/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Arduino build output
+build/
+*.hex
+*.elf
+*.bin
+*.eep
+*.map
+*.lst
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Secrets or local config
+.env
+*.local
+
