@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Vehicle photo placeholder</title>
+  <desc id="desc">Placeholder image for robot vehicle photos.</desc>
+  <rect width="800" height="500" rx="28" fill="#eef2ff"/>
+  <rect x="132" y="214" width="536" height="122" rx="38" fill="#1f2937"/>
+  <path d="M214 214l72-78h228l72 78" fill="#374151"/>
+  <rect x="305" y="154" width="190" height="48" rx="14" fill="#60a5fa"/>
+  <circle cx="246" cy="344" r="58" fill="#111827"/>
+  <circle cx="554" cy="344" r="58" fill="#111827"/>
+  <circle cx="246" cy="344" r="24" fill="#d1d5db"/>
+  <circle cx="554" cy="344" r="24" fill="#d1d5db"/>
+  <circle cx="154" cy="250" r="16" fill="#22c55e"/>
+  <circle cx="646" cy="250" r="16" fill="#ef4444"/>
+  <text x="400" y="90" text-anchor="middle" fill="#1f2937" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="0">ROBOT PHOTO</text>
+  <text x="400" y="442" text-anchor="middle" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="0">Replace with real vehicle image</text>
+</svg>
+
