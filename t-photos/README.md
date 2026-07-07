@@ -12,3 +12,7 @@ Use filenames such as:
 - `team-official.jpg`
 - `team-informal.jpg`
 
+Member photos:
+
+- `ibrahim-daraghma.jpg` - Ibrahim Daraghma
+

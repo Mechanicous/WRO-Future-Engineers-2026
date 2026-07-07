@@ -43,8 +43,8 @@ Replace the placeholders with your real team information and photos.
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="./other/repository-images/placeholder-team.svg" alt="Team member photo placeholder" width="180"><br>
-      <strong>Member Name</strong><br>
+      <img src="./t-photos/ibrahim-daraghma.jpg" alt="Ibrahim Daraghma team member photo" width="180"><br>
+      <strong>Ibrahim Daraghma</strong><br>
       Role: TODO<br>
       Focus: TODO
     </td>
