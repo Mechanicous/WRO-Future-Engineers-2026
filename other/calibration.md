@@ -35,6 +35,31 @@ Record the calibration procedure used before runs.
 | Middle/front | TODO | TODO | TODO | TODO |
 | Right | TODO | TODO | TODO | TODO |
 
+## SPIKE Prime Integrated Gyro
+
+- Place the robot flat on the field.
+- Align the robot to the known starting direction.
+- Press the start button so the Pybricks program calls `hub.imu.reset_heading(0)`.
+- Record heading drift while the robot is still and after driving.
+
+| Date | Robot Version | Test | Result | Notes |
+| --- | --- | --- | --- | --- |
+| TODO | TODO | Heading reset | TODO | TODO |
+| TODO | TODO | Still drift test | TODO | TODO |
+| TODO | TODO | Driving drift test | TODO | TODO |
+
+## OpenMV H7 Vision
+
+- Mount the camera at the documented height and angle.
+- Calibrate red and green obstacle detection under field lighting.
+- Record false positives and false negatives.
+- Document the message sent from OpenMV H7 to the main robot logic.
+
+| Date | Lighting | Target | Threshold/Model | Result | Notes |
+| --- | --- | --- | --- | --- | --- |
+| TODO | TODO | Red obstacle | TODO | TODO | TODO |
+| TODO | TODO | Green obstacle | TODO | TODO | TODO |
+
 ## Control Tuning
 
 Record values and behavior after each tuning change.

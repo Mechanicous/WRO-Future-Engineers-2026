@@ -7,6 +7,9 @@ Platform:
 Sensors:
     left ultrasonic, middle/front ultrasonic, right ultrasonic.
 
+Heading:
+    LEGO SPIKE Prime Hub integrated IMU/gyro.
+
 This is a starter control loop for the new LEGO/Pybricks robot. It is not the
 final competition strategy yet. Tune the constants and extend the state
 machine as the robot design matures.
@@ -118,6 +121,16 @@ def wait_for_start():
     hub.light.on(Color.GREEN)
 
 
+def reset_heading():
+    """Reset the SPIKE Prime integrated gyro heading at the start line."""
+    hub.imu.reset_heading(0)
+
+
+def read_heading():
+    """Return the current integrated gyro heading in degrees."""
+    return hub.imu.heading()
+
+
 def center_steering():
     steering_motor.reset_angle(STEERING_CENTER_DEG)
     steering_motor.run_target(
@@ -172,6 +185,7 @@ def run_open_challenge_starter():
         left_mm = read_distance(left_sensor)
         front_mm = read_distance(front_sensor)
         right_mm = read_distance(right_sensor)
+        heading_deg = read_heading()
 
         if front_mm is None:
             front_blocked = True
@@ -196,6 +210,8 @@ def run_open_challenge_starter():
             front_mm,
             "right:",
             right_mm,
+            "heading:",
+            heading_deg,
             "blocked:",
             front_blocked,
         )
@@ -212,6 +228,7 @@ def run_open_challenge_starter():
 
 center_steering()
 wait_for_start()
+reset_heading()
 
 try:
     run_open_challenge_starter()

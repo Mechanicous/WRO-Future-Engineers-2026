@@ -10,6 +10,7 @@ List the parts used to build the LEGO SPIKE Prime robot.
 | SPIKE Large Angular Motor | 1 | Rear-wheel drive | Drives the rear differential gear system |
 | SPIKE Medium Angular Motor | 1 | Front steering | Controls the steering linkage |
 | LEGO ultrasonic sensor | 3 | Left, middle/front, and right distance sensing | Current sensor set |
+| OpenMV H7 camera | 1 | Vision and red/green obstacle detection | Planned integration |
 | LEGO wheels/tires | TODO | Movement | Document diameter and tire type |
 | LEGO Technic differential/gears | TODO | Rear differential drive system | Document gear ratio and layout |
 | LEGO Technic beams/frames/pins/gears | TODO | Chassis and mounts | Add model/build photos |
@@ -25,6 +26,6 @@ List the parts used to build the LEGO SPIKE Prime robot.
 
 | Part | Quantity | Purpose | Notes |
 | --- | ---: | --- | --- |
-| Camera/color sensor | TODO | Obstacle color detection if added | TODO |
+| OpenMV communication hardware | TODO | Connect OpenMV H7 to main robot logic | Document final method |
 | Extra LEGO motor | TODO | Backup or later mechanism | TODO |
 

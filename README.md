@@ -99,7 +99,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Programming platform | Pybricks MicroPython |
 | Drive system | Rear-wheel drive using a SPIKE Large Angular Motor and rear differential gear system |
 | Steering system | Front steering using a SPIKE Medium Angular Motor |
-| Sensors | 3x LEGO ultrasonic sensors: left, middle/front, right |
+| Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, planned OpenMV H7 camera |
 | Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
 | Current behavior | Starter wall-balancing loop with front safety stop |
 | Next behavior to implement | Open Challenge lap logic, Obstacle Challenge sign strategy, parking if used |
@@ -130,8 +130,8 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | 2026 Criterion | What Judges Need To See | Evidence Location | Status |
 | --- | --- | --- | --- |
 | Mobility and mechanical design | LEGO chassis, steering/drive mechanism, gear reasoning, dimensions, stability, iterations | [`models/`](./models/), [`v-photos/`](./v-photos/), [Mobility section](#mobility-and-mechanical-design) | TODO |
-| Power and sensor architecture | SPIKE Prime hub, port map, battery/power notes, ultrasonic placement, calibration, failure handling | [`schemes/`](./schemes/), [`schemes/port-map.md`](./schemes/port-map.md), [`other/calibration.md`](./other/calibration.md), [Power section](#power-and-sensor-architecture) | In progress |
-| Software architecture and obstacle strategy | Pybricks code, flowchart/state machine, wall-following, obstacle strategy, edge cases, tests | [`src/`](./src/), [`docs/software-architecture.md`](./docs/software-architecture.md), [Software section](#software-architecture-and-obstacle-strategy) | In progress |
+| Power and sensor architecture | SPIKE Prime hub, port map, battery/power notes, ultrasonic placement, integrated gyro use, OpenMV H7 plan, calibration, failure handling | [`schemes/`](./schemes/), [`schemes/port-map.md`](./schemes/port-map.md), [`other/calibration.md`](./other/calibration.md), [Power section](#power-and-sensor-architecture) | In progress |
+| Software architecture and obstacle strategy | Pybricks code, gyro heading telemetry, flowchart/state machine, wall-following, OpenMV obstacle strategy, edge cases, tests | [`src/`](./src/), [`docs/software-architecture.md`](./docs/software-architecture.md), [Software section](#software-architecture-and-obstacle-strategy) | In progress |
 | Systems thinking and engineering decisions | Why LEGO SPIKE Prime was chosen, tradeoffs, risks, version history, testing response | [`docs/decisions.md`](./docs/decisions.md), [Decisions section](#systems-thinking-and-engineering-decisions) | In progress |
 | Reproducibility and GitHub quality | README, source code, build steps, photos, diagrams, tests, meaningful commits | [`docs/build-instructions.md`](./docs/build-instructions.md), [`docs/tests.md`](./docs/tests.md), [Repository structure](#repository-structure) | In progress |
 
@@ -146,7 +146,7 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | Chassis | LEGO SPIKE Prime / Technic construction | Fast rebuilds, repeatable geometry, simpler maintenance | Add photos and dimensions |
 | Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Add gear ratio, wheel diameter, and speed tests |
 | Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
-| Sensors | Left, middle/front, and right ultrasonic sensors | Wall distance and front safety/obstacle distance | Add sensor placement diagram |
+| Sensors | Left/middle/right ultrasonic sensors, integrated gyro, planned OpenMV H7 | Distance, heading feedback, and future vision/color detection | Add sensor placement and camera mounting diagrams |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
 
 ### Powertrain
@@ -187,7 +187,8 @@ Keep the active port map in [`schemes/port-map.md`](./schemes/port-map.md).
 | Left ultrasonic sensor | C | Measure left wall distance | TODO: confirm |
 | Middle/front ultrasonic sensor | D | Measure front path and obstacle distance | TODO: confirm |
 | Right ultrasonic sensor | E | Measure right wall distance | TODO: confirm |
-| Spare / future camera or sensor | F | TODO | TODO |
+| Integrated gyro/IMU | SPIKE Prime Hub | Heading and turn feedback | Built into hub |
+| OpenMV H7 camera | TODO | Vision and obstacle color detection | Planned integration |
 
 ### Power Distribution
 
@@ -206,6 +207,8 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 | Left ultrasonic | Left side | Wall distance and lane centering | Test readings at known distances |
 | Middle/front ultrasonic | Middle/front | Front safety stop and obstacle approach distance | Test close-range stop threshold |
 | Right ultrasonic | Right side | Wall distance and lane centering | Test readings at known distances |
+| Integrated gyro/IMU | Inside SPIKE Prime Hub | Heading tracking and turn feedback | Reset heading at start line and test drift |
+| OpenMV H7 camera | TODO | Red/green obstacle detection and vision strategy | Calibrate thresholds after mounting |
 
 ### Failure Handling
 
@@ -214,6 +217,8 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 | Front sensor reports too close | Front distance below threshold | Stop drive motor |
 | Front sensor unavailable | Reading rejected by software | Stop until reading returns |
 | Left/right sensor noisy or out of range | Clamp steering correction | Keep steering limited |
+| Gyro heading drift | Heading check becomes inaccurate | Reset at start and record drift tests |
+| OpenMV unavailable or uncalibrated | Vision-based obstacle classification is unavailable | Fall back to safe behavior until integration is tested |
 | Low hub battery | TODO: document observed behavior | Charge before official run |
 
 ---
@@ -228,18 +233,20 @@ It currently:
 
 - Runs on a LEGO SPIKE Prime Hub using Pybricks MicroPython.
 - Reads three ultrasonic sensors: left, middle/front, and right.
+- Resets and reads the SPIKE Prime integrated gyro heading.
 - Uses the middle/front ultrasonic sensor as a safety stop.
 - Uses left/right distance difference for a starter wall-balancing steering correction.
+- Reserves `src/openmv/` for future OpenMV H7 vision code.
 - Keeps all port assignments and control constants near the top of the file for easy tuning.
 
 ### Current Flow
 
 ```mermaid
 flowchart TD
-    A["Power on SPIKE Prime"] --> B["Initialize hub, motors, ultrasonic sensors"]
+    A["Power on SPIKE Prime"] --> B["Initialize hub, motors, ultrasonic sensors, and gyro"]
     B --> C["Wait for center button"]
-    C --> D["Center steering"]
-    D --> E["Read left, front, right distances"]
+    C --> D["Center steering and reset gyro heading"]
+    D --> E["Read distances and heading"]
     E --> F{"Front distance safe?"}
     F -- "No" --> G["Stop drive motor"]
     F -- "Yes" --> H["Compare left and right distances"]
@@ -257,7 +264,7 @@ flowchart TD
 | WaitForStart | Keep robot still before official run | Hub center button or start condition | Start pressed | TODO |
 | OpenChallengeDrive | Complete laps without colored obstacles | Open Challenge run starts | Laps complete or timeout | TODO |
 | WallCentering | Maintain position using side ultrasonic sensors | Driving straight/curving | Corner or obstacle detected | Starter code exists |
-| ObstacleDetect | Detect obstacle approach with front sensor and future vision/color method | Obstacle Challenge | Obstacle classified | TODO |
+| ObstacleDetect | Detect obstacle approach with front sensor and OpenMV H7 vision | Obstacle Challenge | Obstacle classified | TODO |
 | AvoidRed | Pass red obstacle according to WRO rules | Red obstacle detected | Safe path restored | TODO |
 | AvoidGreen | Pass green obstacle according to WRO rules | Green obstacle detected | Safe path restored | TODO |
 | Parking | Align with parking zone if used | Final lap/parking trigger | Parked/stopped | TODO |
@@ -266,10 +273,11 @@ flowchart TD
 ### Algorithms To Explain
 
 - Wall centering from left/right ultrasonic sensors.
+- Heading feedback from the SPIKE Prime integrated gyro.
 - Front obstacle distance threshold.
 - Corner detection.
 - Lap counting.
-- Obstacle color detection strategy if added later.
+- Obstacle color detection strategy using OpenMV H7.
 - Recovery from bad ultrasonic readings.
 - Steering calibration and sign testing.
 
@@ -284,7 +292,9 @@ Judges look for the reasoning behind the design, not only the final robot.
 | Controller platform | Arduino custom electronics vs LEGO SPIKE Prime | LEGO SPIKE Prime | Faster iteration, integrated battery, robust ports, Pybricks support | TODO |
 | Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | TODO |
 | Distance sensing | VL53L1X ToF vs LEGO ultrasonic | Three LEGO ultrasonic sensors | Matches new LEGO build and simple wall-distance measurements | TODO |
-| Navigation strategy | Gyro heading hold vs ultrasonic wall centering | Ultrasonic wall centering starter | Uses current sensor set without an external IMU | TODO |
+| Heading feedback | External IMU vs SPIKE Prime integrated gyro | SPIKE Prime integrated gyro | Built into the hub and available through Pybricks | TODO |
+| Vision sensor | No camera vs OpenMV H7 | OpenMV H7 planned | Supports red/green obstacle detection with onboard vision processing | TODO |
+| Navigation strategy | Gyro heading hold vs ultrasonic wall centering vs fused approach | Ultrasonic wall centering plus integrated gyro feedback | Uses current sensors while keeping heading data available | TODO |
 
 ### Iteration Log
 
@@ -299,7 +309,8 @@ Judges look for the reasoning behind the design, not only the final robot.
 | Risk | Impact | Mitigation | Test |
 | --- | --- | --- | --- |
 | Ultrasonic reflections | Wrong distance near angled walls or obstacles | Use repeated tests, clamp steering, tune thresholds | TODO |
-| No gyro in current plan | Heading estimate may be weaker | Use wall centering and corner detection | TODO |
+| Gyro heading drift | Turns or lap logic may become inaccurate | Reset at start and test drift over time | TODO |
+| OpenMV lighting sensitivity | Red/green detection may fail under different lighting | Calibrate thresholds on the real field | TODO |
 | Steering sign reversed | Robot steers into wall | Test at low speed and flip `STEERING_SIGN` | TODO |
 | LEGO structure flex | Sensor angle or steering changes during run | Reinforce mounts and inspect after runs | TODO |
 | Hub battery low | Motor speed changes during run | Charge before tests and record battery state | TODO |
@@ -332,7 +343,13 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 - Right ultrasonic sensor faces the right wall.
 - Measure and record sensor height, angle, and offset from the robot centerline.
 
-### Step 4: Upload Pybricks Code
+### Step 4: Mount OpenMV H7
+
+- Choose a camera position with a clear view of traffic signs/obstacles.
+- Record camera height, angle, and field of view.
+- Document the communication method between OpenMV H7 and the main robot logic.
+
+### Step 5: Upload Pybricks Code
 
 1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
 2. Open [Pybricks Code](https://code.pybricks.com/) in a browser.
@@ -351,11 +368,13 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Test | Metric | Target | Current Result |
 | --- | --- | --- | --- |
 | Ultrasonic accuracy | Error at known distances | TODO | TODO |
+| Gyro heading drift | Degrees drift over time | TODO | TODO |
 | Front safety stop | Stop distance from obstacle | TODO | TODO |
 | Steering center | Straight run drift | TODO | TODO |
 | Steering sign | Correct response to left/right offset | TODO | TODO |
 | Wall centering | Average side-distance error | TODO | TODO |
 | Open Challenge | Laps and time | TODO | TODO |
+| OpenMV color detection | Red/green classification accuracy | TODO | TODO |
 | Obstacle Challenge | Obstacle handling and score | TODO | TODO |
 | Parking | Final position and alignment | TODO | TODO |
 
@@ -380,7 +399,7 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 | Category | Estimated Cost | Notes |
 | --- | ---: | --- |
 | LEGO SPIKE Prime set/parts | TODO | Hub, motors, beams, frames, wheels |
-| Sensors | TODO | Three ultrasonic sensors |
+| Sensors | TODO | Three ultrasonic sensors, integrated gyro, OpenMV H7 |
 | Power | TODO | SPIKE Prime rechargeable battery and charger |
 | Extra LEGO parts | TODO | Gears, beams, pins, wheels, mounts |
 | Total | TODO | TODO |
@@ -391,8 +410,8 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 
 | Folder | Purpose |
 | --- | --- |
-| [`src/`](./src/) | Pybricks MicroPython robot code |
-| [`schemes/`](./schemes/) | SPIKE Prime port map, sensor placement, and power/connection diagrams |
+| [`src/`](./src/) | Pybricks MicroPython robot code and OpenMV H7 vision placeholder |
+| [`schemes/`](./schemes/) | SPIKE Prime port map, gyro/camera notes, sensor placement, and power/connection diagrams |
 | [`models/`](./models/) | LEGO digital model files, build photos, or reproducible assembly notes |
 | [`v-photos/`](./v-photos/) | Vehicle photos from all required angles |
 | [`t-photos/`](./t-photos/) | Team photos |
@@ -411,6 +430,8 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 - [ ] Mechanical design includes LEGO model/build files, photos, and dimensions.
 - [ ] SPIKE Prime port map and sensor placement diagrams are included.
 - [ ] Ultrasonic sensor calibration is documented.
+- [ ] Integrated gyro heading reset/drift tests are documented.
+- [ ] OpenMV H7 mounting, calibration, and communication method are documented.
 - [ ] Software architecture includes flowchart/state machine and obstacle strategy.
 - [ ] Tests include results, metrics, and changes made after testing.
 - [ ] Decisions include alternatives, tradeoffs, and risks.

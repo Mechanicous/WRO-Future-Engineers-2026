@@ -11,12 +11,14 @@ TODO:
 - Add rear differential gear system assembly steps.
 - Add SPIKE Medium Angular Motor steering linkage steps.
 - Add wheelbase, track width, and wheel diameter.
-- Add sensor mount positions, heights, and angles.
+- Add ultrasonic sensor mount positions, heights, and angles.
+- Add SPIKE Prime Hub orientation for integrated gyro heading.
+- Add OpenMV H7 camera mount position, height, angle, and field of view.
 - Link to build files or build photos in `../models/`.
 
 ## Electronics And Ports
 
-The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, and three ultrasonic sensors. The hub battery powers all connected devices.
+The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultrasonic sensors, the hub's integrated gyro/IMU, and a planned OpenMV H7 camera. The hub battery powers LEGO devices connected to the hub.
 
 Keep the port map updated in `../schemes/port-map.md`.
 
@@ -30,6 +32,8 @@ Default working assumption:
 | D | Middle/front ultrasonic sensor |
 | E | Right ultrasonic sensor |
 | F | Spare |
+| Hub IMU | Integrated gyro/heading |
+| TODO | OpenMV H7 camera |
 
 ## Software Upload
 
@@ -41,7 +45,8 @@ Default working assumption:
 6. Upload or run the program from Pybricks Code.
 7. Start with the robot lifted so wheels can spin safely.
 8. Verify steering center and steering direction.
-9. Place the robot on the field and test at low `DRIVE_POWER`.
+9. Verify the gyro heading resets to 0 at the start line.
+10. Place the robot on the field and test at low `DRIVE_POWER`.
 
 ## Pre-Run Checklist
 
@@ -54,6 +59,9 @@ Default working assumption:
 - [ ] Left ultrasonic sensor reports fresh readings.
 - [ ] Middle/front ultrasonic sensor reports fresh readings.
 - [ ] Right ultrasonic sensor reports fresh readings.
+- [ ] Integrated gyro heading resets at the start line.
+- [ ] OpenMV H7 is mounted securely.
+- [ ] OpenMV H7 communication method is documented.
 - [ ] Front safety stop threshold tested.
 - [ ] `STEERING_SIGN` tested at low speed.
 - [ ] Emergency stop or safe shutdown procedure is known by the team.

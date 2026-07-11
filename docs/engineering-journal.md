@@ -1,6 +1,6 @@
 # Engineering Journal
 
-Use this document to tell the story of the robot's engineering process, not only the final design. The current robot direction is LEGO SPIKE Prime with Pybricks MicroPython and three ultrasonic sensors.
+Use this document to tell the story of the robot's engineering process, not only the final design. The current robot direction is LEGO SPIKE Prime with Pybricks MicroPython, three ultrasonic sensors, the integrated SPIKE Prime gyro/IMU, and an OpenMV H7 camera.
 
 ## Team
 
@@ -26,15 +26,17 @@ Include:
 
 ## 2. Power And Sensor Architecture
 
-Describe how the SPIKE Prime Hub powers the system and how the ultrasonic sensors are placed.
+Describe how the SPIKE Prime Hub powers the system, how the ultrasonic sensors are placed, how the integrated gyro is used, and how the OpenMV H7 camera is mounted.
 
 Include:
 
 - SPIKE Prime Hub battery and charging procedure.
 - Motor and sensor port map.
 - Left, middle/front, and right ultrasonic sensor placement.
+- SPIKE Prime Hub orientation for integrated gyro heading.
+- OpenMV H7 camera position, purpose, and communication method.
 - Why ultrasonic sensors were chosen for this version.
-- Calibration procedure and sensor accuracy tests.
+- Calibration procedure, gyro reset procedure, vision calibration, and sensor accuracy tests.
 - Failure modes such as ultrasonic reflections, loose cables, low battery, or bad sensor angles.
 - Diagrams or links to files in `../schemes/`.
 
@@ -47,9 +49,10 @@ Include:
 - Main control loop in `../src/pybricks/main.py`.
 - State machine or flowchart.
 - Wall-centering strategy using left/right ultrasonic sensors.
+- Heading feedback from the SPIKE Prime integrated gyro.
 - Front safety and obstacle approach logic using the middle/front ultrasonic sensor.
 - Open Challenge lap strategy.
-- Obstacle Challenge red/green obstacle strategy when implemented.
+- Obstacle Challenge red/green obstacle strategy using OpenMV H7 when implemented.
 - Parking strategy if implemented.
 - Edge cases and how the robot recovers.
 - Links to `software-architecture.md`.
@@ -63,6 +66,8 @@ Include:
 - Why the team moved from the Arduino prototype to LEGO SPIKE Prime.
 - Why Pybricks MicroPython was selected.
 - Why three ultrasonic sensors were selected.
+- Why the integrated SPIKE Prime gyro is used for heading feedback.
+- Why OpenMV H7 is planned for vision/color detection.
 - Constraints: size, weight, time, processing, power, reliability, budget, available LEGO parts.
 - Major decisions and alternatives considered.
 - Iterations from the old prototype to the current LEGO version.
@@ -80,6 +85,8 @@ Include:
 - Bill of materials.
 - SPIKE Prime port map.
 - Ultrasonic sensor placement diagram.
+- SPIKE Prime Hub orientation and gyro reset notes.
+- OpenMV H7 mounting and communication notes.
 - Pybricks upload steps.
 - Test procedure and tuning values.
 - Version or release notes.
@@ -92,6 +99,7 @@ Include:
 - [ ] Pybricks code uploaded in `../src/`.
 - [ ] LEGO build files/photos uploaded in `../models/`.
 - [ ] Port map and sensor diagrams uploaded in `../schemes/`.
+- [ ] Gyro and OpenMV H7 documentation uploaded in `../schemes/`.
 - [ ] Vehicle photos uploaded in `../v-photos/`.
 - [ ] Team photos uploaded in `../t-photos/`.
 - [ ] Demo video link added in `../video/video.md`.
