@@ -15,4 +15,5 @@ Use filenames such as:
 Member photos:
 
 - `ibrahim-daraghma.jpg` - Ibrahim Daraghma
+- `qais-shrideh.jpg` - Qais Shrideh, coach
 
