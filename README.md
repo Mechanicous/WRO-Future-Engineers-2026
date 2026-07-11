@@ -2,6 +2,8 @@
 
 <img src="./other/repository-images/banner.svg" alt="WRO Future Engineers 2026 project banner" width="900">
 
+<img src="./other/repository-images/team-logo.png" alt="Mechanicous team logo" width="180">
+
 # Mechanicous - MadBoy
 
 **WRO Future Engineers 2026 engineering documentation**
