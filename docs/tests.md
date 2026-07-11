@@ -2,6 +2,8 @@
 
 Use this file to prove that the LEGO SPIKE Prime robot was tested and improved over time.
 
+Internet-sourced reference values are summarized in `sensor-reference.md`. Team measurements should be recorded below and compared against those references.
+
 ## Test Log
 
 | Date | Robot Version | Test | Result | Change Made |
@@ -41,6 +43,8 @@ Use this file to prove that the LEGO SPIKE Prime robot was tested and improved o
 
 ## Ultrasonic Accuracy
 
+Reference target: LEGO lists the Technic Distance Sensor at 1-200 cm with +/- 1 cm accuracy. Pybricks learning material uses 40-2000 mm as the practical ultrasonic range, and the Pybricks API can return 2000 mm when no valid distance is measured.
+
 | Date | Sensor | Actual Distance | Measured Distance | Error | Notes |
 | --- | --- | ---: | ---: | ---: | --- |
 | TODO | Left | TODO | TODO | TODO | TODO |
@@ -48,6 +52,8 @@ Use this file to prove that the LEGO SPIKE Prime robot was tested and improved o
 | TODO | Right | TODO | TODO | TODO | TODO |
 
 ## Gyro / IMU Tests
+
+Reference note: no official universal SPIKE Prime gyro drift rate was found. Pybricks documents per-hub full-turn scale variation and supports `heading_correction`, so drift/heading error must be measured on this hub.
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |

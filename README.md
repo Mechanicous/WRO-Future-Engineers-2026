@@ -419,6 +419,8 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 | [`docs/`](./docs/) | Engineering journal, build guide, tests, decisions |
 | [`other/`](./other/) | BOM, calibration notes, datasets, hardware specs, supporting assets |
 
+Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-reference.md`](./docs/sensor-reference.md).
+
 ---
 
 ## Submission Checklist

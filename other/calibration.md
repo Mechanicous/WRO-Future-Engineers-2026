@@ -2,6 +2,8 @@
 
 Record the calibration procedure used before runs.
 
+Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor-reference.md`.
+
 ## Steering Center
 
 - Put the wheels straight before starting the program.
@@ -28,6 +30,7 @@ Record the calibration procedure used before runs.
 - Verify that left, middle/front, and right sensors report fresh readings.
 - Test readings at known distances such as 100 mm, 200 mm, 300 mm, and 500 mm.
 - Test angled walls because ultrasonic reflections can change with angle.
+- First target: stay within +/- 10 mm under controlled conditions, based on the LEGO Education +/- 1 cm distance sensor reference.
 
 | Sensor | Actual Distance | Measured Distance | Error | Notes |
 | --- | ---: | ---: | ---: | --- |
@@ -41,6 +44,7 @@ Record the calibration procedure used before runs.
 - Align the robot to the known starting direction.
 - Press the start button so the Pybricks program calls `hub.imu.reset_heading(0)`.
 - Record heading drift while the robot is still and after driving.
+- No universal drift rate was found in official docs; measure this specific hub and document any `heading_correction` value.
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |
