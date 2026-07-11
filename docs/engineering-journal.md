@@ -4,7 +4,7 @@ Use this document to tell the story of the robot's engineering process, not only
 
 ## Team
 
-- Team name: TODO
+- Team name: Mechanicous
 - Country/region: TODO
 - Members: TODO
 - Season: WRO Future Engineers 2026

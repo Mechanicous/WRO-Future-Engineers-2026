@@ -2,7 +2,7 @@
 
 <img src="./other/repository-images/banner.svg" alt="WRO Future Engineers 2026 project banner" width="900">
 
-# TEAM NAME - ROBOT NAME
+# Mechanicous - MadBoy
 
 **WRO Future Engineers 2026 engineering documentation**
 
@@ -94,7 +94,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 
 | Item | Current Plan / Evidence |
 | --- | --- |
-| Robot name | TODO |
+| Robot name | MadBoy |
 | Main controller | LEGO SPIKE Prime Hub |
 | Programming platform | Pybricks MicroPython |
 | Drive system | TODO: document motor count, port, gearing, and wheel size |
