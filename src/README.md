@@ -1,33 +1,42 @@
 # Source Code
 
-This folder contains the robot control software.
+This folder contains the active robot software.
 
-## Arduino Sketch
+## Active Program
 
-`robot_controller_improved/robot_controller_improved.ino`
+`pybricks/main.py`
 
-Keep the `.ino` file inside a folder with the same name so the Arduino IDE can open it correctly.
+The project now uses:
+
+- LEGO SPIKE Prime Hub.
+- Pybricks MicroPython.
+- Three LEGO ultrasonic sensors:
+  - Left.
+  - Middle/front.
+  - Right.
+
+The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains available in Git history for reference, but the repository documentation now follows the LEGO SPIKE Prime design.
 
 ## Current Behavior
 
-- Calibrates the BMI160 gyroscope at startup.
-- Assigns unique addresses to three VL53L1X distance sensors.
-- Tracks yaw by integrating gyroscope readings.
-- Uses PID steering correction to hold the starting heading.
-- Stops when the front sensor sees an obstacle closer than the configured threshold.
+- Initializes the SPIKE Prime Hub, drive motor, steering motor, and three ultrasonic sensors.
+- Waits for the hub center button before driving.
+- Stops when the middle/front ultrasonic sensor reports an unsafe distance.
+- Uses left/right ultrasonic distance difference for starter wall-centering steering.
+- Prints simple telemetry for tuning.
 
-## Required Libraries
+## Files
 
-- `Wire`
-- `BMI160Gen`
-- `VL53L1X`
-- `Servo`
+| File | Purpose |
+| --- | --- |
+| `pybricks/main.py` | Active robot program |
+| `pybricks/README.md` | Pybricks setup, port constants, and tuning notes |
 
 ## TODO
 
-- Document the exact controller board.
-- Document all pin mappings with a matching wiring diagram in `../schemes/`.
-- Add OpenMV or camera communication if used.
-- Add obstacle challenge state machine logic.
-- Add tested PID values and tuning notes in `../docs/tests.md`.
+- Confirm the exact motor ports and sensor ports in `../schemes/port-map.md`.
+- Tune steering center, steering sign, drive power, and stop thresholds.
+- Add final Open Challenge lap logic.
+- Add final Obstacle Challenge strategy.
+- Add tested values and run data in `../docs/tests.md`.
 

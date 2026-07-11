@@ -1,43 +1,58 @@
 # Build Instructions
 
-Use this document to make the robot reproducible.
+Use this document to make the LEGO SPIKE Prime robot reproducible.
 
 ## Mechanical Assembly
 
 TODO:
 
-- Add chassis dimensions.
-- Add motor and steering mounting steps.
-- Add sensor mount positions.
-- Link to files in `../models/`.
+- Add LEGO chassis dimensions.
+- Add drive motor mounting steps.
+- Add steering motor/linkage steps, or document differential drive if used.
+- Add wheelbase, track width, and wheel diameter.
+- Add sensor mount positions, heights, and angles.
+- Link to build files or build photos in `../models/`.
 
-## Electronics
+## Electronics And Ports
 
-TODO:
+The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, and three ultrasonic sensors. The hub battery powers all connected devices.
 
-- Add battery type and voltage.
-- Add motor driver model.
-- Add regulator details.
-- Add controller board model.
-- Link to wiring diagrams in `../schemes/`.
+Keep the port map updated in `../schemes/port-map.md`.
+
+Default working assumption:
+
+| Port | Device |
+| --- | --- |
+| A | Drive motor |
+| B | Steering motor |
+| C | Left ultrasonic sensor |
+| D | Middle/front ultrasonic sensor |
+| E | Right ultrasonic sensor |
+| F | Spare |
 
 ## Software Upload
 
-1. Install the Arduino IDE.
-2. Install the required libraries listed in `../src/README.md`.
-3. Open `../src/robot_controller_improved/robot_controller_improved.ino`.
-4. Select the correct board and port.
-5. Confirm the sketch pin constants match the real wiring.
-6. Upload the sketch.
-7. Power-cycle the robot and keep it still during gyro calibration.
+1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
+2. Open `https://code.pybricks.com/`.
+3. Connect the SPIKE Prime Hub.
+4. Open `../src/pybricks/main.py`.
+5. Confirm the port constants match `../schemes/port-map.md`.
+6. Upload or run the program from Pybricks Code.
+7. Start with the robot lifted so wheels can spin safely.
+8. Verify steering center and steering direction.
+9. Place the robot on the field and test at low `DRIVE_POWER`.
 
 ## Pre-Run Checklist
 
-- [ ] Battery charged.
-- [ ] Wheels and steering move freely.
-- [ ] Motor direction is correct.
-- [ ] Servo center is correct.
-- [ ] Front, left, and right distance sensors report fresh readings.
-- [ ] Gyroscope calibration completed while the robot was still.
+- [ ] Hub battery charged.
+- [ ] LEGO structure is rigid.
+- [ ] Wheels and gears move freely.
+- [ ] Steering centers correctly.
+- [ ] Drive motor direction is correct.
+- [ ] Left ultrasonic sensor reports fresh readings.
+- [ ] Middle/front ultrasonic sensor reports fresh readings.
+- [ ] Right ultrasonic sensor reports fresh readings.
+- [ ] Front safety stop threshold tested.
+- [ ] `STEERING_SIGN` tested at low speed.
 - [ ] Emergency stop or safe shutdown procedure is known by the team.
 

@@ -1,6 +1,6 @@
 # Testing Workflow
 
-Use this file to prove that the robot was tested and improved over time.
+Use this file to prove that the LEGO SPIKE Prime robot was tested and improved over time.
 
 ## Test Log
 
@@ -10,14 +10,15 @@ Use this file to prove that the robot was tested and improved over time.
 
 ## Recommended Tests
 
-- Gyro drift test.
-- Distance sensor accuracy test.
+- Ultrasonic sensor accuracy test.
 - Front safety stop test.
-- Straight-line PID tuning test.
+- Steering center test.
+- Steering sign test.
+- Straight-line wall-centering test.
 - Corner behavior test.
 - Open Challenge lap consistency test.
 - Obstacle detection and avoidance test.
-- Battery runtime test.
+- Hub battery runtime test.
 - Full three-minute run test.
 
 ## Metrics To Record
@@ -27,13 +28,22 @@ Use this file to prove that the robot was tested and improved over time.
 - Number of wall touches.
 - Number of obstacle touches.
 - Stop distance from obstacle.
-- Heading error.
-- Battery voltage before and after run.
+- Average left/right distance error.
+- Steering correction range.
+- Hub battery state before and after run.
 - Any manual interventions.
 
-## PID Tuning Notes
+## Ultrasonic Accuracy
 
-| Date | KP | KI | KD | Track Result | Notes |
-| --- | ---: | ---: | ---: | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO |
+| Date | Sensor | Actual Distance | Measured Distance | Error | Notes |
+| --- | --- | ---: | ---: | ---: | --- |
+| TODO | Left | TODO | TODO | TODO | TODO |
+| TODO | Front | TODO | TODO | TODO | TODO |
+| TODO | Right | TODO | TODO | TODO | TODO |
+
+## Control Tuning Notes
+
+| Date | Drive Power | Side Gain | Front Stop | Front Resume | Track Result | Notes |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| TODO | TODO | TODO | TODO | TODO | TODO | TODO |
 

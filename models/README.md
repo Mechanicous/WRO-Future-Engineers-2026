@@ -1,20 +1,19 @@
 # Models
 
-Add mechanical design files used to build the robot.
+Add mechanical design files and reproducible build materials for the LEGO SPIKE Prime robot.
 
 Useful formats:
 
-- CAD source files
-- `.stl` files for 3D printing
-- `.step` files for sharing 3D models
-- DXF files for laser cutting
-- CNC files if used
+- LEGO Studio `.io` files.
+- Step-by-step build photos.
+- Exported PDF building instructions.
+- Dimension drawings for wheelbase, track width, and sensor placement.
+- Custom part CAD only if non-LEGO parts are used.
 
 ## TODO
 
-- Add chassis model files.
-- Add sensor mounts.
-- Add motor or servo mounts.
-- Add wheel, axle, or steering linkage parts if custom-made.
-- Include dimensions or drawings that make the build reproducible.
-
+- Add LEGO chassis model files or build photos.
+- Add steering linkage photos and dimensions.
+- Add ultrasonic sensor mount photos and measurements.
+- Add wheel, axle, and gearing details.
+- Include enough detail that another team could rebuild the robot.

@@ -1,6 +1,6 @@
 # Engineering Journal
 
-Use this document to tell the story of the robot's engineering process, not only the final design.
+Use this document to tell the story of the robot's engineering process, not only the final design. The current robot direction is LEGO SPIKE Prime with Pybricks MicroPython and three ultrasonic sensors.
 
 ## Team
 
@@ -11,45 +11,47 @@ Use this document to tell the story of the robot's engineering process, not only
 
 ## 1. Mobility And Mechanical Design
 
-Describe the chassis, steering, drive system, stability, and mechanical constraints.
+Describe the LEGO chassis, steering, drive system, stability, and mechanical constraints.
 
 Include:
 
-- Why this chassis was chosen.
-- Steering and drive mechanism.
-- Wheelbase, track width, and important dimensions.
-- Torque and speed reasoning.
+- Why LEGO SPIKE Prime / Technic construction was chosen.
+- Drive mechanism, motor type, gearing, wheel diameter, and expected speed.
+- Steering mechanism, steering limits, and turn radius.
+- Wheelbase, track width, sensor positions, and important dimensions.
+- Stability, weight distribution, and structural rigidity.
 - Mechanical tests and changes between versions.
 - Diagrams or links to files in `../models/` and `../v-photos/`.
 
 ## 2. Power And Sensor Architecture
 
-Describe how power is distributed and how sensors are placed.
+Describe how the SPIKE Prime Hub powers the system and how the ultrasonic sensors are placed.
 
 Include:
 
-- Battery and regulators.
-- Motor driver and power wiring.
-- Sensor list, purpose, and placement.
-- Why these sensors were chosen.
-- Calibration procedure.
-- Failure modes such as low battery, sensor noise, or glare.
+- SPIKE Prime Hub battery and charging procedure.
+- Motor and sensor port map.
+- Left, middle/front, and right ultrasonic sensor placement.
+- Why ultrasonic sensors were chosen for this version.
+- Calibration procedure and sensor accuracy tests.
+- Failure modes such as ultrasonic reflections, loose cables, low battery, or bad sensor angles.
 - Diagrams or links to files in `../schemes/`.
 
 ## 3. Software Architecture And Obstacle Strategy
 
-Describe the robot behavior and program structure.
+Describe the Pybricks software and the robot behavior.
 
 Include:
 
-- Main control loop.
+- Main control loop in `../src/pybricks/main.py`.
 - State machine or flowchart.
-- Lane or wall-following strategy.
-- Obstacle detection and avoidance strategy.
+- Wall-centering strategy using left/right ultrasonic sensors.
+- Front safety and obstacle approach logic using the middle/front ultrasonic sensor.
+- Open Challenge lap strategy.
+- Obstacle Challenge red/green obstacle strategy when implemented.
 - Parking strategy if implemented.
-- PID or control algorithms.
 - Edge cases and how the robot recovers.
-- Links to `../src/` and `software-architecture.md`.
+- Links to `software-architecture.md`.
 
 ## 4. Systems Thinking And Engineering Decisions
 
@@ -57,9 +59,12 @@ Explain design tradeoffs and how subsystems interact.
 
 Include:
 
-- Constraints: size, weight, time, processing, power, reliability, budget.
+- Why the team moved from the Arduino prototype to LEGO SPIKE Prime.
+- Why Pybricks MicroPython was selected.
+- Why three ultrasonic sensors were selected.
+- Constraints: size, weight, time, processing, power, reliability, budget, available LEGO parts.
 - Major decisions and alternatives considered.
-- Iterations from version 1 to later versions.
+- Iterations from the old prototype to the current LEGO version.
 - Risks and mitigations.
 - What changed after testing.
 - Links to `decisions.md`.
@@ -70,12 +75,12 @@ Explain how someone else can rebuild the robot from this repository.
 
 Include:
 
-- Build instructions.
+- LEGO build instructions, photos, or digital model files.
 - Bill of materials.
-- Wiring diagrams.
-- CAD/model files.
-- Software upload steps.
-- Test procedure.
+- SPIKE Prime port map.
+- Ultrasonic sensor placement diagram.
+- Pybricks upload steps.
+- Test procedure and tuning values.
 - Version or release notes.
 - Commit history with meaningful changes.
 
@@ -83,13 +88,13 @@ Include:
 
 - [ ] README completed.
 - [ ] Engineering journal completed.
-- [ ] Code uploaded in `src/`.
-- [ ] CAD or model files uploaded in `models/`.
-- [ ] Wiring diagrams uploaded in `schemes/`.
-- [ ] Vehicle photos uploaded in `v-photos/`.
-- [ ] Team photos uploaded in `t-photos/`.
-- [ ] Demo video link added in `video/video.md`.
+- [ ] Pybricks code uploaded in `../src/`.
+- [ ] LEGO build files/photos uploaded in `../models/`.
+- [ ] Port map and sensor diagrams uploaded in `../schemes/`.
+- [ ] Vehicle photos uploaded in `../v-photos/`.
+- [ ] Team photos uploaded in `../t-photos/`.
+- [ ] Demo video link added in `../video/video.md`.
 - [ ] Tests documented in `tests.md`.
 - [ ] Decisions documented in `decisions.md`.
-- [ ] At least three meaningful commits are visible on GitHub.
+- [ ] Meaningful commits are visible on GitHub.
 

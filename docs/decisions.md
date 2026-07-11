@@ -2,28 +2,56 @@
 
 Use this file to show why the team chose each design, not only what the final design is.
 
-## Decision Record Template
+## Decision Records
 
-### Decision: TODO
+### Decision: Move From Arduino Prototype To LEGO SPIKE Prime
 
-- Date: TODO
-- Context: TODO
-- Options considered: TODO
-- Decision: TODO
-- Reasoning: TODO
-- Tradeoffs: TODO
-- Test evidence: TODO
-- Result after testing: TODO
+- Date: 2026-07-11
+- Context: The team stopped using the Arduino, BMI160, VL53L1X sensors, servo, and custom wiring prototype.
+- Options considered: Continue custom Arduino electronics, or rebuild on LEGO SPIKE Prime.
+- Decision: Use LEGO SPIKE Prime with Pybricks MicroPython.
+- Reasoning: SPIKE Prime gives an integrated hub, battery, ports, LEGO motor/sensor ecosystem, and faster mechanical iteration.
+- Tradeoffs: Less direct low-level electronics control, ultrasonic readings may be less precise than ToF sensors, and the robot needs careful LEGO structural rigidity.
+- Test evidence: TODO.
+- Result after testing: TODO.
+
+### Decision: Use Three Ultrasonic Sensors
+
+- Date: 2026-07-11
+- Context: The new robot uses LEGO ultrasonic sensors on the left, middle/front, and right.
+- Options considered: Camera/vision, ToF sensors, gyroscope, ultrasonic wall sensing.
+- Decision: Use left/right ultrasonic sensors for wall distance and middle/front ultrasonic for safety/obstacle distance.
+- Reasoning: This matches the new LEGO build and gives simple distance feedback for first autonomous driving tests.
+- Tradeoffs: Ultrasonic sensors can reflect poorly from angled surfaces and may need filtering.
+- Test evidence: TODO.
+- Result after testing: TODO.
+
+### Decision: Use Pybricks MicroPython
+
+- Date: 2026-07-11
+- Context: The project moved away from Arduino C++.
+- Options considered: SPIKE app blocks, LEGO Python, Pybricks MicroPython.
+- Decision: Use Pybricks MicroPython.
+- Reasoning: Pybricks gives clean text-based Python control of SPIKE Prime motors and sensors and makes tuning constants easy.
+- Tradeoffs: Requires Pybricks firmware/workflow and careful documentation so judges can reproduce uploads.
+- Test evidence: TODO.
+- Result after testing: TODO.
 
 ## Risks And Mitigations
 
 | Risk | Impact | Mitigation | Status |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| Ultrasonic readings bounce on angled walls | Robot may steer incorrectly | Test at many distances and add filtering if needed | TODO |
+| Steering motor center is wrong | Robot drifts or hits walls | Add a repeatable center setup procedure | TODO |
+| Steering sign is reversed | Robot steers into walls | Low-speed sign test and `STEERING_SIGN` constant | In starter code |
+| LEGO frame flexes during run | Sensor angle and steering geometry change | Reinforce chassis and inspect after each run | TODO |
+| Hub battery is low | Motor power changes | Charge before runs and record battery state | TODO |
 
 ## Iterations
 
 | Version | Change | Why It Changed | Evidence |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| v0.1 | Arduino prototype with BMI160 and VL53L1X sensors | Initial control experiment | Git history |
+| v0.2 | LEGO SPIKE Prime with 3 ultrasonic sensors and Pybricks | New team hardware direction | Current repository |
+| v0.3 | TODO | TODO | TODO |
 

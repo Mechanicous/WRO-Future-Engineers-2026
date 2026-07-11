@@ -1,19 +1,19 @@
 # Schemes
 
-Add diagrams that show how the vehicle electronics are connected.
+Add diagrams that show how the LEGO SPIKE Prime robot is connected and how the sensors are placed.
 
 Recommended files:
 
-- `wiring-diagram.png` or `wiring-diagram.pdf`
-- `power-distribution.png` or `power-distribution.pdf`
-- `sensor-placement.png` or `sensor-placement.pdf`
+- `port-map.md` for the active SPIKE Prime port assignments.
+- `port-map.png` or `port-map.pdf` for a visual hub connection diagram.
+- `sensor-placement.png` or `sensor-placement.pdf` for left, middle/front, and right ultrasonic sensor placement.
+- `power-notes.md` if you want to document SPIKE Prime battery behavior and charging procedure.
 
-The 2026 documentation rubric expects wiring, power distribution, sensor placement, calibration, and enough detail for another team to reproduce the robot.
+The 2026 documentation rubric expects power/sensor architecture, sensor placement, calibration, and enough detail for another team to reproduce the robot.
 
 ## TODO
 
-- Add a full wiring diagram.
-- Add a power budget or power distribution diagram.
+- Confirm every SPIKE Prime port in `port-map.md`.
+- Add a visual port map.
 - Add a sensor placement diagram with distances, heights, and angles.
-- Explain any voltage regulators, motor drivers, and shared grounds.
-
+- Add notes about the SPIKE Prime rechargeable battery and pre-run charging.

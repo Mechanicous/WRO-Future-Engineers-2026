@@ -1,21 +1,28 @@
 # Bill Of Materials
 
-List the parts used to build the robot.
+List the parts used to build the LEGO SPIKE Prime robot.
+
+## Main Components
 
 | Part | Quantity | Purpose | Notes |
 | --- | ---: | --- | --- |
-| TODO | TODO | TODO | TODO |
+| LEGO SPIKE Prime Hub | 1 | Main controller and power source | Runs Pybricks MicroPython |
+| LEGO Powered Up motor | TODO | Drive and/or steering | Document exact motor type and port |
+| LEGO ultrasonic sensor | 3 | Left, middle/front, and right distance sensing | Current sensor set |
+| LEGO wheels/tires | TODO | Movement | Document diameter and tire type |
+| LEGO Technic beams/frames/pins/gears | TODO | Chassis and mounts | Add model/build photos |
 
 ## Power Components
 
 | Part | Quantity | Voltage/Current | Notes |
 | --- | ---: | --- | --- |
-| TODO | TODO | TODO | TODO |
+| SPIKE Prime rechargeable battery | 1 | Hub battery | Powers hub, motors, and sensors |
+| SPIKE Prime charger/cable | 1 | Charging/upload support | TODO |
 
-## Sensors
+## Optional Or Future Components
 
-| Part | Quantity | Interface | Notes |
+| Part | Quantity | Purpose | Notes |
 | --- | ---: | --- | --- |
-| BMI160 | 1 | I2C | Used for yaw estimation in the current sketch. |
-| VL53L1X | 3 | I2C | Front, left, and right distance sensing in the current sketch. |
+| Camera/color sensor | TODO | Obstacle color detection if added | TODO |
+| Extra LEGO motor | TODO | Alternative steering/drive design | TODO |
 
