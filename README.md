@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./other/repository-images/team-logo.png" alt="Mechanicous team logo" width="180">
+<img src="./other/repository-images/team-logo.png" alt="Mechanicous team logo" width="240">
 
 # Mechanicous - MadBoy
 
