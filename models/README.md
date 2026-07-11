@@ -14,6 +14,7 @@ Useful formats:
 
 - Add LEGO chassis model files or build photos.
 - Add steering linkage photos and dimensions.
+- Add rear differential gear system photos, gear layout, and gear ratio.
 - Add ultrasonic sensor mount photos and measurements.
 - Add wheel, axle, and gearing details.
 - Include enough detail that another team could rebuild the robot.

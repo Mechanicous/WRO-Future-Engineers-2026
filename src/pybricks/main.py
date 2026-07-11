@@ -22,8 +22,9 @@ from pybricks.tools import StopWatch, wait
 # Port assignments
 # ---------------------------------------------------------------------------
 
-# TODO: Update these to match the real robot and keep schemes/port-map.md in
-# sync. The default map is intentionally simple for the first SPIKE Prime build.
+# TODO: Confirm these match the real robot and keep schemes/port-map.md in sync.
+# The drive motor is the SPIKE Large Angular Motor connected to the rear
+# differential. The steering motor is the SPIKE Medium Angular Motor.
 DRIVE_MOTOR_PORT = Port.A
 STEERING_MOTOR_PORT = Port.B
 LEFT_SENSOR_PORT = Port.C

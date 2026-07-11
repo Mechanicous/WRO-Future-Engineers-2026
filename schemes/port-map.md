@@ -4,8 +4,8 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 
 | Port | Device | Purpose | Status |
 | --- | --- | --- | --- |
-| A | Drive motor | Forward/reverse movement | TODO: confirm |
-| B | Steering motor | Steering linkage | TODO: confirm |
+| A | SPIKE Large Angular Motor | Rear-wheel drive through differential gear system | TODO: confirm |
+| B | SPIKE Medium Angular Motor | Front steering linkage | TODO: confirm |
 | C | Left ultrasonic sensor | Left wall distance | TODO: confirm |
 | D | Middle/front ultrasonic sensor | Front obstacle/path distance | TODO: confirm |
 | E | Right ultrasonic sensor | Right wall distance | TODO: confirm |
@@ -29,6 +29,7 @@ Add a photo or diagram showing:
 - Hub location.
 - Cable routing.
 - Motor ports.
+- Rear differential gear system.
 - Sensor ports.
 - Ultrasonic sensor field of view.
 

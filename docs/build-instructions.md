@@ -7,8 +7,9 @@ Use this document to make the LEGO SPIKE Prime robot reproducible.
 TODO:
 
 - Add LEGO chassis dimensions.
-- Add drive motor mounting steps.
-- Add steering motor/linkage steps, or document differential drive if used.
+- Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
+- Add rear differential gear system assembly steps.
+- Add SPIKE Medium Angular Motor steering linkage steps.
 - Add wheelbase, track width, and wheel diameter.
 - Add sensor mount positions, heights, and angles.
 - Link to build files or build photos in `../models/`.
@@ -23,8 +24,8 @@ Default working assumption:
 
 | Port | Device |
 | --- | --- |
-| A | Drive motor |
-| B | Steering motor |
+| A | SPIKE Large Angular Motor for rear-wheel drive |
+| B | SPIKE Medium Angular Motor for front steering |
 | C | Left ultrasonic sensor |
 | D | Middle/front ultrasonic sensor |
 | E | Right ultrasonic sensor |
@@ -47,6 +48,7 @@ Default working assumption:
 - [ ] Hub battery charged.
 - [ ] LEGO structure is rigid.
 - [ ] Wheels and gears move freely.
+- [ ] Rear differential gear system rotates smoothly.
 - [ ] Steering centers correctly.
 - [ ] Drive motor direction is correct.
 - [ ] Left ultrasonic sensor reports fresh readings.

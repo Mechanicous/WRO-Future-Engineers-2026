@@ -97,8 +97,8 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Robot name | MadBoy |
 | Main controller | LEGO SPIKE Prime Hub |
 | Programming platform | Pybricks MicroPython |
-| Drive system | TODO: document motor count, port, gearing, and wheel size |
-| Steering system | TODO: document steering motor/linkage or differential steering design |
+| Drive system | Rear-wheel drive using a SPIKE Large Angular Motor and rear differential gear system |
+| Steering system | Front steering using a SPIKE Medium Angular Motor |
 | Sensors | 3x LEGO ultrasonic sensors: left, middle/front, right |
 | Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
 | Current behavior | Starter wall-balancing loop with front safety stop |
@@ -144,14 +144,14 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | Subsystem | Design | Reasoning | Evidence |
 | --- | --- | --- | --- |
 | Chassis | LEGO SPIKE Prime / Technic construction | Fast rebuilds, repeatable geometry, simpler maintenance | Add photos and dimensions |
-| Drive motor | TODO: document motor type, port, gearing, wheel diameter | Needed for speed/torque reasoning | Add gear ratio and tests |
-| Steering | TODO: document steering motor/linkage or differential steering | Needed for turn radius and stability | Add linkage photos/dimensions |
+| Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Add gear ratio, wheel diameter, and speed tests |
+| Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
 | Sensors | Left, middle/front, and right ultrasonic sensors | Wall distance and front safety/obstacle distance | Add sensor placement diagram |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
 
 ### Powertrain
 
-Document the drivetrain, gear ratio if used, motor torque/speed tradeoff, wheel diameter, and expected field speed.
+The robot uses rear-wheel drive. A SPIKE Large Angular Motor drives the rear axle through a differential gear system so the left and right rear wheels can rotate at different speeds while turning. Document the gear ratio, wheel diameter, torque/speed tradeoff, and expected field speed after testing.
 
 | Test | Result | What Changed |
 | --- | --- | --- |
@@ -161,7 +161,7 @@ Document the drivetrain, gear ratio if used, motor torque/speed tradeoff, wheel 
 
 ### Steering
 
-Explain the steering mechanism, motor choice, steering limits, center calibration, and how the Pybricks steering sign is verified. If the robot uses differential steering instead of a steering linkage, replace this section with left/right drive motor reasoning.
+The robot uses a SPIKE Medium Angular Motor for steering. Explain the steering linkage, motor choice, steering limits, center calibration, turn radius, and how the Pybricks steering sign is verified.
 
 ### Chassis
 
@@ -182,8 +182,8 @@ Keep the active port map in [`schemes/port-map.md`](./schemes/port-map.md).
 
 | Device | Current Port | Purpose | Notes |
 | --- | --- | --- | --- |
-| Drive motor | A | Move the robot forward/reverse | TODO: confirm |
-| Steering motor | B | Turn steering linkage | TODO: confirm, or replace with second drive motor |
+| Drive motor | A | SPIKE Large Angular Motor for rear-wheel drive | TODO: confirm port |
+| Steering motor | B | SPIKE Medium Angular Motor for front steering | TODO: confirm port |
 | Left ultrasonic sensor | C | Measure left wall distance | TODO: confirm |
 | Middle/front ultrasonic sensor | D | Measure front path and obstacle distance | TODO: confirm |
 | Right ultrasonic sensor | E | Measure right wall distance | TODO: confirm |
@@ -320,8 +320,9 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 ### Step 2: Mount Motors And Steering
 
-- Mount the drive motor and document its port.
-- Mount the steering motor or differential drive motors and document the ports.
+- Mount the SPIKE Large Angular Motor for rear-wheel drive and document its port.
+- Mount the rear differential gear system and document its gear ratio.
+- Mount the SPIKE Medium Angular Motor for steering and document its port.
 - Check that wheels and steering move freely.
 
 ### Step 3: Mount Ultrasonic Sensors

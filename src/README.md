@@ -19,7 +19,7 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 
 ## Current Behavior
 
-- Initializes the SPIKE Prime Hub, drive motor, steering motor, and three ultrasonic sensors.
+- Initializes the SPIKE Prime Hub, rear-drive Large Angular Motor, steering Medium Angular Motor, and three ultrasonic sensors.
 - Waits for the hub center button before driving.
 - Stops when the middle/front ultrasonic sensor reports an unsafe distance.
 - Uses left/right ultrasonic distance difference for starter wall-centering steering.

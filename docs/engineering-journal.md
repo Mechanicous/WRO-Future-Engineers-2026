@@ -16,8 +16,9 @@ Describe the LEGO chassis, steering, drive system, stability, and mechanical con
 Include:
 
 - Why LEGO SPIKE Prime / Technic construction was chosen.
-- Drive mechanism, motor type, gearing, wheel diameter, and expected speed.
-- Steering mechanism, steering limits, and turn radius.
+- Rear-wheel drive mechanism using the SPIKE Large Angular Motor.
+- Rear differential gear system, gear ratio, wheel diameter, and expected speed.
+- Front steering mechanism using the SPIKE Medium Angular Motor, steering limits, and turn radius.
 - Wheelbase, track width, sensor positions, and important dimensions.
 - Stability, weight distribution, and structural rigidity.
 - Mechanical tests and changes between versions.

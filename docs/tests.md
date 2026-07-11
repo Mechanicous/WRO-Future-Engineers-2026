@@ -14,6 +14,7 @@ Use this file to prove that the LEGO SPIKE Prime robot was tested and improved o
 - Front safety stop test.
 - Steering center test.
 - Steering sign test.
+- Rear differential smoothness test.
 - Straight-line wall-centering test.
 - Corner behavior test.
 - Open Challenge lap consistency test.
@@ -30,6 +31,7 @@ Use this file to prove that the LEGO SPIKE Prime robot was tested and improved o
 - Stop distance from obstacle.
 - Average left/right distance error.
 - Steering correction range.
+- Differential gear smoothness and wheel slip.
 - Hub battery state before and after run.
 - Any manual interventions.
 

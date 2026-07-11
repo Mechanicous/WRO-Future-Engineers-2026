@@ -37,12 +37,24 @@ Use this file to show why the team chose each design, not only what the final de
 - Test evidence: TODO.
 - Result after testing: TODO.
 
+### Decision: Use Rear-Wheel Drive With A Differential Gear System
+
+- Date: 2026-07-11
+- Context: The LEGO version uses a SPIKE Large Angular Motor for propulsion and a SPIKE Medium Angular Motor for steering.
+- Options considered: Direct rear axle drive, rear-wheel drive with differential gearing, front-wheel drive, differential steering.
+- Decision: Use rear-wheel drive through a differential gear system, with a separate front steering motor.
+- Reasoning: The differential lets the rear wheels rotate at different speeds in turns, reducing tire scrub and making cornering smoother.
+- Tradeoffs: The drivetrain is mechanically more complex and needs careful alignment so gears do not bind.
+- Test evidence: TODO.
+- Result after testing: TODO.
+
 ## Risks And Mitigations
 
 | Risk | Impact | Mitigation | Status |
 | --- | --- | --- | --- |
 | Ultrasonic readings bounce on angled walls | Robot may steer incorrectly | Test at many distances and add filtering if needed | TODO |
 | Steering motor center is wrong | Robot drifts or hits walls | Add a repeatable center setup procedure | TODO |
+| Rear differential binds or slips | Robot loses speed or turns inconsistently | Check gear alignment and test both rear wheels under load | TODO |
 | Steering sign is reversed | Robot steers into walls | Low-speed sign test and `STEERING_SIGN` constant | In starter code |
 | LEGO frame flexes during run | Sensor angle and steering geometry change | Reinforce chassis and inspect after each run | TODO |
 | Hub battery is low | Motor power changes | Charge before runs and record battery state | TODO |

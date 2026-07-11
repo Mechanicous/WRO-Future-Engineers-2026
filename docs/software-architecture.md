@@ -11,7 +11,7 @@ Source file:
 Current control flow:
 
 1. Initialize the SPIKE Prime Hub.
-2. Initialize drive motor, steering motor, and three ultrasonic sensors.
+2. Initialize the SPIKE Large Angular Motor for rear-wheel drive, SPIKE Medium Angular Motor for steering, and three ultrasonic sensors.
 3. Wait for the hub center button.
 4. Center the steering motor.
 5. Read left, middle/front, and right ultrasonic distances.
@@ -41,7 +41,7 @@ flowchart TD
 
 | Area | Current Implementation | Next Work |
 | --- | --- | --- |
-| Hardware setup | Port constants and Pybricks device objects in `main.py` | Confirm real ports |
+| Hardware setup | Port constants and Pybricks device objects in `main.py` | Confirm Large Angular Motor and Medium Angular Motor ports |
 | Distance reading | `read_distance()` validates ultrasonic readings | Add smoothing if needed |
 | Front safety | Stop/resume thresholds with hysteresis | Tune thresholds on track |
 | Wall centering | Left/right distance difference with gain | Tune gain and steering sign |

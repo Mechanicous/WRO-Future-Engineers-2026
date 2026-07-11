@@ -7,14 +7,14 @@ The active program is `main.py`.
 The current starter code assumes:
 
 - LEGO SPIKE Prime Hub.
-- One drive motor.
-- One steering motor.
+- One SPIKE Large Angular Motor for rear-wheel drive.
+- One SPIKE Medium Angular Motor for steering.
 - Three ultrasonic sensors:
   - Left sensor.
   - Middle/front sensor.
   - Right sensor.
 
-If the robot uses differential drive instead of a steering linkage, update `main.py` and document the change in `../../docs/decisions.md`.
+The robot uses a rear differential gear system in the drivetrain. This is a mechanical differential, not differential steering.
 
 ## Default Port Map
 
@@ -22,8 +22,8 @@ Confirm these constants before running:
 
 | Device | Default Port |
 | --- | --- |
-| Drive motor | A |
-| Steering motor | B |
+| SPIKE Large Angular Motor, rear-wheel drive | A |
+| SPIKE Medium Angular Motor, steering | B |
 | Left ultrasonic sensor | C |
 | Middle/front ultrasonic sensor | D |
 | Right ultrasonic sensor | E |
