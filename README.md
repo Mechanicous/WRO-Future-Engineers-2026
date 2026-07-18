@@ -117,7 +117,7 @@ Replace the placeholders with real vehicle photos in [`v-photos/`](./v-photos/).
   <tr>
     <td align="center"><img src="./other/repository-images/placeholder-vehicle.svg" alt="Right vehicle photo" width="240"><br><strong>Right</strong></td>
     <td align="center"><img src="./other/repository-images/placeholder-vehicle.svg" alt="Top vehicle photo" width="240"><br><strong>Top</strong></td>
-    <td align="center"><img src="./other/repository-images/placeholder-vehicle.svg" alt="Bottom vehicle photo" width="240"><br><strong>Bottom</strong></td>
+    <td align="center"><img src="./v-photos/bottom.png" alt="Bottom vehicle photo" width="240"><br><strong>Bottom</strong></td>
   </tr>
 </table>
 

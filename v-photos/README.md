@@ -15,3 +15,6 @@ Recommended set:
 
 Use clear lighting and avoid heavy editing so judges can inspect the real robot.
 
+Current photos:
+
+- `bottom.png` - underside view of MadBoy.
