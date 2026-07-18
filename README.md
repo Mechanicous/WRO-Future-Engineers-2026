@@ -38,7 +38,6 @@
 
 ## Team
 
-Replace the placeholders with your real team information and photos.
 
 <table>
   <tr>
@@ -63,7 +62,7 @@ Replace the placeholders with your real team information and photos.
   </tr>
 </table>
 
-Required team photos go in [`t-photos/`](./t-photos/).
+ [`t-photos/`](./t-photos/).
 
 ---
 
