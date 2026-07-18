@@ -19,4 +19,5 @@ Current photos:
 
 - `back.png` - rear view of MadBoy.
 - `bottom.png` - underside view of MadBoy.
+- `front.png` - front view of MadBoy.
 - `left.png` - left side view of MadBoy.
