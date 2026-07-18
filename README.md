@@ -62,7 +62,7 @@
   </tr>
 </table>
 
- [`t-photos/`](./t-photos/).
+Photos can be found in [`t-photos/`](./t-photos/).
 
 ---
 
@@ -105,7 +105,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 
 ### Vehicle Photos
 
-Replace the placeholders with real vehicle photos in [`v-photos/`](./v-photos/).
+Vehicle photos can be found in [`v-photos/`](./v-photos/).
 
 <table>
   <tr>
