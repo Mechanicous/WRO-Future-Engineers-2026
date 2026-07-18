@@ -101,8 +101,8 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Steering system | Front steering using a SPIKE Medium Angular Motor |
 | Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, planned OpenMV H7 camera |
 | Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
-| Current behavior | Starter wall-balancing loop with front safety stop |
-| Next behavior to implement | Open Challenge lap logic, Obstacle Challenge sign strategy, parking if used |
+| Current behavior | Completes 3 laps in the Open Challenge round |
+| Next behavior to implement | Obstacle Challenge sign strategy and course handling |
 
 ### Vehicle Photos
 
@@ -235,7 +235,8 @@ It currently:
 - Reads three ultrasonic sensors: left, middle/front, and right.
 - Resets and reads the SPIKE Prime integrated gyro heading.
 - Uses the middle/front ultrasonic sensor as a safety stop.
-- Uses left/right distance difference for a starter wall-balancing steering correction.
+- Completes 3 laps in the Open Challenge round.
+- Uses left/right distance difference for wall-balancing steering.
 - Reserves `src/openmv/` for future OpenMV H7 vision code.
 - Keeps all port assignments and control constants near the top of the file for easy tuning.
 
@@ -262,7 +263,7 @@ flowchart TD
 | --- | --- | --- | --- | --- |
 | Init | Verify ports, sensors, motors, and battery | Program start | Hardware ready | TODO |
 | WaitForStart | Keep robot still before official run | Hub center button or start condition | Start pressed | TODO |
-| OpenChallengeDrive | Complete laps without colored obstacles | Open Challenge run starts | Laps complete or timeout | TODO |
+| OpenChallengeDrive | Complete 3 laps without colored obstacles | Open Challenge run starts | 3 laps complete or timeout | Working |
 | WallCentering | Maintain position using side ultrasonic sensors | Driving straight/curving | Corner or obstacle detected | Starter code exists |
 | ObstacleDetect | Detect obstacle approach with front sensor and OpenMV H7 vision | Obstacle Challenge | Obstacle classified | TODO |
 | AvoidRed | Pass red obstacle according to WRO rules | Red obstacle detected | Safe path restored | TODO |
@@ -373,9 +374,9 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Steering center | Straight run drift | TODO | TODO |
 | Steering sign | Correct response to left/right offset | TODO | TODO |
 | Wall centering | Average side-distance error | TODO | TODO |
-| Open Challenge | Laps and time | TODO | TODO |
+| Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
 | OpenMV color detection | Red/green classification accuracy | TODO | TODO |
-| Obstacle Challenge | Obstacle handling and score | TODO | TODO |
+| Obstacle Challenge | Obstacle handling and score | TODO | In progress |
 | Parking | Final position and alignment | TODO | TODO |
 
 ---

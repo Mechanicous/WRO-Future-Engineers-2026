@@ -9,6 +9,7 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | Date | Robot Version | Test | Result | Change Made |
 | --- | --- | --- | --- | --- |
 | TODO | TODO | TODO | TODO | TODO |
+| TODO | MadBoy | Open Challenge 3-lap run | Completes 3 laps | Continue tuning consistency |
 
 ## Recommended Tests
 

@@ -25,7 +25,8 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 - Resets and reports the SPIKE Prime integrated gyro heading.
 - Waits for the hub center button before driving.
 - Stops when the middle/front ultrasonic sensor reports an unsafe distance.
-- Uses left/right ultrasonic distance difference for starter wall-centering steering.
+- Completes 3 laps in the Open Challenge round.
+- Uses left/right ultrasonic distance difference for wall-centering steering.
 - Prints simple telemetry for tuning.
 
 ## Files
@@ -43,7 +44,7 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 - Tune steering center, steering sign, drive power, and stop thresholds.
 - Test integrated gyro heading reset and drift.
 - Decide and document how the OpenMV H7 communicates with the SPIKE Prime robot.
-- Add final Open Challenge lap logic.
+- Improve and document Open Challenge lap counting details.
 - Add final Obstacle Challenge strategy.
 - Add tested values and run data in `../docs/tests.md`.
 

@@ -19,6 +19,7 @@ Current control flow:
 7. Compare left and right distances.
 8. Convert side-distance error into a steering target.
 9. Drive forward while repeating the loop.
+10. Complete 3 laps in the Open Challenge round.
 
 ## Flowchart
 
@@ -56,9 +57,9 @@ flowchart TD
 | --- | --- | --- | --- | --- |
 | Init | Configure hub, motors, sensors, constants | Program starts | Devices ready | Starter code |
 | WaitForStart | Hold robot until team starts run | Init complete | Center button pressed | Starter code |
-| OpenDrive | Drive using ultrasonic wall centering | Start pressed | Corner, obstacle, or timeout | Starter code |
+| OpenDrive | Drive using ultrasonic wall centering | Start pressed | 3 laps complete, obstacle, or timeout | Working |
 | CornerHandling | Turn through course corners | Corner detected | Straight section found | TODO |
-| ObstacleDetect | Detect red/green obstacle with OpenMV H7 | Obstacle Challenge enabled | Obstacle classified | TODO |
+| ObstacleDetect | Detect red/green obstacle with OpenMV H7 | Obstacle Challenge enabled | Obstacle classified | In progress |
 | AvoidRed | Pass red obstacle correctly | Red obstacle detected | Safe path restored | TODO |
 | AvoidGreen | Pass green obstacle correctly | Green obstacle detected | Safe path restored | TODO |
 | Parking | Align and stop in parking zone if used | Final phase | Parked | TODO |
