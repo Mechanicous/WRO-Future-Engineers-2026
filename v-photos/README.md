@@ -17,4 +17,5 @@ Use clear lighting and avoid heavy editing so judges can inspect the real robot.
 
 Current photos:
 
+- `back.png` - rear view of MadBoy.
 - `bottom.png` - underside view of MadBoy.
