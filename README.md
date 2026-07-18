@@ -88,7 +88,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 
 <div align="center">
 
-<img src="./other/repository-images/placeholder-vehicle.svg" alt="Robot photo placeholder" width="640">
+<img src="./v-photos/overview.png" alt="MadBoy robot overview photo" width="640">
 
 </div>
 
