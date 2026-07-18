@@ -50,9 +50,9 @@ Replace the placeholders with your real team information and photos.
     </td>
     <td align="center" width="33%">
       <img src="./other/repository-images/placeholder-team.svg" alt="Team member photo placeholder" width="180"><br>
-      <strong>Member Name</strong><br>
-      Role: TODO<br>
-      Focus: TODO
+      <strong>Ali Foqha</strong><br>
+      Role: Member<br>
+      Focus: Coding And Thinking
     </td>
     <td align="center" width="33%">
       <img src="./t-photos/qais-shrideh.jpg" alt="Qais Shrideh coach photo" width="180"><br>
