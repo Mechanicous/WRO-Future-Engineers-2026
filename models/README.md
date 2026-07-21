@@ -24,7 +24,7 @@ Open `Robot_Design.io` with Studio 2.0 to inspect the LEGO design and follow the
 
 - Keep `Robot_Design.io` updated when the physical robot changes.
 - Add steering linkage photos and dimensions.
-- Add rear differential gear system photos, gear layout, and gear ratio.
+- Rear differential gear layout: SPIKE Large Angular Motor drives a 20-tooth double bevel gear into a 28-tooth LEGO differential gear; the differential contains three 12-tooth bevel gears.
 - Add ultrasonic sensor mount photos and measurements.
 - Add SPIKE Prime Hub orientation photos for integrated gyro heading.
 - Add OpenMV H7 camera mount photos, height, angle, field of view, and case installation notes.

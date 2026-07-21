@@ -11,7 +11,7 @@ TODO:
 - Open `../models/Robot_Design.io` in Studio 2.0 and follow the included step-by-step instructions.
 - Documented LEGO chassis dimensions: about 20 cm long x 13.5 cm wide x 22 cm high.
 - Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
-- Add rear differential gear system assembly steps.
+- Documented rear differential gear system: 20-tooth double bevel drive gear into 28-tooth differential gear, with three 12-tooth bevel gears inside the differential.
 - Add SPIKE Medium Angular Motor steering linkage steps.
 - Documented wheelbase, track width, and wheel diameter.
 - Documented ultrasonic sensor mount heights and facing directions.
@@ -52,6 +52,12 @@ Confirmed port map:
 
 MadBoy fits within the WRO Future Engineers 2026 maximum robot size of 30 cm length x 20 cm width x 30 cm height.
 
+## Rear Differential Drivetrain
+
+The rear drive motor is a LEGO SPIKE Prime Large Angular Motor. It drives a beige 20-tooth double bevel gear, which drives the 28-tooth gear on the LEGO differential. The external gear ratio is approximately 20:28, so the differential output turns at about 0.71x motor-gear speed and gains about 1.4x torque before drivetrain losses.
+
+The LEGO differential must contain three 12-tooth bevel gears inside it. Those internal bevel gears allow the left and right rear wheels to rotate at different speeds during turns.
+
 ## Sensor And Camera Placement
 
 | Component | Placement |
@@ -80,7 +86,7 @@ MadBoy fits within the WRO Future Engineers 2026 maximum robot size of 30 cm len
 - [ ] Hub battery charged.
 - [ ] LEGO structure is rigid.
 - [ ] Wheels and gears move freely.
-- [ ] Rear differential gear system rotates smoothly.
+- [ ] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
 - [ ] Steering centers correctly.
 - [ ] Drive motor direction is correct.
 - [ ] Left ultrasonic sensor reports fresh readings.

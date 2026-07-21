@@ -143,14 +143,14 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | Subsystem | Design | Reasoning | Evidence |
 | --- | --- | --- | --- |
 | Chassis | LEGO SPIKE Prime / Technic construction, about 20 cm long x 13.5 cm wide x 22 cm high | Fast rebuilds, repeatable geometry, simpler maintenance, and within the WRO FE 30 cm x 20 cm x 30 cm size limit | [`v-photos/`](./v-photos/), [`models/Robot_Design.io`](./models/Robot_Design.io) |
-| Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Wheel diameter about 5.5 cm; add gear ratio and speed tests |
+| Drive motor | SPIKE Large Angular Motor driving a 20-tooth double bevel gear into a 28-tooth differential gear | Rear-wheel traction with smoother turning between left/right rear wheels | Approx. 20:28 reduction, wheel diameter about 5.5 cm; add speed tests |
 | Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
 | Sensors | Left/middle/right ultrasonic sensors, integrated gyro, OpenMV H7 | Distance, heading feedback, and vision/color detection | Sensor and camera heights documented below |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
 
 ### Powertrain
 
-The robot uses rear-wheel drive. A SPIKE Large Angular Motor drives the rear axle through a differential gear system so the left and right rear wheels can rotate at different speeds while turning. Document the gear ratio, wheel diameter, torque/speed tradeoff, and expected field speed after testing.
+The robot uses rear-wheel drive. A SPIKE Large Angular Motor drives a beige 20-tooth double bevel gear, which drives the 28-tooth gear on the LEGO differential. This creates an approximate 20:28 reduction, so the differential turns about 0.71 times for each motor gear rotation while increasing torque by about 1.4x before friction losses. The differential contains three 12-tooth bevel gears so the left and right rear wheels can rotate at different speeds while turning.
 
 ### Dimensions
 
@@ -168,7 +168,7 @@ Current size check: MadBoy fits inside the WRO Future Engineers 2026 maximum rob
 
 | Test | Result | What Changed |
 | --- | --- | --- |
-| Straight-line run | TODO | TODO |
+| Straight-line run | Completes 3 Open Challenge laps | Current drivetrain retained |
 | Corner entry | TODO | TODO |
 | Three-minute endurance | TODO | TODO |
 
@@ -349,7 +349,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 ### Step 2: Mount Motors And Steering
 
 - Mount the SPIKE Large Angular Motor for rear-wheel drive and document its port.
-- Mount the rear differential gear system and document its gear ratio.
+- Mount the rear differential gear system: the motor drives a 20-tooth double bevel gear into the 28-tooth differential gear, and the differential contains three 12-tooth bevel gears.
 - Mount the SPIKE Medium Angular Motor for steering and document its port.
 - Check that wheels and steering move freely.
 

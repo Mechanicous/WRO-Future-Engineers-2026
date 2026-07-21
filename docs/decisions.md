@@ -43,9 +43,9 @@ Use this file to show why the team chose each design, not only what the final de
 - Context: The LEGO version uses a SPIKE Large Angular Motor for propulsion and a SPIKE Medium Angular Motor for steering.
 - Options considered: Direct rear axle drive, rear-wheel drive with differential gearing, front-wheel drive, differential steering.
 - Decision: Use rear-wheel drive through a differential gear system, with a separate front steering motor.
-- Reasoning: The differential lets the rear wheels rotate at different speeds in turns, reducing tire scrub and making cornering smoother.
+- Reasoning: The differential lets the rear wheels rotate at different speeds in turns, reducing tire scrub and making cornering smoother. The SPIKE Large Angular Motor drives a 20-tooth double bevel gear into the differential's 28-tooth gear, giving an approximate 20:28 reduction for more torque at the rear axle.
 - Tradeoffs: The drivetrain is mechanically more complex and needs careful alignment so gears do not bind.
-- Test evidence: TODO.
+- Test evidence: Current robot completes 3 Open Challenge laps.
 - Result after testing: TODO.
 
 ### Decision: Use SPIKE Prime Integrated Gyro
