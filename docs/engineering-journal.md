@@ -5,8 +5,8 @@ Use this document to tell the story of the robot's engineering process, not only
 ## Team
 
 - Team name: Mechanicous
-- Country/region: TODO
-- Members: TODO
+- Country/region: Palestine
+- Members: Ibrahim Daraghma, Ali Foqha
 - Season: WRO Future Engineers 2026
 
 ## 1. Mobility And Mechanical Design
