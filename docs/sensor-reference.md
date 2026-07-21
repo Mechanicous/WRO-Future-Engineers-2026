@@ -29,12 +29,14 @@ No official universal drift rate for the SPIKE Prime integrated gyro was found. 
 | Stationary recalibration | Pybricks can treat the hub as stationary after measurements stay below thresholds for one second | Pybricks PrimeHub docs |
 | Default stationary angular threshold | 2 deg/s | Pybricks PrimeHub docs |
 | Default stationary acceleration threshold | 2500 mm/s^2 | Pybricks PrimeHub docs |
+| Internet-reported bad-case drift | Up to about 1 deg/s in a user report when the gyro was behaving incorrectly | FIRST LEGO League forum |
 
 Competition test target:
 
 - Record measured heading drift while the robot is still for 1 minute and 3 minutes.
 - Record heading error after repeated 90-degree and 360-degree turns.
 - If the hub consistently under-reports or over-reports a full turn, document the measured value and tune `heading_correction`.
+- Use 1 deg/s only as a conservative internet-reported bad-case reference, not as MadBoy's measured drift.
 
 ## Sources
 
@@ -43,4 +45,4 @@ Competition test target:
 - Pybricks sensor learning material: https://pybricks.com/learn/sensors/responding-sensor-values/
 - Pybricks PrimeHub IMU docs: https://docs.pybricks.com/en/latest/hubs/primehub.html
 - Pybricks gyro calibration discussion: https://github.com/pybricks/support/issues/933
-
+- FIRST LEGO League forum gyro drift report: https://forums.firstinspires.org/forum/general-discussions/first-programs/first-lego-league/the-challenge/programming-ab/94247-gyro-calibration-and-drift

@@ -55,13 +55,14 @@ Reference target: LEGO lists the Technic Distance Sensor at 1-200 cm with +/- 1 
 
 ## Gyro / IMU Tests
 
-Reference note: no official universal SPIKE Prime gyro drift rate was found. Pybricks documents per-hub full-turn scale variation and supports `heading_correction`, so drift/heading error must be measured on this hub.
+Reference note: no official universal SPIKE Prime gyro drift rate was found. Pybricks documents per-hub full-turn scale variation and supports `heading_correction`, so drift/heading error should be measured on this hub. As an internet-reported bad-case reference, a FIRST LEGO League forum post reported SPIKE Prime yaw drift as high as about 1 deg/s when the gyro was behaving incorrectly.
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |
 | TODO | TODO | Heading reset at start line | TODO | TODO |
-| TODO | TODO | Drift after 1 minute | TODO | TODO |
-| TODO | TODO | Drift after 3 minutes | TODO | TODO |
+| Internet reference | SPIKE Prime Hub | Bad-case drift report | Up to about 1 deg/s | Not measured on MadBoy; use only as conservative reference |
+| TODO | MadBoy | Drift after 1 minute | TODO | Measure this robot before competition |
+| TODO | MadBoy | Drift after 3 minutes | TODO | Measure this robot before competition |
 
 ## OpenMV H7 Vision Tests
 

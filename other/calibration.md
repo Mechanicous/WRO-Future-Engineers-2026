@@ -52,11 +52,12 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 - Align the robot to the known starting direction.
 - Press the start button so the Pybricks program calls `hub.imu.reset_heading(0)`.
 - Record heading drift while the robot is still and after driving.
-- No universal drift rate was found in official docs; measure this specific hub and document any `heading_correction` value.
+- No official universal drift rate was found. Pybricks documents per-hub heading variation, and an internet user report describes bad-case SPIKE Prime yaw drift up to about 1 deg/s when the gyro behaves incorrectly. Measure this specific hub and document any `heading_correction` value.
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |
 | TODO | TODO | Heading reset | TODO | TODO |
+| Internet reference | SPIKE Prime Hub | Bad-case drift report | Up to about 1 deg/s | Not measured on MadBoy |
 | TODO | TODO | Still drift test | TODO | TODO |
 | TODO | TODO | Driving drift test | TODO | TODO |
 
