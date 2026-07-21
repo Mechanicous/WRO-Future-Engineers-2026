@@ -19,7 +19,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | Robot Version | Steering Center Method | Result | Notes |
 | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO |
+| TODO | MadBoy | Center steering before straight run | Drifts left or right depending on the last steering adjustment | Needs repeatable centering reset/calibration before each run |
 
 ## Steering Direction
 

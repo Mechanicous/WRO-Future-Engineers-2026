@@ -389,7 +389,7 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Ultrasonic accuracy | Error at known distances | +/- 1 cm reference target | 20 cm test: left +0.5 cm, front +1.2 cm, right +0.1 cm |
 | Gyro heading drift | Degrees drift over time | Measure MadBoy; internet bad-case reference up to about 1 deg/s | Not measured yet on MadBoy |
 | Front safety stop | Stop distance from obstacle | Object at 10 cm | Robot stopped at about 10 cm, +/- 1 cm |
-| Steering center | Straight run drift | TODO | TODO |
+| Steering center | Straight run drift | Straight run after centering | Drifts left or right depending on the last steering adjustment |
 | Steering sign | Correct response to left/right offset | TODO | TODO |
 | Wall centering | Average side-distance error | TODO | TODO |
 | Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
