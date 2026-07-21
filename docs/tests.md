@@ -15,6 +15,7 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | TODO | MadBoy | Steering center straight-run check | Robot drifts left or right depending on the last steering adjustment | Improve repeatable steering center reset/calibration |
 | TODO | MadBoy | Steering sign test | When closer to the left wall, robot steers right/away from the wall | Keep `STEERING_SIGN = 1` |
 | TODO | MadBoy | Wall-centering observation | Sometimes centered; sometimes closer to one wall than the other | Tune `SIDE_BALANCE_GAIN` and improve steering center reset |
+| TODO | MadBoy | Rear differential smoothness | Drives smoothly using LEGO parts and gears; no binding/slipping observed | Keep checking gear alignment before runs |
 
 ## Recommended Tests
 

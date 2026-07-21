@@ -392,6 +392,7 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Steering center | Straight run drift | Straight run after centering | Drifts left or right depending on the last steering adjustment |
 | Steering sign | Correct response to left/right offset | Closer to left wall should steer right/away | Passes with `STEERING_SIGN = 1` |
 | Wall centering | Average side-distance error | Stay between walls during Open Challenge | Sometimes centered; sometimes closer to one wall, so side gain and steering center need tuning |
+| Rear differential smoothness | Binding, clicking, or slipping | Smooth rear-wheel drive | Drives smoothly with LEGO gears; no binding/slipping observed |
 | Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
 | OpenMV color detection | Red/green classification accuracy | TODO | TODO |
 | Obstacle Challenge | Obstacle handling and score | TODO | In progress |

@@ -96,7 +96,7 @@ The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART pro
 - [ ] LEGO structure is rigid, steady, and sturdy.
 - [ ] Motors, sensors, camera, and gears are in place.
 - [ ] Wheels and gears move freely.
-- [ ] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
+- [x] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
 - [ ] Steering centers correctly and reaches about 45 degrees left/right without binding.
 - [ ] Drive motor direction is correct.
 - [ ] Left ultrasonic sensor reports fresh readings.
