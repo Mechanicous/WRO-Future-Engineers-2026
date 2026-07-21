@@ -466,4 +466,4 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 
 ## License
 
-TODO: Add the project license if the team wants to publish the code and designs under an open-source license.
+This project is released under the [MIT License](./LICENSE).
