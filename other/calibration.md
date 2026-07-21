@@ -41,6 +41,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 ## SPIKE Prime Integrated Gyro
 
 - Place the robot flat on the field.
+- The SPIKE Prime Hub is mounted lying flat, with the USB port facing the robot's left side.
 - Align the robot to the known starting direction.
 - Press the start button so the Pybricks program calls `hub.imu.reset_heading(0)`.
 - Record heading drift while the robot is still and after driving.

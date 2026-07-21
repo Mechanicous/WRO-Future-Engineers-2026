@@ -15,7 +15,7 @@ TODO:
 - Add SPIKE Medium Angular Motor steering linkage steps.
 - Documented wheelbase, track width, and wheel diameter.
 - Documented ultrasonic sensor mount heights and facing directions.
-- Add SPIKE Prime Hub orientation for integrated gyro heading.
+- Documented SPIKE Prime Hub orientation for integrated gyro heading.
 - Print or prepare `../models/openmv-camera-case.stl` for the OpenMV H7 camera.
 - Documented OpenMV H7 camera lens height and tilt angle. Add field of view and case installation notes after camera calibration.
 - Keep the Studio 2.0 model in `../models/` synchronized with the physical robot.
@@ -60,6 +60,7 @@ MadBoy fits within the WRO Future Engineers 2026 maximum robot size of 30 cm len
 | Middle/front ultrasonic sensor | About 6 cm from the floor, facing forward |
 | Right ultrasonic sensor | About 5 cm from the floor, facing outward to the right |
 | OpenMV H7 camera | Lens about 17.5 cm from the floor, tilted about 5 degrees |
+| SPIKE Prime Hub | Lying flat, with USB port facing the robot's left side |
 
 ## Software Upload
 

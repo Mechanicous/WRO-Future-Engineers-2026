@@ -222,7 +222,7 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 | Left ultrasonic | Left side, about 5 cm from the floor, facing outward to the left | Wall distance and lane centering | Test readings at known distances |
 | Middle/front ultrasonic | Middle/front, about 6 cm from the floor, facing forward | Front safety stop and obstacle approach distance | Test close-range stop threshold |
 | Right ultrasonic | Right side, about 5 cm from the floor, facing outward to the right | Wall distance and lane centering | Test readings at known distances |
-| Integrated gyro/IMU | Inside SPIKE Prime Hub | Heading tracking and turn feedback | Reset heading at start line and test drift |
+| Integrated gyro/IMU | Inside SPIKE Prime Hub, hub lying flat with USB port facing left | Heading tracking and turn feedback | Reset heading at start line and test drift |
 | OpenMV H7 camera | Lens about 17.5 cm from the floor, tilted about 5 degrees | Red/green obstacle detection and vision strategy | Calibrate thresholds after mounting |
 
 ### Failure Handling
