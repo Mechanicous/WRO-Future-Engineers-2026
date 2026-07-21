@@ -16,7 +16,8 @@ TODO:
 - Add wheelbase, track width, and wheel diameter.
 - Add ultrasonic sensor mount positions, heights, and angles.
 - Add SPIKE Prime Hub orientation for integrated gyro heading.
-- Add OpenMV H7 camera mount position, height, angle, and field of view.
+- Print or prepare `../models/openmv-camera-case.stl` for the OpenMV H7 camera.
+- Add OpenMV H7 camera mount position, height, angle, field of view, and case installation notes.
 - Keep the Studio 2.0 model in `../models/` synchronized with the physical robot.
 
 ## Electronics And Ports
