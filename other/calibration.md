@@ -10,6 +10,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 - Check that all cables are connected firmly.
 - Make sure the robot is steady and sturdy.
 - Confirm that motors, ultrasonic sensors, OpenMV H7 camera, wheels, and gears are in place.
+- Battery runtime note: the hub battery lasts a long time in team testing, but exact runtime has not been tracked yet.
 
 ## Steering Center
 

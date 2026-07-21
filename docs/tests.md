@@ -16,6 +16,7 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | TODO | MadBoy | Steering sign test | When closer to the left wall, robot steers right/away from the wall | Keep `STEERING_SIGN = 1` |
 | TODO | MadBoy | Wall-centering observation | Sometimes centered; sometimes closer to one wall than the other | Tune `SIDE_BALANCE_GAIN` and improve steering center reset |
 | TODO | MadBoy | Rear differential smoothness | Drives smoothly using LEGO parts and gears; no binding/slipping observed | Keep checking gear alignment before runs |
+| TODO | MadBoy | Hub battery qualitative runtime check | Battery lasts a long time in testing; no noticeable slowdown reported | Exact runtime not tracked yet |
 
 ## Recommended Tests
 

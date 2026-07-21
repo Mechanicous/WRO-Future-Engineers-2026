@@ -82,7 +82,7 @@ Use this file to show why the team chose each design, not only what the final de
 | Gyro heading drifts | Turns or lap logic become inaccurate | Reset heading at start and run drift tests | TODO |
 | OpenMV lighting changes | Red/green classification becomes unreliable | Calibrate thresholds under field lighting | TODO |
 | LEGO frame flexes during run | Sensor angle and steering geometry change | Reinforce chassis and inspect after each run | TODO |
-| Hub battery is low | Motor power changes | Charge before runs and record battery state | TODO |
+| Hub battery is low | Motor power changes | Charge before runs and record battery state | No noticeable slowdown reported; exact runtime not tracked |
 
 ## Iterations
 
