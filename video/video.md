@@ -1,20 +1,15 @@
 # Demo Video
 
-Add a public link to a video showing the robot driving.
+Public links to videos showing MadBoy driving.
+
+## Videos
+
+| Video | Link | Robot Version | Date |
+| --- | --- | --- | --- |
+| Open Challenge / Open Round | https://youtu.be/ipjWBAg2dVM | MadBoy | TODO |
+| Obstacle Challenge | TODO | TODO | TODO |
 
 ## TODO
 
-- Add Open Challenge driving demonstration link.
-- Add Obstacle Challenge driving demonstration link if available.
-- Mention the robot version shown in the video.
-- Mention the date of the run.
-
-Example format:
-
-```text
-Open Challenge: TODO
-Obstacle Challenge: TODO
-Robot version: TODO
-Date: TODO
-```
-
+- Add Obstacle Challenge driving demonstration link when available.
+- Add the exact date of the Open Challenge video.
