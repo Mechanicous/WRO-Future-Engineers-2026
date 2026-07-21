@@ -128,7 +128,7 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 
 | 2026 Criterion | What Judges Need To See | Evidence Location | Status |
 | --- | --- | --- | --- |
-| Mobility and mechanical design | LEGO chassis, steering/drive mechanism, gear reasoning, dimensions, stability, iterations | [`models/`](./models/), [`v-photos/`](./v-photos/), [Mobility section](#mobility-and-mechanical-design) | TODO |
+| Mobility and mechanical design | LEGO chassis, steering/drive mechanism, gear reasoning, dimensions, stability, iterations | [`models/`](./models/), [`v-photos/`](./v-photos/), [Mobility section](#mobility-and-mechanical-design) | In progress |
 | Power and sensor architecture | SPIKE Prime hub, port map, battery/power notes, ultrasonic placement, integrated gyro use, OpenMV H7 UART communication using PUPRemote/LPF2 libraries, calibration, failure handling | [`schemes/`](./schemes/), [`schemes/port-map.md`](./schemes/port-map.md), [`other/calibration.md`](./other/calibration.md), [Power section](#power-and-sensor-architecture) | In progress |
 | Software architecture and obstacle strategy | Pybricks code, gyro heading telemetry, flowchart/state machine, wall-following, OpenMV obstacle strategy, edge cases, tests | [`src/`](./src/), [`docs/software-architecture.md`](./docs/software-architecture.md), [Software section](#software-architecture-and-obstacle-strategy) | In progress |
 | Systems thinking and engineering decisions | Why LEGO SPIKE Prime was chosen, tradeoffs, risks, version history, testing response | [`docs/decisions.md`](./docs/decisions.md), [Decisions section](#systems-thinking-and-engineering-decisions) | In progress |
@@ -446,21 +446,21 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 
 ## Submission Checklist
 
-- [ ] Team details and team photos are complete.
-- [ ] Vehicle photos show front, back, left, right, top, bottom, wiring/ports, and sensors.
-- [ ] README explains the LEGO SPIKE Prime robot clearly and links to all evidence.
-- [ ] Engineering journal tells the design story and includes reasoning.
+- [ ] Team details and team photos are complete. Missing Ali Foqha photo.
+- [x] Vehicle photos show front, back, left, right, top, bottom, wiring/ports, and sensors.
+- [x] README explains the LEGO SPIKE Prime robot clearly and links to all evidence.
+- [ ] Engineering journal tells the design story and includes reasoning. Needs more dated narrative entries from the team.
 - [x] Mechanical design includes LEGO model/build files, photos, and dimensions.
 - [x] SPIKE Prime port map and sensor placement measurements are included.
 - [x] Ultrasonic sensor calibration is documented.
 - [ ] Integrated gyro heading reset/drift tests are documented with MadBoy measurements.
 - [x] OpenMV H7 mounting, calibration plan, and communication method are documented.
-- [ ] Software architecture includes flowchart/state machine and obstacle strategy.
-- [ ] Tests include results, metrics, and changes made after testing.
-- [ ] Decisions include alternatives, tradeoffs, and risks.
-- [ ] Build instructions let another team reproduce the robot.
-- [ ] Demo video links are public.
-- [ ] Git history has meaningful commits.
+- [x] Software architecture includes flowchart/state machine and obstacle strategy.
+- [x] Tests include results, metrics, and changes made after testing.
+- [x] Decisions include alternatives, tradeoffs, and risks.
+- [x] Build instructions let another team reproduce the robot.
+- [ ] Demo video links are public. Open Challenge video is public; Obstacle Challenge video is still pending.
+- [x] Git history has meaningful commits.
 
 ---
 
