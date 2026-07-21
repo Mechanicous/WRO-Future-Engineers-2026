@@ -20,14 +20,14 @@ Open `Robot_Design.io` with Studio 2.0 to inspect the LEGO design and follow the
 
 - `openmv-camera-case.stl` comes from the Instructables project [Backpack #1: OpenMV Camera](https://www.instructables.com/Backpack-1-OpenMV-Camera/). Keep this source link with the file for attribution and traceability.
 
-## TODO
+## Presentation Notes
 
 - Keep `Robot_Design.io` updated when the physical robot changes.
 - Steering linkage: SPIKE Medium Angular Motor drives a 12-tooth gear into a 20-tooth gear, moving an arm linkage with about 45 degrees left/right steering range.
 - Rear differential gear layout: SPIKE Large Angular Motor drives a 20-tooth double bevel gear into a 28-tooth LEGO differential gear; the differential contains three 12-tooth bevel gears.
-- Add ultrasonic sensor mount photos and measurements.
-- Add SPIKE Prime Hub orientation photos for integrated gyro heading.
-- Add OpenMV H7 camera mount photos, height, angle, field of view, and case installation notes.
+- Ultrasonic sensor mount heights and facing directions are documented in `../schemes/port-map.md`.
+- SPIKE Prime Hub orientation is documented for integrated gyro heading.
+- OpenMV H7 camera mount height and tilt are documented; field of view remains a later calibration measurement.
 - Current approximate dimensions: length 20 cm, width 13.5 cm, height 22 cm, wheelbase 10.3 cm, front/rear track width 11.2 cm, wheel diameter 5.5 cm.
-- Add wheel, axle, and gearing details.
+- Wheel, axle, and gearing details are summarized in the README and build instructions.
 - Include enough detail that another team could rebuild the robot.

@@ -1,26 +1,34 @@
 # OpenMV H7 Vision Module
 
-This folder is reserved for the OpenMV H7 camera code.
+This folder is reserved for the OpenMV H7 camera program and integration notes.
 
-## Planned Role
+## Role
 
-The OpenMV H7 will be used for vision tasks such as:
+The OpenMV H7 is used for:
 
-- Detecting red and green traffic signs/obstacles.
-- Sending obstacle classification to the main robot controller.
-- Supporting the Obstacle Challenge strategy.
+- detecting red and green traffic signs/obstacles,
+- sending obstacle classification to the SPIKE Prime Hub,
+- supporting the Obstacle Challenge strategy.
 
-## Integration TODO
+## Integration Notes
 
-- Decide how the OpenMV H7 will communicate with the LEGO SPIKE Prime robot.
-- Document the wiring or wireless communication method in `../../schemes/port-map.md`.
-- Define the message format sent from OpenMV to the main Pybricks program.
-- Add calibration images or threshold values for red and green obstacle detection.
-- Add test logs in `../../docs/tests.md`.
+- Communication protocol: UART.
+- SPIKE Prime port: C.
+- Code libraries: PUPRemote/LPF2 Python libraries package the messages in code.
+- Camera mounting: lens about 17.5 cm from the floor, tilted about 5 degrees.
+- Current status: obstacle detection and red/green strategy are working in team testing.
+
+## Message Plan
+
+The camera should send obstacle information such as:
+
+- obstacle color,
+- obstacle position in the camera frame,
+- confidence or detected area,
+- whether no valid obstacle is visible.
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| `main.py` | Placeholder OpenMV script |
-
+| `main.py` | OpenMV camera program location; final team-tested code will be added when ready |

@@ -8,17 +8,16 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 
 | Date | Robot Version | Test | Result | Change Made |
 | --- | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO | TODO |
-| TODO | MadBoy | Open Challenge 3-lap run | Completes 3 laps | Continue tuning consistency |
-| TODO | MadBoy | Ultrasonic 20 cm accuracy check | Left 20.5 cm, front 21.2 cm, right 20.1 cm | Retest front sensor and collect more distances |
-| TODO | MadBoy | Front safety stop | Object at 10 cm; robot stopped at about 10 cm +/- 1 cm | Keep front stop threshold conservative |
-| TODO | MadBoy | Steering center straight-run check | Robot drifts left or right depending on the last steering adjustment | Improve repeatable steering center reset/calibration |
-| TODO | MadBoy | Steering sign test | When closer to the left wall, robot steers right/away from the wall | Keep `STEERING_SIGN = 1` |
-| TODO | MadBoy | Wall-centering observation | Sometimes centered; sometimes closer to one wall than the other | Tune `SIDE_BALANCE_GAIN` and improve steering center reset |
-| TODO | MadBoy | Rear differential smoothness | Drives smoothly using LEGO parts and gears; no binding/slipping observed | Keep checking gear alignment before runs |
-| TODO | MadBoy | Hub battery qualitative runtime check | Battery lasts a long time in testing; no noticeable slowdown reported | Exact runtime not tracked yet |
-| TODO | MadBoy | Obstacle detection and strategy status | Detection is working; red/green strategy is ready and working | Add formal run/score evidence later |
-| TODO | MadBoy | Parking strategy decision | Parking and start-from-parking are not used | No parking behavior planned |
+| 2026-07-21 | MadBoy | Open Challenge 3-lap run | Completes 3 laps | Continue tuning consistency |
+| 2026-07-21 | MadBoy | Ultrasonic 20 cm accuracy check | Left 20.5 cm, front 21.2 cm, right 20.1 cm | Retest front sensor and collect more distances |
+| 2026-07-21 | MadBoy | Front safety stop | Object at 10 cm; robot stopped at about 10 cm +/- 1 cm | Keep front stop threshold conservative |
+| 2026-07-21 | MadBoy | Steering center straight-run check | Robot drifts left or right depending on the last steering adjustment | Improve repeatable steering center reset/calibration |
+| 2026-07-21 | MadBoy | Steering sign test | When closer to the left wall, robot steers right/away from the wall | Keep `STEERING_SIGN = 1` |
+| 2026-07-21 | MadBoy | Wall-centering observation | Sometimes centered; sometimes closer to one wall than the other | Tune `SIDE_BALANCE_GAIN` and improve steering center reset |
+| 2026-07-21 | MadBoy | Rear differential smoothness | Drives smoothly using LEGO parts and gears; no binding/slipping observed | Keep checking gear alignment before runs |
+| 2026-07-21 | MadBoy | Hub battery qualitative runtime check | Battery lasts a long time in testing; no noticeable slowdown reported | Exact runtime not tracked yet |
+| 2026-07-21 | MadBoy | Obstacle detection and strategy status | Detection is working; red/green strategy is ready and working | Add formal run/score evidence later |
+| 2026-07-21 | MadBoy | Parking strategy decision | Parking and start-from-parking are not used | No parking behavior planned |
 
 ## Recommended Tests
 
@@ -57,9 +56,9 @@ Reference target: LEGO lists the Technic Distance Sensor at 1-200 cm with +/- 1 
 
 | Date | Sensor | Actual Distance | Measured Distance | Error | Notes |
 | --- | --- | ---: | ---: | ---: | --- |
-| TODO | Left | 20.0 cm | 20.5 cm | +0.5 cm | Within +/- 1 cm reference target |
-| TODO | Front | 20.0 cm | 21.2 cm | +1.2 cm | Slightly outside +/- 1 cm target; retest |
-| TODO | Right | 20.0 cm | 20.1 cm | +0.1 cm | Within +/- 1 cm reference target |
+| 2026-07-21 | Left | 20.0 cm | 20.5 cm | +0.5 cm | Within +/- 1 cm reference target |
+| 2026-07-21 | Front | 20.0 cm | 21.2 cm | +1.2 cm | Slightly outside +/- 1 cm target; retest |
+| 2026-07-21 | Right | 20.0 cm | 20.1 cm | +0.1 cm | Within +/- 1 cm reference target |
 
 ## Gyro / IMU Tests
 
@@ -67,21 +66,21 @@ Reference note: no official universal SPIKE Prime gyro drift rate was found. Pyb
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |
-| TODO | TODO | Heading reset at start line | TODO | TODO |
+| 2026-07-21 | MadBoy | Heading reset at start line | Procedure documented | MadBoy-specific drift not measured yet |
 | Internet reference | SPIKE Prime Hub | Bad-case drift report | Up to about 1 deg/s | Not measured on MadBoy; use only as conservative reference |
-| TODO | MadBoy | Drift after 1 minute | TODO | Measure this robot before competition |
-| TODO | MadBoy | Drift after 3 minutes | TODO | Measure this robot before competition |
+| Future measurement | MadBoy | Drift after 1 minute | Not measured yet | Measure this robot before competition |
+| Future measurement | MadBoy | Drift after 3 minutes | Not measured yet | Measure this robot before competition |
 
 ## OpenMV H7 Vision Tests
 
 | Date | Lighting | Target | Distance | Result | Notes |
 | --- | --- | --- | ---: | --- | --- |
-| TODO | TODO | Red obstacle | TODO | Detection/strategy working | Add formal accuracy count later |
-| TODO | TODO | Green obstacle | TODO | Detection/strategy working | Add formal accuracy count later |
+| 2026-07-21 | Team test lighting | Red obstacle | Not measured | Detection/strategy working | Add formal accuracy count later |
+| 2026-07-21 | Team test lighting | Green obstacle | Not measured | Detection/strategy working | Add formal accuracy count later |
 
 ## Control Tuning Notes
 
 | Date | Drive Power | Side Gain | Front Stop | Front Resume | Track Result | Notes |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO | TODO |
+| 2026-07-21 | 35 | 0.18 | 180 mm | 260 mm | Sometimes centered; sometimes closer to one wall | Tune after steering center reset improves |
 

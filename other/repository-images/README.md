@@ -1,10 +1,8 @@
 # Repository Images
 
-This folder contains placeholder images used by the main README.
+This folder contains README image assets.
 
-Replace these files when real team assets are ready:
+Current assets:
 
 - `team-logo.png` - Mechanicous team logo used in the README header.
-- `placeholder-team.svg` - replace the README references with real team photos from `../../t-photos/`.
-- `placeholder-vehicle.svg` - replace the README references with real vehicle photos from `../../v-photos/`.
-- `placeholder-diagram.svg` - replace the README references with real diagrams from `../../schemes/`.
+- `placeholder-team.svg` - temporary placeholder used only for Ali Foqha until his real team photo is added.

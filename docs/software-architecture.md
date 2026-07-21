@@ -58,7 +58,7 @@ flowchart TD
 | Init | Configure hub, motors, sensors, constants | Program starts | Devices ready | Starter code |
 | WaitForStart | Hold robot until team starts run | Init complete | Center button pressed | Starter code |
 | OpenDrive | Drive using ultrasonic wall centering | Start pressed | 3 laps complete, obstacle, or timeout | Working |
-| CornerHandling | Turn through course corners | Corner detected | Straight section found | TODO |
+| CornerHandling | Turn through course corners | Corner detected | Straight section found | Working in Open Challenge runs; continue consistency tuning |
 | ObstacleDetect | Detect red/green obstacle with OpenMV H7 | Obstacle Challenge enabled | Obstacle classified | Working |
 | AvoidRed | Pass red obstacle correctly | Red obstacle detected | Safe path restored | Working |
 | AvoidGreen | Pass green obstacle correctly | Green obstacle detected | Safe path restored | Working |

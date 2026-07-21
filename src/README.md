@@ -15,7 +15,7 @@ The project now uses:
   - Left.
   - Middle/front.
   - Right.
-- OpenMV H7 camera module for future vision/color detection.
+- OpenMV H7 camera module for vision/color detection.
 
 The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains available in Git history for reference, but the repository documentation now follows the LEGO SPIKE Prime design.
 
@@ -35,16 +35,14 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 | --- | --- |
 | `pybricks/main.py` | Active robot program |
 | `pybricks/README.md` | Pybricks setup, port constants, and tuning notes |
-| `openmv/README.md` | Planned OpenMV H7 vision module notes |
-| `openmv/main.py` | Placeholder for future OpenMV H7 code |
+| `openmv/README.md` | OpenMV H7 vision module notes |
+| `openmv/main.py` | OpenMV H7 camera code draft; publish after team review/testing |
 
-## TODO
+## Presentation Status
 
-- Confirm the exact motor ports and sensor ports in `../schemes/port-map.md`.
-- Tune steering center, steering sign, drive power, and stop thresholds.
-- Test integrated gyro heading reset and drift.
-- Decide and document how the OpenMV H7 communicates with the SPIKE Prime robot.
-- Improve and document Open Challenge lap counting details.
-- Add final Obstacle Challenge strategy.
-- Add tested values and run data in `../docs/tests.md`.
+- Motor and sensor ports are confirmed in `../schemes/port-map.md`.
+- Steering sign and front safety stop are tested; steering center and wall-centering consistency remain tuning targets.
+- Integrated gyro heading reset is documented; MadBoy-specific drift measurement remains a future calibration task.
+- OpenMV H7 communicates with the SPIKE Prime Hub through UART on port C, using PUPRemote/LPF2 Python libraries in code.
+- Open Challenge 3-lap behavior and Obstacle Challenge working status are documented in `../docs/tests.md`.
 

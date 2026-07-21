@@ -1,35 +1,31 @@
 # Pybricks Program
 
-The active program is `main.py`.
+The active robot program is `main.py`.
 
-## Hardware Assumptions
-
-The current starter code assumes:
+## Hardware
 
 - LEGO SPIKE Prime Hub.
-- One SPIKE Large Angular Motor for rear-wheel drive.
-- One SPIKE Medium Angular Motor for steering.
+- SPIKE Large Angular Motor for rear-wheel drive.
+- SPIKE Medium Angular Motor for steering.
 - SPIKE Prime integrated gyro/IMU for heading feedback.
 - Three ultrasonic sensors:
-  - Left sensor.
-  - Middle/front sensor.
-  - Right sensor.
+  - left,
+  - middle/front,
+  - right.
 - OpenMV H7 for vision/color detection.
 
 The robot uses a rear differential gear system in the drivetrain. This is a mechanical differential, not differential steering.
 
-## Default Port Map
+## Port Map
 
-Confirm these constants before running:
-
-| Device | Default Port |
+| Device | Port |
 | --- | --- |
 | SPIKE Large Angular Motor, rear-wheel drive | A |
-| SPIKE Medium Angular Motor, steering | E |
 | Left ultrasonic sensor | B |
+| OpenMV H7 via UART | C |
 | Middle/front ultrasonic sensor | D |
+| SPIKE Medium Angular Motor, steering | E |
 | Right ultrasonic sensor | F |
-| OpenMV H7 via PUPRemote/LPF2 | C |
 
 The judge-facing port map is in `../../schemes/port-map.md`.
 
@@ -46,5 +42,6 @@ The judge-facing port map is in `../../schemes/port-map.md`.
 
 ## OpenMV H7
 
-OpenMV H7 integration is planned but not implemented in the Pybricks control loop yet. Document the final communication method, wiring, and message format before using OpenMV data in competition code.
+OpenMV H7 communicates with the SPIKE Prime Hub through UART on port C. PUPRemote/LPF2 are Python libraries used by the code to package messages; they are not the communication protocol.
 
+The final integrated reader/strategy code will be added after team testing is ready to publish.

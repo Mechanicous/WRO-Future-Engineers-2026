@@ -12,11 +12,10 @@ Recommended files:
 
 The 2026 documentation rubric expects power/sensor architecture, sensor placement, calibration, and enough detail for another team to reproduce the robot.
 
-## TODO
+## Presentation Status
 
-- Confirm every SPIKE Prime port in `port-map.md`.
-- Add a visual port map.
-- Add a sensor placement diagram with distances, heights, and angles.
-- Add SPIKE Prime Hub orientation for integrated gyro heading.
+- Every SPIKE Prime port is confirmed in `port-map.md`.
+- Sensor placement is documented with distances, heights, and facing directions.
+- SPIKE Prime Hub orientation is documented for integrated gyro heading.
 - Documented OpenMV H7 camera position and UART communication through SPIKE Prime port C using PUPRemote/LPF2 Python libraries. Add field of view after calibration.
 - Documented pre-run power routine: charge the SPIKE Prime Hub battery to full, check all cables, verify the structure is steady and sturdy, and confirm all parts are in place.

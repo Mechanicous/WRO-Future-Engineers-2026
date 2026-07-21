@@ -169,8 +169,8 @@ Current size check: MadBoy fits inside the WRO Future Engineers 2026 maximum rob
 | Test | Result | What Changed |
 | --- | --- | --- |
 | Straight-line run | Completes 3 Open Challenge laps | Current drivetrain retained |
-| Corner entry | TODO | TODO |
-| Three-minute endurance | TODO | TODO |
+| Corner entry | Handles Open Challenge corners during completed 3-lap runs | Keep tuning for consistency |
+| Three-minute endurance | Battery shows no noticeable slowdown during current runs | Exact runtime not measured |
 
 ### Steering
 
@@ -211,11 +211,12 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 
 Current battery evidence is qualitative: the SPIKE Prime Hub battery lasts a long time during team testing, and no noticeable slowdown has been reported during current Open Challenge runs. Exact runtime has not been tracked yet.
 
-<div align="center">
-
-<img src="./other/repository-images/placeholder-diagram.svg" alt="Power and port map placeholder" width="720">
-
-</div>
+| Connection | Details |
+| --- | --- |
+| Power source | SPIKE Prime rechargeable battery inside the hub |
+| Motor/sensor power | Hub ports power the two motors and three ultrasonic sensors |
+| OpenMV link | UART on SPIKE Prime port C, with PUPRemote/LPF2 Python libraries packaging messages |
+| Pre-run check | Full battery, firm cables, sturdy LEGO frame, all sensors/motors/camera in place |
 
 ### Sensor Placement
 
@@ -280,8 +281,8 @@ flowchart TD
 
 | State | Purpose | Entry Condition | Exit Condition | Notes |
 | --- | --- | --- | --- | --- |
-| Init | Verify ports, sensors, motors, and battery | Program start | Hardware ready | TODO |
-| WaitForStart | Keep robot still before official run | Hub center button or start condition | Start pressed | TODO |
+| Init | Verify ports, sensors, motors, and battery | Program start | Hardware ready | Implemented in starter code |
+| WaitForStart | Keep robot still before official run | Hub center button or start condition | Start pressed | Implemented in starter code |
 | OpenChallengeDrive | Complete 3 laps without colored obstacles | Open Challenge run starts | 3 laps complete or timeout | Working |
 | WallCentering | Maintain position using side ultrasonic sensors | Driving straight/curving | Corner or obstacle detected | Starter code exists |
 | ObstacleDetect | Detect obstacle approach with front sensor and OpenMV H7 vision | Obstacle Challenge | Obstacle classified | Working |
@@ -309,12 +310,12 @@ Judges look for the reasoning behind the design, not only the final robot.
 
 | Decision | Options Compared | Chosen Option | Why | Test Evidence |
 | --- | --- | --- | --- | --- |
-| Controller platform | Arduino custom electronics vs LEGO SPIKE Prime | LEGO SPIKE Prime | Faster iteration, integrated battery, robust ports, Pybricks support | TODO |
-| Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | TODO |
-| Distance sensing | VL53L1X ToF vs LEGO ultrasonic | Three LEGO ultrasonic sensors | Matches new LEGO build and simple wall-distance measurements | TODO |
-| Heading feedback | External IMU vs SPIKE Prime integrated gyro | SPIKE Prime integrated gyro | Built into the hub and available through Pybricks | TODO |
-| Vision sensor | No camera vs OpenMV H7 | OpenMV H7 | Supports red/green obstacle detection with onboard vision processing and UART communication to the SPIKE Hub using PUPRemote/LPF2 libraries | TODO |
-| Navigation strategy | Gyro heading hold vs ultrasonic wall centering vs fused approach | Ultrasonic wall centering plus integrated gyro feedback | Uses current sensors while keeping heading data available | TODO |
+| Controller platform | Arduino custom electronics vs LEGO SPIKE Prime | LEGO SPIKE Prime | Faster iteration, integrated battery, robust ports, Pybricks support | Current robot completes 3 Open Challenge laps |
+| Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | Active code in `src/pybricks/main.py` |
+| Distance sensing | VL53L1X ToF vs LEGO ultrasonic | Three LEGO ultrasonic sensors | Matches new LEGO build and simple wall-distance measurements | 20 cm calibration recorded |
+| Heading feedback | External IMU vs SPIKE Prime integrated gyro | SPIKE Prime integrated gyro | Built into the hub and available through Pybricks | Orientation documented; MadBoy drift measurement still needed |
+| Vision sensor | No camera vs OpenMV H7 | OpenMV H7 | Supports red/green obstacle detection with onboard vision processing and UART communication to the SPIKE Hub using PUPRemote/LPF2 libraries | Obstacle detection and strategy working |
+| Navigation strategy | Gyro heading hold vs ultrasonic wall centering vs fused approach | Ultrasonic wall centering plus integrated gyro feedback | Uses current sensors while keeping heading data available | Current wall-centering behavior documented |
 
 ### Iteration Log
 
@@ -322,17 +323,17 @@ Judges look for the reasoning behind the design, not only the final robot.
 | --- | --- | --- | --- |
 | v0.1 | Arduino prototype with BMI160 and VL53L1X sensors | First heading-hold experiment | Git history |
 | v0.2 | Switched to LEGO SPIKE Prime, Pybricks, and 3 ultrasonic sensors | Simpler integrated robot platform | Current README and source |
-| v0.3 | TODO | TODO | TODO |
+| v0.3 | Added integrated gyro, OpenMV H7, confirmed ports, dimensions, tests, and BOM | Prepared repository for presentation | Current README, docs, photos, and test logs |
 
 ### Risks
 
 | Risk | Impact | Mitigation | Test |
 | --- | --- | --- | --- |
-| Ultrasonic reflections | Wrong distance near angled walls or obstacles | Use repeated tests, clamp steering, tune thresholds | TODO |
-| Gyro heading drift | Turns or lap logic may become inaccurate | Reset at start and test drift over time | TODO |
-| OpenMV lighting sensitivity | Red/green detection may fail under different lighting | Calibrate thresholds on the real field | TODO |
+| Ultrasonic reflections | Wrong distance near angled walls or obstacles | Use repeated tests, clamp steering, tune thresholds | 20 cm calibration recorded; more distances recommended |
+| Gyro heading drift | Turns or lap logic may become inaccurate | Reset at start and test drift over time | Internet reference documented; MadBoy measurement still needed |
+| OpenMV lighting sensitivity | Red/green detection may fail under different lighting | Calibrate thresholds on the real field | Detection/strategy working; formal accuracy count still needed |
 | Steering sign reversed | Robot steers into wall | Test at low speed and flip `STEERING_SIGN` if needed | Current sign passes: closer to left wall steers right/away |
-| LEGO structure flex | Sensor angle or steering changes during run | Reinforce mounts and inspect after runs | TODO |
+| LEGO structure flex | Sensor angle or steering changes during run | Reinforce mounts and inspect after runs | Pre-run structure check documented |
 | Hub battery low | Motor speed changes during run | Charge to full before each run and check cable/structure stability | No noticeable slowdown reported; exact runtime not tracked |
 
 Detailed decision records belong in [`docs/decisions.md`](./docs/decisions.md).
@@ -409,7 +410,7 @@ Add public video links in [`video/video.md`](./video/video.md).
 | Video | Link | Robot Version | Date |
 | --- | --- | --- | --- |
 | Open Challenge run | [YouTube](https://youtu.be/ipjWBAg2dVM) | MadBoy | July 21, 2026 |
-| Obstacle Challenge run | TODO | TODO | TODO |
+| Obstacle Challenge run | Not published yet | MadBoy | Evidence pending |
 
 ---
 
@@ -431,7 +432,7 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 
 | Folder | Purpose |
 | --- | --- |
-| [`src/`](./src/) | Pybricks MicroPython robot code and OpenMV H7 vision placeholder |
+| [`src/`](./src/) | Pybricks MicroPython robot code and OpenMV H7 vision notes |
 | [`schemes/`](./schemes/) | SPIKE Prime port map, gyro/camera notes, sensor placement, and power/connection diagrams |
 | [`models/`](./models/) | Studio 2.0 LEGO model, build instructions, build photos, and reproducible assembly notes |
 | [`v-photos/`](./v-photos/) | Vehicle photos from all required angles |

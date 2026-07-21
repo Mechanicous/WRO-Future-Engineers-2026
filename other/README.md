@@ -6,7 +6,7 @@ Suggested files:
 
 - `bill-of-materials.md`
 - `calibration.md`
-- `repository-images/` for README graphics and placeholders
+- `repository-images/` for README graphics and team assets
 - hardware datasheets
 - datasets or sample sensor logs
 - setup notes for cameras, boards, or computers

@@ -20,7 +20,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | Robot Version | Steering Center Method | Result | Notes |
 | --- | --- | --- | --- | --- |
-| TODO | MadBoy | Center steering before straight run | Drifts left or right depending on the last steering adjustment | Needs repeatable centering reset/calibration before each run |
+| 2026-07-21 | MadBoy | Center steering before straight run | Drifts left or right depending on the last steering adjustment | Needs repeatable centering reset/calibration before each run |
 
 ## Steering Direction
 
@@ -31,7 +31,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | STEERING_SIGN | Result | Notes |
 | --- | ---: | --- | --- |
-| TODO | 1 | Pass: closer to left wall makes robot steer right/away | Keep current sign unless linkage/code direction changes |
+| 2026-07-21 | 1 | Pass: closer to left wall makes robot steer right/away | Keep current sign unless linkage/code direction changes |
 
 ## Ultrasonic Sensors
 
@@ -57,10 +57,10 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | Robot Version | Test | Result | Notes |
 | --- | --- | --- | --- | --- |
-| TODO | TODO | Heading reset | TODO | TODO |
+| 2026-07-21 | MadBoy | Heading reset | Procedure documented | Hub lies flat with USB port facing left |
 | Internet reference | SPIKE Prime Hub | Bad-case drift report | Up to about 1 deg/s | Not measured on MadBoy |
-| TODO | TODO | Still drift test | TODO | TODO |
-| TODO | TODO | Driving drift test | TODO | TODO |
+| Future measurement | MadBoy | Still drift test | Not measured yet | Measure before competition |
+| Future measurement | MadBoy | Driving drift test | Not measured yet | Measure before competition |
 
 ## OpenMV H7 Vision
 
@@ -71,8 +71,8 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | Lighting | Target | Threshold/Model | Result | Notes |
 | --- | --- | --- | --- | --- | --- |
-| TODO | TODO | Red obstacle | TODO | TODO | TODO |
-| TODO | TODO | Green obstacle | TODO | TODO | TODO |
+| 2026-07-21 | Team test lighting | Red obstacle | OpenMV color strategy | Detection/strategy working | Formal accuracy count still needed |
+| 2026-07-21 | Team test lighting | Green obstacle | OpenMV color strategy | Detection/strategy working | Formal accuracy count still needed |
 
 ## Control Tuning
 
@@ -80,5 +80,5 @@ Record values and behavior after each tuning change.
 
 | Date | DRIVE_POWER | SIDE_BALANCE_GAIN | FRONT_STOP_MM | FRONT_RESUME_MM | Test Result | Notes |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | Sometimes centered; sometimes closer to one wall than the other | Tune side gain after steering center reset is more repeatable |
+| 2026-07-21 | 35 | 0.18 | 180 mm | 260 mm | Sometimes centered; sometimes closer to one wall than the other | Tune side gain after steering center reset is more repeatable |
 

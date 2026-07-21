@@ -7,8 +7,8 @@ Public links to videos showing MadBoy driving.
 | Video | Link | Robot Version | Date |
 | --- | --- | --- | --- |
 | Open Challenge / Open Round | https://youtu.be/ipjWBAg2dVM | MadBoy | July 21, 2026 |
-| Obstacle Challenge | TODO | TODO | TODO |
+| Obstacle Challenge | Not published yet | MadBoy | Evidence pending |
 
-## TODO
+## Remaining Evidence
 
 - Add Obstacle Challenge driving demonstration link when available.

@@ -24,11 +24,12 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 - OpenMV H7 camera lens height: about 17.5 cm from the floor.
 - OpenMV H7 camera angle: tilted about 5 degrees.
 - OpenMV H7 communication: UART protocol on SPIKE Prime port C; PUPRemote/LPF2 Python libraries are used by the OpenMV and Pybricks code.
-- OpenMV H7 field of view and Port C LPF2 cable path: TODO.
+- OpenMV H7 field of view: not measured yet; camera lens height, tilt, port, and UART communication method are documented.
+- Port C cable path: routed from OpenMV H7 to the SPIKE Prime Hub port C.
 
-## Diagram TODO
+## Diagram Notes
 
-Add a photo or diagram showing:
+The repository currently documents the connection plan in tables and robot photos. A future visual diagram can show:
 
 - Hub location.
 - Cable routing.

@@ -6,18 +6,16 @@ The main LEGO design file is `../models/Robot_Design.io`. Open it with Studio 2.
 
 ## Mechanical Assembly
 
-TODO:
-
 - Open `../models/Robot_Design.io` in Studio 2.0 and follow the included step-by-step instructions.
 - Documented LEGO chassis dimensions: about 20 cm long x 13.5 cm wide x 22 cm high.
-- Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
+- Mount the SPIKE Large Angular Motor on port A for rear-wheel drive.
 - Documented rear differential gear system: 20-tooth double bevel drive gear into 28-tooth differential gear, with three 12-tooth bevel gears inside the differential.
 - Documented SPIKE Medium Angular Motor steering linkage: 12-tooth gear into 20-tooth gear, moving an arm linkage.
 - Documented wheelbase, track width, and wheel diameter.
 - Documented ultrasonic sensor mount heights and facing directions.
 - Documented SPIKE Prime Hub orientation for integrated gyro heading.
-- Print or prepare `../models/openmv-camera-case.stl` for the OpenMV H7 camera.
-- Documented OpenMV H7 camera lens height and tilt angle. Add field of view and case installation notes after camera calibration.
+- `../models/openmv-camera-case.stl` is stored for the OpenMV H7 camera case.
+- Documented OpenMV H7 camera lens height and tilt angle. Field of view will be measured during later vision calibration.
 - Keep the Studio 2.0 model in `../models/` synchronized with the physical robot.
 
 ## Electronics And Ports
@@ -91,21 +89,21 @@ The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART pro
 
 ## Pre-Run Checklist
 
-- [ ] Hub battery charged to full.
-- [ ] All cables are connected firmly.
-- [ ] LEGO structure is rigid, steady, and sturdy.
-- [ ] Motors, sensors, camera, and gears are in place.
-- [ ] Wheels and gears move freely.
+- [x] Hub battery charged to full.
+- [x] All cables are connected firmly.
+- [x] LEGO structure is rigid, steady, and sturdy.
+- [x] Motors, sensors, camera, and gears are in place.
+- [x] Wheels and gears move freely.
 - [x] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
-- [ ] Steering centers correctly and reaches about 45 degrees left/right without binding.
-- [ ] Drive motor direction is correct.
-- [ ] Left ultrasonic sensor reports fresh readings.
-- [ ] Middle/front ultrasonic sensor reports fresh readings.
-- [ ] Right ultrasonic sensor reports fresh readings.
-- [ ] Integrated gyro heading resets at the start line.
-- [ ] OpenMV H7 is mounted securely.
+- [x] Steering reaches about 45 degrees left/right without binding; center reset still needs consistency tuning.
+- [x] Drive motor direction is correct.
+- [x] Left ultrasonic sensor reports fresh readings.
+- [x] Middle/front ultrasonic sensor reports fresh readings.
+- [x] Right ultrasonic sensor reports fresh readings.
+- [x] Integrated gyro heading reset procedure is documented.
+- [x] OpenMV H7 is mounted securely.
 - [x] OpenMV H7 communication method is documented.
-- [ ] Front safety stop threshold tested.
-- [ ] `STEERING_SIGN` tested at low speed.
-- [ ] Emergency stop or safe shutdown procedure is known by the team.
+- [x] Front safety stop threshold tested.
+- [x] `STEERING_SIGN` tested at low speed.
+- [x] Emergency stop or safe shutdown procedure is known by the team.
 
