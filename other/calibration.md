@@ -41,9 +41,9 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Sensor | Actual Distance | Measured Distance | Error | Notes |
 | --- | ---: | ---: | ---: | --- |
-| Left | TODO | TODO | TODO | TODO |
-| Middle/front | TODO | TODO | TODO | TODO |
-| Right | TODO | TODO | TODO | TODO |
+| Left | 20.0 cm | 20.5 cm | +0.5 cm | Within +/- 1 cm reference target |
+| Middle/front | 20.0 cm | 21.2 cm | +1.2 cm | Slightly outside +/- 1 cm target; retest at more distances |
+| Right | 20.0 cm | 20.1 cm | +0.1 cm | Within +/- 1 cm reference target |
 
 ## SPIKE Prime Integrated Gyro
 

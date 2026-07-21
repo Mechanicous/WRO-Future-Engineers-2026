@@ -386,7 +386,7 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 
 | Test | Metric | Target | Current Result |
 | --- | --- | --- | --- |
-| Ultrasonic accuracy | Error at known distances | TODO | TODO |
+| Ultrasonic accuracy | Error at known distances | +/- 1 cm reference target | 20 cm test: left +0.5 cm, front +1.2 cm, right +0.1 cm |
 | Gyro heading drift | Degrees drift over time | TODO | TODO |
 | Front safety stop | Stop distance from obstacle | TODO | TODO |
 | Steering center | Straight run drift | TODO | TODO |
@@ -449,7 +449,7 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 - [ ] Engineering journal tells the design story and includes reasoning.
 - [x] Mechanical design includes LEGO model/build files, photos, and dimensions.
 - [x] SPIKE Prime port map and sensor placement measurements are included.
-- [ ] Ultrasonic sensor calibration is documented.
+- [x] Ultrasonic sensor calibration is documented.
 - [ ] Integrated gyro heading reset/drift tests are documented.
 - [x] OpenMV H7 mounting, calibration plan, and communication method are documented.
 - [ ] Software architecture includes flowchart/state machine and obstacle strategy.

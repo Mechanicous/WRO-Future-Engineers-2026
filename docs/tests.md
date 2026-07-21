@@ -10,6 +10,7 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | --- | --- | --- | --- | --- |
 | TODO | TODO | TODO | TODO | TODO |
 | TODO | MadBoy | Open Challenge 3-lap run | Completes 3 laps | Continue tuning consistency |
+| TODO | MadBoy | Ultrasonic 20 cm accuracy check | Left 20.5 cm, front 21.2 cm, right 20.1 cm | Retest front sensor and collect more distances |
 
 ## Recommended Tests
 
@@ -48,9 +49,9 @@ Reference target: LEGO lists the Technic Distance Sensor at 1-200 cm with +/- 1 
 
 | Date | Sensor | Actual Distance | Measured Distance | Error | Notes |
 | --- | --- | ---: | ---: | ---: | --- |
-| TODO | Left | TODO | TODO | TODO | TODO |
-| TODO | Front | TODO | TODO | TODO | TODO |
-| TODO | Right | TODO | TODO | TODO | TODO |
+| TODO | Left | 20.0 cm | 20.5 cm | +0.5 cm | Within +/- 1 cm reference target |
+| TODO | Front | 20.0 cm | 21.2 cm | +1.2 cm | Slightly outside +/- 1 cm target; retest |
+| TODO | Right | 20.0 cm | 20.1 cm | +0.1 cm | Within +/- 1 cm reference target |
 
 ## Gyro / IMU Tests
 
