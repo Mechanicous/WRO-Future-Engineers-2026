@@ -391,7 +391,7 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Front safety stop | Stop distance from obstacle | Object at 10 cm | Robot stopped at about 10 cm, +/- 1 cm |
 | Steering center | Straight run drift | Straight run after centering | Drifts left or right depending on the last steering adjustment |
 | Steering sign | Correct response to left/right offset | Closer to left wall should steer right/away | Passes with `STEERING_SIGN = 1` |
-| Wall centering | Average side-distance error | TODO | TODO |
+| Wall centering | Average side-distance error | Stay between walls during Open Challenge | Sometimes centered; sometimes closer to one wall, so side gain and steering center need tuning |
 | Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
 | OpenMV color detection | Red/green classification accuracy | TODO | TODO |
 | Obstacle Challenge | Obstacle handling and score | TODO | In progress |

@@ -46,7 +46,7 @@ flowchart TD
 | Distance reading | `read_distance()` validates ultrasonic readings | Add smoothing if needed |
 | Heading reading | `hub.imu.reset_heading()` and `hub.imu.heading()` use the integrated gyro | Test drift and hub orientation |
 | Front safety | Stop/resume thresholds with hysteresis | Tune thresholds on track |
-| Wall centering | Left/right distance difference with gain | Tune gain and steering sign |
+| Wall centering | Left/right distance difference with gain | Current result is sometimes centered and sometimes closer to one wall; tune gain after improving steering center reset |
 | Run control | Button start and 180-second timeout | Add official lap/end behavior |
 | OpenMV vision | OpenMV H7 communicates over UART on SPIKE Prime port C; PUPRemote/LPF2 libraries package the data | Add final red/green obstacle avoidance behavior |
 | Obstacle challenge | Not implemented yet | Add obstacle classification and avoidance |

@@ -79,5 +79,5 @@ Record values and behavior after each tuning change.
 
 | Date | DRIVE_POWER | SIDE_BALANCE_GAIN | FRONT_STOP_MM | FRONT_RESUME_MM | Test Result | Notes |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| TODO | TODO | TODO | TODO | TODO | TODO | TODO |
+| TODO | TODO | TODO | TODO | TODO | Sometimes centered; sometimes closer to one wall than the other | Tune side gain after steering center reset is more repeatable |
 
