@@ -4,6 +4,13 @@ Record the calibration procedure used before runs.
 
 Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor-reference.md`.
 
+## Pre-Run Power And Structure Check
+
+- Charge the SPIKE Prime Hub battery to full.
+- Check that all cables are connected firmly.
+- Make sure the robot is steady and sturdy.
+- Confirm that motors, ultrasonic sensors, OpenMV H7 camera, wheels, and gears are in place.
+
 ## Steering Center
 
 - Put the wheels straight before starting the program.

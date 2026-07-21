@@ -22,7 +22,7 @@ TODO:
 
 ## Electronics And Ports
 
-The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultrasonic sensors, the hub's integrated gyro/IMU, and a planned OpenMV H7 camera. The hub battery powers LEGO devices connected to the hub.
+The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultrasonic sensors, the hub's integrated gyro/IMU, and a planned OpenMV H7 camera. The hub battery powers LEGO devices connected to the hub. Before each run, charge the hub battery to full, check all cables, make sure the LEGO structure is steady and sturdy, and confirm that every part is in place.
 
 Keep the port map updated in `../schemes/port-map.md`.
 
@@ -89,8 +89,10 @@ The maximum steering range is about 45 degrees left and 45 degrees right. The Py
 
 ## Pre-Run Checklist
 
-- [ ] Hub battery charged.
-- [ ] LEGO structure is rigid.
+- [ ] Hub battery charged to full.
+- [ ] All cables are connected firmly.
+- [ ] LEGO structure is rigid, steady, and sturdy.
+- [ ] Motors, sensors, camera, and gears are in place.
 - [ ] Wheels and gears move freely.
 - [ ] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
 - [ ] Steering centers correctly and reaches about 45 degrees left/right without binding.

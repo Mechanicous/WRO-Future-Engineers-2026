@@ -19,4 +19,4 @@ The 2026 documentation rubric expects power/sensor architecture, sensor placemen
 - Add a sensor placement diagram with distances, heights, and angles.
 - Add SPIKE Prime Hub orientation for integrated gyro heading.
 - Add OpenMV H7 camera position, viewing angle, and communication method.
-- Add notes about the SPIKE Prime rechargeable battery and pre-run charging.
+- Documented pre-run power routine: charge the SPIKE Prime Hub battery to full, check all cables, verify the structure is steady and sturdy, and confirm all parts are in place.

@@ -207,7 +207,7 @@ Keep the active port map in [`schemes/port-map.md`](./schemes/port-map.md).
 
 ### Power Distribution
 
-The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered Up motors/sensors through the hub ports. Add a diagram or photo showing the hub, motor ports, sensor ports, and cable routing in [`schemes/`](./schemes/).
+The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered Up motors/sensors through the hub ports. Before each run, the team charges the hub battery to full, checks that every cable is connected, confirms that the LEGO structure is steady and sturdy, and verifies that all motors, sensors, and camera parts are in place.
 
 <div align="center">
 
@@ -234,7 +234,7 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 | Left/right sensor noisy or out of range | Clamp steering correction | Keep steering limited |
 | Gyro heading drift | Heading check becomes inaccurate | Reset at start and record drift tests |
 | OpenMV unavailable or uncalibrated | Vision-based obstacle classification is unavailable | Fall back to safe behavior until integration is tested |
-| Low hub battery | TODO: document observed behavior | Charge before official run |
+| Low hub battery | Battery not fully charged before a run | Charge the SPIKE Prime Hub battery to full before testing or official runs |
 
 ---
 
@@ -329,7 +329,7 @@ Judges look for the reasoning behind the design, not only the final robot.
 | OpenMV lighting sensitivity | Red/green detection may fail under different lighting | Calibrate thresholds on the real field | TODO |
 | Steering sign reversed | Robot steers into wall | Test at low speed and flip `STEERING_SIGN` | TODO |
 | LEGO structure flex | Sensor angle or steering changes during run | Reinforce mounts and inspect after runs | TODO |
-| Hub battery low | Motor speed changes during run | Charge before tests and record battery state | TODO |
+| Hub battery low | Motor speed changes during run | Charge to full before each run and check cable/structure stability | Current pre-run routine |
 
 Detailed decision records belong in [`docs/decisions.md`](./docs/decisions.md).
 
