@@ -391,7 +391,6 @@ Add public video links in [`video/video.md`](./video/video.md).
 | --- | --- | --- | --- |
 | Open Challenge run | [YouTube](https://youtu.be/ipjWBAg2dVM) | MadBoy | 21/7 |
 | Obstacle Challenge run | TODO | TODO | TODO |
-| Build overview | TODO | TODO | TODO |
 
 ---
 
