@@ -145,7 +145,7 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | Chassis | LEGO SPIKE Prime / Technic construction, about 20 cm long x 13.5 cm wide x 22 cm high | Fast rebuilds, repeatable geometry, simpler maintenance, and within the WRO FE 30 cm x 20 cm x 30 cm size limit | [`v-photos/`](./v-photos/), [`models/Robot_Design.io`](./models/Robot_Design.io) |
 | Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Wheel diameter about 5.5 cm; add gear ratio and speed tests |
 | Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
-| Sensors | Left/middle/right ultrasonic sensors, integrated gyro, planned OpenMV H7 | Distance, heading feedback, and future vision/color detection | Add sensor placement and camera mounting diagrams |
+| Sensors | Left/middle/right ultrasonic sensors, integrated gyro, OpenMV H7 | Distance, heading feedback, and vision/color detection | Sensor and camera heights documented below |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
 
 ### Powertrain
@@ -219,11 +219,11 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 
 | Sensor | Position | Purpose | Calibration |
 | --- | --- | --- | --- |
-| Left ultrasonic | Left side | Wall distance and lane centering | Test readings at known distances |
-| Middle/front ultrasonic | Middle/front | Front safety stop and obstacle approach distance | Test close-range stop threshold |
-| Right ultrasonic | Right side | Wall distance and lane centering | Test readings at known distances |
+| Left ultrasonic | Left side, about 5 cm from the floor, facing outward to the left | Wall distance and lane centering | Test readings at known distances |
+| Middle/front ultrasonic | Middle/front, about 6 cm from the floor, facing forward | Front safety stop and obstacle approach distance | Test close-range stop threshold |
+| Right ultrasonic | Right side, about 5 cm from the floor, facing outward to the right | Wall distance and lane centering | Test readings at known distances |
 | Integrated gyro/IMU | Inside SPIKE Prime Hub | Heading tracking and turn feedback | Reset heading at start line and test drift |
-| OpenMV H7 camera | TODO | Red/green obstacle detection and vision strategy | Calibrate thresholds after mounting |
+| OpenMV H7 camera | Lens about 17.5 cm from the floor, tilted about 5 degrees | Red/green obstacle detection and vision strategy | Calibrate thresholds after mounting |
 
 ### Failure Handling
 
@@ -343,7 +343,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 - Open [`models/Robot_Design.io`](./models/Robot_Design.io) in Studio 2.0 and follow the included step-by-step building instructions.
 - Add extra step photos to [`models/`](./models/) if a physical assembly step needs more explanation.
-- Record hub position and sensor heights. Current measured chassis dimensions are documented in the mobility section.
+- Record hub position. Current measured chassis dimensions and sensor heights are documented in the mobility and sensor sections.
 - Show how the hub is secured and how cables are routed.
 
 ### Step 2: Mount Motors And Steering
@@ -358,12 +358,12 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 - Left ultrasonic sensor faces the left wall.
 - Middle/front ultrasonic sensor faces forward.
 - Right ultrasonic sensor faces the right wall.
-- Measure and record sensor height, angle, and offset from the robot centerline.
+- Side ultrasonic sensors are about 5 cm from the floor and face outward. The middle/front ultrasonic sensor is about 6 cm from the floor and faces forward.
 
 ### Step 4: Mount OpenMV H7
 
-- Choose a camera position with a clear view of traffic signs/obstacles.
-- Record camera height, angle, and field of view.
+- Mount the OpenMV H7 with the lens about 17.5 cm from the floor and tilted about 5 degrees.
+- Record camera field of view after calibration.
 - Document the communication method between OpenMV H7 and the main robot logic.
 
 ### Step 5: Upload Pybricks Code
@@ -446,7 +446,7 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 - [ ] README explains the LEGO SPIKE Prime robot clearly and links to all evidence.
 - [ ] Engineering journal tells the design story and includes reasoning.
 - [x] Mechanical design includes LEGO model/build files, photos, and dimensions.
-- [ ] SPIKE Prime port map and sensor placement diagrams are included.
+- [x] SPIKE Prime port map and sensor placement measurements are included.
 - [ ] Ultrasonic sensor calibration is documented.
 - [ ] Integrated gyro heading reset/drift tests are documented.
 - [ ] OpenMV H7 mounting, calibration, and communication method are documented.

@@ -14,16 +14,16 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 
 ## Sensor Placement Notes
 
-Add measurements after the build is finalized:
-
-- Left ultrasonic height from floor: TODO.
-- Left ultrasonic angle relative to robot centerline: TODO.
-- Middle/front ultrasonic height from floor: TODO.
-- Middle/front ultrasonic offset from robot centerline: TODO.
-- Right ultrasonic height from floor: TODO.
-- Right ultrasonic angle relative to robot centerline: TODO.
+- Left ultrasonic height from floor: about 5 cm.
+- Left ultrasonic angle relative to robot centerline: faces outward to the left.
+- Middle/front ultrasonic height from floor: about 6 cm.
+- Middle/front ultrasonic offset from robot centerline: centered at the front.
+- Right ultrasonic height from floor: about 5 cm.
+- Right ultrasonic angle relative to robot centerline: faces outward to the right.
 - SPIKE Prime Hub orientation and top/front direction: TODO.
-- OpenMV H7 camera height, angle, field of view, and Port C LPF2 cable path: TODO.
+- OpenMV H7 camera lens height: about 17.5 cm from the floor.
+- OpenMV H7 camera angle: tilted about 5 degrees.
+- OpenMV H7 field of view and Port C LPF2 cable path: TODO.
 
 ## Diagram TODO
 
