@@ -77,7 +77,7 @@ Use this file to show why the team chose each design, not only what the final de
 | Ultrasonic readings bounce on angled walls | Robot may steer incorrectly | Test at many distances and add filtering if needed | TODO |
 | Steering motor center depends on last adjustment | Robot drifts left or right after centering | Add a repeatable center reset/calibration procedure before each run | Current test shows drift direction depends on last steering adjustment |
 | Rear differential binds or slips | Robot loses speed or turns inconsistently | Check gear alignment and test both rear wheels under load | TODO |
-| Steering sign is reversed | Robot steers into walls | Low-speed sign test and `STEERING_SIGN` constant | In starter code |
+| Steering sign is reversed | Robot steers into walls | Low-speed sign test and `STEERING_SIGN` constant | Tested: `STEERING_SIGN = 1` steers away from left wall |
 | Steering linkage binds at full lock | Front wheels may not reach commanded angle | Limit steering to about 45 degrees left/right and inspect the 12-tooth to 20-tooth gear linkage | Current code clamps to +/-45 degrees |
 | Gyro heading drifts | Turns or lap logic become inaccurate | Reset heading at start and run drift tests | TODO |
 | OpenMV lighting changes | Red/green classification becomes unreliable | Calibrate thresholds under field lighting | TODO |

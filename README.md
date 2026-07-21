@@ -329,7 +329,7 @@ Judges look for the reasoning behind the design, not only the final robot.
 | Ultrasonic reflections | Wrong distance near angled walls or obstacles | Use repeated tests, clamp steering, tune thresholds | TODO |
 | Gyro heading drift | Turns or lap logic may become inaccurate | Reset at start and test drift over time | TODO |
 | OpenMV lighting sensitivity | Red/green detection may fail under different lighting | Calibrate thresholds on the real field | TODO |
-| Steering sign reversed | Robot steers into wall | Test at low speed and flip `STEERING_SIGN` | TODO |
+| Steering sign reversed | Robot steers into wall | Test at low speed and flip `STEERING_SIGN` if needed | Current sign passes: closer to left wall steers right/away |
 | LEGO structure flex | Sensor angle or steering changes during run | Reinforce mounts and inspect after runs | TODO |
 | Hub battery low | Motor speed changes during run | Charge to full before each run and check cable/structure stability | Current pre-run routine |
 
@@ -390,7 +390,7 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Gyro heading drift | Degrees drift over time | Measure MadBoy; internet bad-case reference up to about 1 deg/s | Not measured yet on MadBoy |
 | Front safety stop | Stop distance from obstacle | Object at 10 cm | Robot stopped at about 10 cm, +/- 1 cm |
 | Steering center | Straight run drift | Straight run after centering | Drifts left or right depending on the last steering adjustment |
-| Steering sign | Correct response to left/right offset | TODO | TODO |
+| Steering sign | Correct response to left/right offset | Closer to left wall should steer right/away | Passes with `STEERING_SIGN = 1` |
 | Wall centering | Average side-distance error | TODO | TODO |
 | Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
 | OpenMV color detection | Red/green classification accuracy | TODO | TODO |

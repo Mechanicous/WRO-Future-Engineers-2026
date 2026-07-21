@@ -13,6 +13,7 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | TODO | MadBoy | Ultrasonic 20 cm accuracy check | Left 20.5 cm, front 21.2 cm, right 20.1 cm | Retest front sensor and collect more distances |
 | TODO | MadBoy | Front safety stop | Object at 10 cm; robot stopped at about 10 cm +/- 1 cm | Keep front stop threshold conservative |
 | TODO | MadBoy | Steering center straight-run check | Robot drifts left or right depending on the last steering adjustment | Improve repeatable steering center reset/calibration |
+| TODO | MadBoy | Steering sign test | When closer to the left wall, robot steers right/away from the wall | Keep `STEERING_SIGN = 1` |
 
 ## Recommended Tests
 

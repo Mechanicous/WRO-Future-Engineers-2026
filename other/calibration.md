@@ -30,7 +30,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 
 | Date | STEERING_SIGN | Result | Notes |
 | --- | ---: | --- | --- |
-| TODO | TODO | TODO | TODO |
+| TODO | 1 | Pass: closer to left wall makes robot steer right/away | Keep current sign unless linkage/code direction changes |
 
 ## Ultrasonic Sensors
 
