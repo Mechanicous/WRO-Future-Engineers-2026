@@ -415,15 +415,15 @@ Add public video links in [`video/video.md`](./video/video.md).
 
 ## Cost Report
 
-Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bill-of-materials.md).
+Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bill-of-materials.md). The current robot used parts that were already available to the team, so the actual team spending for the listed robot electronics is 0 USD. The replacement-cost estimate below is for another team buying the main electronics separately.
 
 | Category | Estimated Cost | Notes |
 | --- | ---: | --- |
-| LEGO SPIKE Prime set/parts | TODO | Hub, motors, beams, frames, wheels |
-| Sensors | TODO | Three ultrasonic sensors, integrated gyro, OpenMV H7 |
-| Power | TODO | SPIKE Prime rechargeable battery and charger |
-| Extra LEGO parts | TODO | Gears, beams, pins, wheels, mounts |
-| Total | TODO | TODO |
+| Actual team spending | 0 USD | Parts were already available |
+| Main electronics replacement estimate | about 669 USD | Hub, Large Angular Motor, Medium Angular Motor, three ultrasonic sensors, OpenMV H7 |
+| LEGO structural parts | Variable / already available | Beams, frames, wheels, gears, differential |
+| Power | Included / already available | SPIKE Prime rechargeable battery and charger/cable |
+| Total replacement estimate | about 669 USD plus variable LEGO structure cost | See detailed BOM |
 
 ---
 
