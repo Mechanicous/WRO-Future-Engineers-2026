@@ -164,7 +164,9 @@ The robot uses a SPIKE Medium Angular Motor for steering. Explain the steering l
 
 ### Chassis
 
-Add build photos and any digital LEGO model files to [`models/`](./models/). Explain:
+The robot design is available as a Studio 2.0 file at [`models/Robot_Design.io`](./models/Robot_Design.io). It includes the step-by-step building instructions for MadBoy.
+
+Use the model and build photos in [`models/`](./models/) to explain:
 
 - Why the LEGO frame shape was chosen.
 - How the hub, motors, and ultrasonic sensors are mounted.
@@ -325,7 +327,8 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 ### Step 1: Build The LEGO Chassis
 
-- Add LEGO model files or step photos to [`models/`](./models/).
+- Open [`models/Robot_Design.io`](./models/Robot_Design.io) in Studio 2.0 and follow the included step-by-step building instructions.
+- Add extra step photos to [`models/`](./models/) if a physical assembly step needs more explanation.
 - Record wheelbase, track width, hub position, and sensor heights.
 - Show how the hub is secured and how cables are routed.
 
@@ -412,7 +415,7 @@ Maintain the full bill of materials in [`other/bill-of-materials.md`](./other/bi
 | --- | --- |
 | [`src/`](./src/) | Pybricks MicroPython robot code and OpenMV H7 vision placeholder |
 | [`schemes/`](./schemes/) | SPIKE Prime port map, gyro/camera notes, sensor placement, and power/connection diagrams |
-| [`models/`](./models/) | LEGO digital model files, build photos, or reproducible assembly notes |
+| [`models/`](./models/) | Studio 2.0 LEGO model, build instructions, build photos, and reproducible assembly notes |
 | [`v-photos/`](./v-photos/) | Vehicle photos from all required angles |
 | [`t-photos/`](./t-photos/) | Team photos |
 | [`video/`](./video/) | Demo video links |

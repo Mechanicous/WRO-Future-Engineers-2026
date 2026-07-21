@@ -10,9 +10,15 @@ Useful formats:
 - Dimension drawings for wheelbase, track width, and sensor placement.
 - Custom part CAD only if non-LEGO parts are used.
 
+## Current Model
+
+- `Robot_Design.io` - LEGO Studio 2.0 model for MadBoy. This file includes the step-by-step building instructions for the robot.
+
+Open this file with Studio 2.0 to inspect the LEGO design and follow the assembly steps.
+
 ## TODO
 
-- Add LEGO chassis model files or build photos.
+- Keep `Robot_Design.io` updated when the physical robot changes.
 - Add steering linkage photos and dimensions.
 - Add rear differential gear system photos, gear layout, and gear ratio.
 - Add ultrasonic sensor mount photos and measurements.

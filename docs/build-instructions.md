@@ -2,10 +2,13 @@
 
 Use this document to make the LEGO SPIKE Prime robot reproducible.
 
+The main LEGO design file is `../models/Robot_Design.io`. Open it with Studio 2.0 to view the MadBoy model and follow the included step-by-step building instructions.
+
 ## Mechanical Assembly
 
 TODO:
 
+- Open `../models/Robot_Design.io` in Studio 2.0 and follow the included step-by-step instructions.
 - Add LEGO chassis dimensions.
 - Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
 - Add rear differential gear system assembly steps.
@@ -14,7 +17,7 @@ TODO:
 - Add ultrasonic sensor mount positions, heights, and angles.
 - Add SPIKE Prime Hub orientation for integrated gyro heading.
 - Add OpenMV H7 camera mount position, height, angle, and field of view.
-- Link to build files or build photos in `../models/`.
+- Keep the Studio 2.0 model in `../models/` synchronized with the physical robot.
 
 ## Electronics And Ports
 
