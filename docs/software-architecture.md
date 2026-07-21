@@ -48,7 +48,7 @@ flowchart TD
 | Front safety | Stop/resume thresholds with hysteresis | Tune thresholds on track |
 | Wall centering | Left/right distance difference with gain | Tune gain and steering sign |
 | Run control | Button start and 180-second timeout | Add official lap/end behavior |
-| OpenMV vision | Placeholder in `../src/openmv/` | Add red/green obstacle classification and communication |
+| OpenMV vision | OpenMV H7 communicates over UART on SPIKE Prime port C; PUPRemote/LPF2 libraries package the data | Add final red/green obstacle avoidance behavior |
 | Obstacle challenge | Not implemented yet | Add obstacle classification and avoidance |
 
 ## State Machine Plan

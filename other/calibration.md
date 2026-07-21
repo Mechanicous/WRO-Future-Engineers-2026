@@ -65,7 +65,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 - Mount the camera at the documented height and angle.
 - Calibrate red and green obstacle detection under field lighting.
 - Record false positives and false negatives.
-- Document the message sent from OpenMV H7 to the main robot logic.
+- Send OpenMV H7 data to the SPIKE Prime Hub using UART communication on port C; PUPRemote/LPF2 are the Python libraries used to package the messages.
 
 | Date | Lighting | Target | Threshold/Model | Result | Notes |
 | --- | --- | --- | --- | --- | --- |

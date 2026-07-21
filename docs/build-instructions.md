@@ -22,7 +22,7 @@ TODO:
 
 ## Electronics And Ports
 
-The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultrasonic sensors, the hub's integrated gyro/IMU, and a planned OpenMV H7 camera. The hub battery powers LEGO devices connected to the hub. Before each run, charge the hub battery to full, check all cables, make sure the LEGO structure is steady and sturdy, and confirm that every part is in place.
+The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultrasonic sensors, the hub's integrated gyro/IMU, and an OpenMV H7 camera. The hub battery powers LEGO devices connected to the hub. Before each run, charge the hub battery to full, check all cables, make sure the LEGO structure is steady and sturdy, and confirm that every part is in place.
 
 Keep the port map updated in `../schemes/port-map.md`.
 
@@ -32,7 +32,7 @@ Confirmed port map:
 | --- | --- |
 | A | SPIKE Large Angular Motor for rear-wheel drive |
 | B | Left ultrasonic sensor |
-| C | OpenMV H7 via PUPRemote/LPF2 |
+| C | OpenMV H7 via UART |
 | D | Middle/front ultrasonic sensor |
 | E | SPIKE Medium Angular Motor for front steering |
 | F | Right ultrasonic sensor |
@@ -74,6 +74,8 @@ The maximum steering range is about 45 degrees left and 45 degrees right. The Py
 | OpenMV H7 camera | Lens about 17.5 cm from the floor, tilted about 5 degrees |
 | SPIKE Prime Hub | Lying flat, with USB port facing the robot's left side |
 
+The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART protocol. The PUPRemote/LPF2 Python libraries are used in the OpenMV and Pybricks code to package the messages.
+
 ## Software Upload
 
 1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
@@ -102,7 +104,7 @@ The maximum steering range is about 45 degrees left and 45 degrees right. The Py
 - [ ] Right ultrasonic sensor reports fresh readings.
 - [ ] Integrated gyro heading resets at the start line.
 - [ ] OpenMV H7 is mounted securely.
-- [ ] OpenMV H7 communication method is documented.
+- [x] OpenMV H7 communication method is documented.
 - [ ] Front safety stop threshold tested.
 - [ ] `STEERING_SIGN` tested at low speed.
 - [ ] Emergency stop or safe shutdown procedure is known by the team.

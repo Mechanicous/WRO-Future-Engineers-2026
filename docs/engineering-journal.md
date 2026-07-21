@@ -67,7 +67,7 @@ Include:
 - Why Pybricks MicroPython was selected.
 - Why three ultrasonic sensors were selected.
 - Why the integrated SPIKE Prime gyro is used for heading feedback.
-- Why OpenMV H7 is planned for vision/color detection.
+- Why OpenMV H7 is used for vision/color detection and UART communication with PUPRemote/LPF2 libraries.
 - Constraints: size, weight, time, processing, power, reliability, budget, available LEGO parts.
 - Major decisions and alternatives considered.
 - Iterations from the old prototype to the current LEGO version.

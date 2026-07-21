@@ -129,7 +129,7 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | 2026 Criterion | What Judges Need To See | Evidence Location | Status |
 | --- | --- | --- | --- |
 | Mobility and mechanical design | LEGO chassis, steering/drive mechanism, gear reasoning, dimensions, stability, iterations | [`models/`](./models/), [`v-photos/`](./v-photos/), [Mobility section](#mobility-and-mechanical-design) | TODO |
-| Power and sensor architecture | SPIKE Prime hub, port map, battery/power notes, ultrasonic placement, integrated gyro use, OpenMV H7 plan, calibration, failure handling | [`schemes/`](./schemes/), [`schemes/port-map.md`](./schemes/port-map.md), [`other/calibration.md`](./other/calibration.md), [Power section](#power-and-sensor-architecture) | In progress |
+| Power and sensor architecture | SPIKE Prime hub, port map, battery/power notes, ultrasonic placement, integrated gyro use, OpenMV H7 UART communication using PUPRemote/LPF2 libraries, calibration, failure handling | [`schemes/`](./schemes/), [`schemes/port-map.md`](./schemes/port-map.md), [`other/calibration.md`](./other/calibration.md), [Power section](#power-and-sensor-architecture) | In progress |
 | Software architecture and obstacle strategy | Pybricks code, gyro heading telemetry, flowchart/state machine, wall-following, OpenMV obstacle strategy, edge cases, tests | [`src/`](./src/), [`docs/software-architecture.md`](./docs/software-architecture.md), [Software section](#software-architecture-and-obstacle-strategy) | In progress |
 | Systems thinking and engineering decisions | Why LEGO SPIKE Prime was chosen, tradeoffs, risks, version history, testing response | [`docs/decisions.md`](./docs/decisions.md), [Decisions section](#systems-thinking-and-engineering-decisions) | In progress |
 | Reproducibility and GitHub quality | README, source code, build steps, photos, diagrams, tests, meaningful commits | [`docs/build-instructions.md`](./docs/build-instructions.md), [`docs/tests.md`](./docs/tests.md), [Repository structure](#repository-structure) | In progress |
@@ -203,7 +203,7 @@ Keep the active port map in [`schemes/port-map.md`](./schemes/port-map.md).
 | Middle/front ultrasonic sensor | D | Measure front path and obstacle distance | Confirmed |
 | Right ultrasonic sensor | F | Measure right wall distance | Confirmed |
 | Integrated gyro/IMU | SPIKE Prime Hub | Heading and turn feedback | Built into hub |
-| OpenMV H7 camera | C | Vision and obstacle color detection | Confirmed |
+| OpenMV H7 camera | C | Vision and obstacle color detection | Confirmed UART protocol; PUPRemote/LPF2 libraries used in code |
 
 ### Power Distribution
 
@@ -224,6 +224,8 @@ The LEGO SPIKE Prime rechargeable battery powers the hub and connected Powered U
 | Right ultrasonic | Right side, about 5 cm from the floor, facing outward to the right | Wall distance and lane centering | Test readings at known distances |
 | Integrated gyro/IMU | Inside SPIKE Prime Hub, hub lying flat with USB port facing left | Heading tracking and turn feedback | Reset heading at start line and test drift |
 | OpenMV H7 camera | Lens about 17.5 cm from the floor, tilted about 5 degrees | Red/green obstacle detection and vision strategy | Calibrate thresholds after mounting |
+
+The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART communication protocol. The code uses the PUPRemote/LPF2 Python libraries to package and exchange the data.
 
 ### Failure Handling
 
@@ -252,7 +254,7 @@ It currently:
 - Uses the middle/front ultrasonic sensor as a safety stop.
 - Completes 3 laps in the Open Challenge round.
 - Uses left/right distance difference for wall-balancing steering.
-- Reserves `src/openmv/` for future OpenMV H7 vision code.
+- Uses `src/openmv/` for OpenMV H7 vision code and UART communication notes.
 - Keeps all port assignments and control constants near the top of the file for easy tuning.
 
 ### Current Flow
@@ -309,7 +311,7 @@ Judges look for the reasoning behind the design, not only the final robot.
 | Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | TODO |
 | Distance sensing | VL53L1X ToF vs LEGO ultrasonic | Three LEGO ultrasonic sensors | Matches new LEGO build and simple wall-distance measurements | TODO |
 | Heading feedback | External IMU vs SPIKE Prime integrated gyro | SPIKE Prime integrated gyro | Built into the hub and available through Pybricks | TODO |
-| Vision sensor | No camera vs OpenMV H7 | OpenMV H7 planned | Supports red/green obstacle detection with onboard vision processing | TODO |
+| Vision sensor | No camera vs OpenMV H7 | OpenMV H7 | Supports red/green obstacle detection with onboard vision processing and UART communication to the SPIKE Hub using PUPRemote/LPF2 libraries | TODO |
 | Navigation strategy | Gyro heading hold vs ultrasonic wall centering vs fused approach | Ultrasonic wall centering plus integrated gyro feedback | Uses current sensors while keeping heading data available | TODO |
 
 ### Iteration Log
@@ -364,7 +366,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 - Mount the OpenMV H7 with the lens about 17.5 cm from the floor and tilted about 5 degrees.
 - Record camera field of view after calibration.
-- Document the communication method between OpenMV H7 and the main robot logic.
+- Communicate from OpenMV H7 to the SPIKE Prime Hub on port C using the UART protocol, with PUPRemote/LPF2 libraries handling the message interface.
 
 ### Step 5: Upload Pybricks Code
 
@@ -449,7 +451,7 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 - [x] SPIKE Prime port map and sensor placement measurements are included.
 - [ ] Ultrasonic sensor calibration is documented.
 - [ ] Integrated gyro heading reset/drift tests are documented.
-- [ ] OpenMV H7 mounting, calibration, and communication method are documented.
+- [x] OpenMV H7 mounting, calibration plan, and communication method are documented.
 - [ ] Software architecture includes flowchart/state machine and obstacle strategy.
 - [ ] Tests include results, metrics, and changes made after testing.
 - [ ] Decisions include alternatives, tradeoffs, and risks.

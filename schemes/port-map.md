@@ -6,7 +6,7 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 | --- | --- | --- | --- |
 | A | SPIKE Large Angular Motor | Rear-wheel drive through differential gear system | Confirmed |
 | B | Left ultrasonic sensor | Left wall distance | Confirmed |
-| C | OpenMV H7 via PUPRemote/LPF2 | Red/green pillar vision data | Confirmed |
+| C | OpenMV H7 via UART | Red/green pillar vision data using PUPRemote/LPF2 libraries | Confirmed |
 | D | Middle/front ultrasonic sensor | Front obstacle/path distance | Confirmed |
 | E | SPIKE Medium Angular Motor | Front steering linkage | Confirmed |
 | F | Right ultrasonic sensor | Right wall distance | Confirmed |
@@ -23,6 +23,7 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 - SPIKE Prime Hub orientation: hub is lying flat, with the USB port facing the robot's left side.
 - OpenMV H7 camera lens height: about 17.5 cm from the floor.
 - OpenMV H7 camera angle: tilted about 5 degrees.
+- OpenMV H7 communication: UART protocol on SPIKE Prime port C; PUPRemote/LPF2 Python libraries are used by the OpenMV and Pybricks code.
 - OpenMV H7 field of view and Port C LPF2 cable path: TODO.
 
 ## Diagram TODO

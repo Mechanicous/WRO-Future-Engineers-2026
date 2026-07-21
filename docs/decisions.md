@@ -64,9 +64,9 @@ Use this file to show why the team chose each design, not only what the final de
 - Date: 2026-07-11
 - Context: The Obstacle Challenge requires reliable red/green obstacle awareness.
 - Options considered: Ultrasonic-only obstacle strategy, LEGO color sensor, OpenMV H7 camera.
-- Decision: Use OpenMV H7 as the planned vision module.
-- Reasoning: OpenMV H7 can run MicroPython vision code on the camera and is suitable for color/object detection experiments.
-- Tradeoffs: Requires camera mounting, lighting calibration, and a reliable communication method to the main robot logic.
+- Decision: Use OpenMV H7 as the vision module.
+- Reasoning: OpenMV H7 can run MicroPython vision code on the camera and is suitable for color/object detection experiments. It communicates with the SPIKE Prime Hub through the UART protocol on port C, while the PUPRemote/LPF2 Python libraries handle message packaging in code.
+- Tradeoffs: Requires camera mounting, lighting calibration, and reliable UART message handling in the main robot logic.
 - Test evidence: TODO.
 - Result after testing: TODO.
 
@@ -90,5 +90,5 @@ Use this file to show why the team chose each design, not only what the final de
 | --- | --- | --- | --- |
 | v0.1 | Arduino prototype with BMI160 and VL53L1X sensors | Initial control experiment | Git history |
 | v0.2 | LEGO SPIKE Prime with 3 ultrasonic sensors and Pybricks | New team hardware direction | Current repository |
-| v0.3 | Added integrated gyro and planned OpenMV H7 vision module | Better heading feedback and future obstacle color detection | Current repository |
+| v0.3 | Added integrated gyro and OpenMV H7 vision module | Better heading feedback and obstacle color detection | Current repository |
 
