@@ -23,7 +23,7 @@ Open `Robot_Design.io` with Studio 2.0 to inspect the LEGO design and follow the
 ## TODO
 
 - Keep `Robot_Design.io` updated when the physical robot changes.
-- Add steering linkage photos and dimensions.
+- Steering linkage: SPIKE Medium Angular Motor drives a 12-tooth gear into a 20-tooth gear, moving an arm linkage with about 45 degrees left/right steering range.
 - Rear differential gear layout: SPIKE Large Angular Motor drives a 20-tooth double bevel gear into a 28-tooth LEGO differential gear; the differential contains three 12-tooth bevel gears.
 - Add ultrasonic sensor mount photos and measurements.
 - Add SPIKE Prime Hub orientation photos for integrated gyro heading.

@@ -144,7 +144,7 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 | --- | --- | --- | --- |
 | Chassis | LEGO SPIKE Prime / Technic construction, about 20 cm long x 13.5 cm wide x 22 cm high | Fast rebuilds, repeatable geometry, simpler maintenance, and within the WRO FE 30 cm x 20 cm x 30 cm size limit | [`v-photos/`](./v-photos/), [`models/Robot_Design.io`](./models/Robot_Design.io) |
 | Drive motor | SPIKE Large Angular Motor driving a 20-tooth double bevel gear into a 28-tooth differential gear | Rear-wheel traction with smoother turning between left/right rear wheels | Approx. 20:28 reduction, wheel diameter about 5.5 cm; add speed tests |
-| Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
+| Steering | SPIKE Medium Angular Motor drives a 12-tooth gear into a 20-tooth gear, moving an arm linkage that steers the front wheels | Dedicated steering actuator keeps drive and steering control separate; 12:20 reduction improves steering torque | Steering range is about 45 degrees left and 45 degrees right |
 | Sensors | Left/middle/right ultrasonic sensors, integrated gyro, OpenMV H7 | Distance, heading feedback, and vision/color detection | Sensor and camera heights documented below |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
 
@@ -174,7 +174,7 @@ Current size check: MadBoy fits inside the WRO Future Engineers 2026 maximum rob
 
 ### Steering
 
-The robot uses a SPIKE Medium Angular Motor for steering. Explain the steering linkage, motor choice, steering limits, center calibration, turn radius, and how the Pybricks steering sign is verified.
+The robot uses a SPIKE Medium Angular Motor for steering. The motor drives a 12-tooth gear, which drives a 20-tooth gear connected to an arm linkage. Moving this arm moves the steering system and turns the front wheels. The maximum steering range is about 45 degrees left and 45 degrees right, which matches the `STEERING_LEFT_LIMIT_DEG = -45` and `STEERING_RIGHT_LIMIT_DEG = 45` limits in [`src/pybricks/main.py`](./src/pybricks/main.py).
 
 ### Chassis
 
@@ -350,7 +350,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 - Mount the SPIKE Large Angular Motor for rear-wheel drive and document its port.
 - Mount the rear differential gear system: the motor drives a 20-tooth double bevel gear into the 28-tooth differential gear, and the differential contains three 12-tooth bevel gears.
-- Mount the SPIKE Medium Angular Motor for steering and document its port.
+- Mount the SPIKE Medium Angular Motor for steering: the motor drives a 12-tooth gear into a 20-tooth gear that moves the steering arm linkage.
 - Check that wheels and steering move freely.
 
 ### Step 3: Mount Ultrasonic Sensors

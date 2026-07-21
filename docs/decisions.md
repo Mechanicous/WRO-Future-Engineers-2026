@@ -78,6 +78,7 @@ Use this file to show why the team chose each design, not only what the final de
 | Steering motor center is wrong | Robot drifts or hits walls | Add a repeatable center setup procedure | TODO |
 | Rear differential binds or slips | Robot loses speed or turns inconsistently | Check gear alignment and test both rear wheels under load | TODO |
 | Steering sign is reversed | Robot steers into walls | Low-speed sign test and `STEERING_SIGN` constant | In starter code |
+| Steering linkage binds at full lock | Front wheels may not reach commanded angle | Limit steering to about 45 degrees left/right and inspect the 12-tooth to 20-tooth gear linkage | Current code clamps to +/-45 degrees |
 | Gyro heading drifts | Turns or lap logic become inaccurate | Reset heading at start and run drift tests | TODO |
 | OpenMV lighting changes | Red/green classification becomes unreliable | Calibrate thresholds under field lighting | TODO |
 | LEGO frame flexes during run | Sensor angle and steering geometry change | Reinforce chassis and inspect after each run | TODO |

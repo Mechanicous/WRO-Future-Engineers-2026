@@ -12,7 +12,7 @@ TODO:
 - Documented LEGO chassis dimensions: about 20 cm long x 13.5 cm wide x 22 cm high.
 - Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
 - Documented rear differential gear system: 20-tooth double bevel drive gear into 28-tooth differential gear, with three 12-tooth bevel gears inside the differential.
-- Add SPIKE Medium Angular Motor steering linkage steps.
+- Documented SPIKE Medium Angular Motor steering linkage: 12-tooth gear into 20-tooth gear, moving an arm linkage.
 - Documented wheelbase, track width, and wheel diameter.
 - Documented ultrasonic sensor mount heights and facing directions.
 - Documented SPIKE Prime Hub orientation for integrated gyro heading.
@@ -58,6 +58,12 @@ The rear drive motor is a LEGO SPIKE Prime Large Angular Motor. It drives a beig
 
 The LEGO differential must contain three 12-tooth bevel gears inside it. Those internal bevel gears allow the left and right rear wheels to rotate at different speeds during turns.
 
+## Front Steering Linkage
+
+The front steering is powered by a LEGO SPIKE Prime Medium Angular Motor. The motor drives a 12-tooth gear, which drives a 20-tooth gear connected to an arm. This arm moves the steering system and turns the front wheels.
+
+The maximum steering range is about 45 degrees left and 45 degrees right. The Pybricks program clamps steering commands to the same range.
+
 ## Sensor And Camera Placement
 
 | Component | Placement |
@@ -87,7 +93,7 @@ The LEGO differential must contain three 12-tooth bevel gears inside it. Those i
 - [ ] LEGO structure is rigid.
 - [ ] Wheels and gears move freely.
 - [ ] Rear differential gear system rotates smoothly and contains three 12-tooth bevel gears.
-- [ ] Steering centers correctly.
+- [ ] Steering centers correctly and reaches about 45 degrees left/right without binding.
 - [ ] Drive motor direction is correct.
 - [ ] Left ultrasonic sensor reports fresh readings.
 - [ ] Middle/front ultrasonic sensor reports fresh readings.
