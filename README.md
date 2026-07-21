@@ -389,7 +389,7 @@ Add public video links in [`video/video.md`](./video/video.md).
 
 | Video | Link | Robot Version | Date |
 | --- | --- | --- | --- |
-| Open Challenge run | [YouTube](https://youtu.be/ipjWBAg2dVM) | MadBoy | TODO |
+| Open Challenge run | [YouTube](https://youtu.be/ipjWBAg2dVM) | MadBoy | 21/7 |
 | Obstacle Challenge run | TODO | TODO | TODO |
 | Build overview | TODO | TODO | TODO |
 
