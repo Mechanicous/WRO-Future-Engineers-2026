@@ -67,8 +67,19 @@ Use this file to show why the team chose each design, not only what the final de
 - Decision: Use OpenMV H7 as the vision module.
 - Reasoning: OpenMV H7 can run MicroPython vision code on the camera and is suitable for color/object detection experiments. It communicates with the SPIKE Prime Hub through the UART protocol on port C, while the PUPRemote/LPF2 Python libraries handle message packaging in code.
 - Tradeoffs: Requires camera mounting, lighting calibration, and reliable UART message handling in the main robot logic.
-- Test evidence: TODO.
-- Result after testing: TODO.
+- Test evidence: Obstacle detection is working and the red/green strategy is ready and working.
+- Result after testing: Continue collecting formal run/score evidence.
+
+### Decision: Do Not Use Parking
+
+- Date: 2026-07-21
+- Context: The team does not plan to park or start from the parking area.
+- Options considered: Implement parking, start from parking area, or skip parking.
+- Decision: Do not implement parking behavior for the current strategy.
+- Reasoning: The current focus is Open Challenge consistency and working Obstacle Challenge detection/avoidance.
+- Tradeoffs: Parking-specific points are not targeted by this strategy.
+- Test evidence: Parking is intentionally not used.
+- Result after testing: Not planned.
 
 ## Risks And Mitigations
 

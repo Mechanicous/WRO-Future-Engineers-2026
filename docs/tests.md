@@ -17,6 +17,8 @@ Internet-sourced reference values are summarized in `sensor-reference.md`. Team 
 | TODO | MadBoy | Wall-centering observation | Sometimes centered; sometimes closer to one wall than the other | Tune `SIDE_BALANCE_GAIN` and improve steering center reset |
 | TODO | MadBoy | Rear differential smoothness | Drives smoothly using LEGO parts and gears; no binding/slipping observed | Keep checking gear alignment before runs |
 | TODO | MadBoy | Hub battery qualitative runtime check | Battery lasts a long time in testing; no noticeable slowdown reported | Exact runtime not tracked yet |
+| TODO | MadBoy | Obstacle detection and strategy status | Detection is working; red/green strategy is ready and working | Add formal run/score evidence later |
+| TODO | MadBoy | Parking strategy decision | Parking and start-from-parking are not used | No parking behavior planned |
 
 ## Recommended Tests
 
@@ -74,8 +76,8 @@ Reference note: no official universal SPIKE Prime gyro drift rate was found. Pyb
 
 | Date | Lighting | Target | Distance | Result | Notes |
 | --- | --- | --- | ---: | --- | --- |
-| TODO | TODO | Red obstacle | TODO | TODO | TODO |
-| TODO | TODO | Green obstacle | TODO | TODO | TODO |
+| TODO | TODO | Red obstacle | TODO | Detection/strategy working | Add formal accuracy count later |
+| TODO | TODO | Green obstacle | TODO | Detection/strategy working | Add formal accuracy count later |
 
 ## Control Tuning Notes
 

@@ -48,8 +48,8 @@ flowchart TD
 | Front safety | Stop/resume thresholds with hysteresis | Tune thresholds on track |
 | Wall centering | Left/right distance difference with gain | Current result is sometimes centered and sometimes closer to one wall; tune gain after improving steering center reset |
 | Run control | Button start and 180-second timeout | Add official lap/end behavior |
-| OpenMV vision | OpenMV H7 communicates over UART on SPIKE Prime port C; PUPRemote/LPF2 libraries package the data | Add final red/green obstacle avoidance behavior |
-| Obstacle challenge | Not implemented yet | Add obstacle classification and avoidance |
+| OpenMV vision | OpenMV H7 communicates over UART on SPIKE Prime port C; PUPRemote/LPF2 libraries package the data | Detection working; add formal accuracy evidence |
+| Obstacle challenge | Detection and strategy are ready and working | Add score/run evidence |
 
 ## State Machine Plan
 
@@ -59,10 +59,10 @@ flowchart TD
 | WaitForStart | Hold robot until team starts run | Init complete | Center button pressed | Starter code |
 | OpenDrive | Drive using ultrasonic wall centering | Start pressed | 3 laps complete, obstacle, or timeout | Working |
 | CornerHandling | Turn through course corners | Corner detected | Straight section found | TODO |
-| ObstacleDetect | Detect red/green obstacle with OpenMV H7 | Obstacle Challenge enabled | Obstacle classified | In progress |
-| AvoidRed | Pass red obstacle correctly | Red obstacle detected | Safe path restored | TODO |
-| AvoidGreen | Pass green obstacle correctly | Green obstacle detected | Safe path restored | TODO |
-| Parking | Align and stop in parking zone if used | Final phase | Parked | TODO |
+| ObstacleDetect | Detect red/green obstacle with OpenMV H7 | Obstacle Challenge enabled | Obstacle classified | Working |
+| AvoidRed | Pass red obstacle correctly | Red obstacle detected | Safe path restored | Working |
+| AvoidGreen | Pass green obstacle correctly | Green obstacle detected | Safe path restored | Working |
+| Parking | Not used by team strategy | N/A | N/A | Not planned |
 | FailSafeStop | Stop when readings are unsafe | Invalid/close front reading | Manual reset or safe reading | Starter code |
 
 ## Edge Cases To Document

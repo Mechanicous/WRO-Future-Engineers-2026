@@ -52,8 +52,8 @@ Include:
 - Heading feedback from the SPIKE Prime integrated gyro.
 - Front safety and obstacle approach logic using the middle/front ultrasonic sensor.
 - Open Challenge lap strategy.
-- Obstacle Challenge red/green obstacle strategy using OpenMV H7 when implemented.
-- Parking strategy if implemented.
+- Obstacle Challenge red/green obstacle strategy using OpenMV H7; current status is working.
+- Parking is intentionally not used because the team will not park or start from the parking area.
 - Edge cases and how the robot recovers.
 - Links to `software-architecture.md`.
 

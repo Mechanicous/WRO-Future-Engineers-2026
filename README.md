@@ -100,8 +100,8 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Steering system | Front steering using a SPIKE Medium Angular Motor |
 | Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, OpenMV H7 camera |
 | Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
-| Current behavior | Completes 3 laps in the Open Challenge round |
-| Next behavior to implement | Obstacle Challenge sign strategy and course handling |
+| Current behavior | Completes 3 laps in the Open Challenge round; Obstacle Challenge detection and strategy are working |
+| Next behavior to implement | Improve consistency, tune steering center/wall centering, and add more test evidence |
 
 ### Vehicle Photos
 
@@ -284,10 +284,10 @@ flowchart TD
 | WaitForStart | Keep robot still before official run | Hub center button or start condition | Start pressed | TODO |
 | OpenChallengeDrive | Complete 3 laps without colored obstacles | Open Challenge run starts | 3 laps complete or timeout | Working |
 | WallCentering | Maintain position using side ultrasonic sensors | Driving straight/curving | Corner or obstacle detected | Starter code exists |
-| ObstacleDetect | Detect obstacle approach with front sensor and OpenMV H7 vision | Obstacle Challenge | Obstacle classified | TODO |
-| AvoidRed | Pass red obstacle according to WRO rules | Red obstacle detected | Safe path restored | TODO |
-| AvoidGreen | Pass green obstacle according to WRO rules | Green obstacle detected | Safe path restored | TODO |
-| Parking | Align with parking zone if used | Final lap/parking trigger | Parked/stopped | TODO |
+| ObstacleDetect | Detect obstacle approach with front sensor and OpenMV H7 vision | Obstacle Challenge | Obstacle classified | Working |
+| AvoidRed | Pass red obstacle according to WRO rules | Red obstacle detected | Safe path restored | Working |
+| AvoidGreen | Pass green obstacle according to WRO rules | Green obstacle detected | Safe path restored | Working |
+| Parking | Not used by team strategy | Parking/start-from-parking not selected | N/A | Not planned |
 | FailSafeStop | Stop safely | Unsafe or invalid readings | Manual reset or safe reading | Starter code exists |
 
 ### Algorithms To Explain
@@ -396,9 +396,9 @@ Testing evidence belongs in [`docs/tests.md`](./docs/tests.md).
 | Wall centering | Average side-distance error | Stay between walls during Open Challenge | Sometimes centered; sometimes closer to one wall, so side gain and steering center need tuning |
 | Rear differential smoothness | Binding, clicking, or slipping | Smooth rear-wheel drive | Drives smoothly with LEGO gears; no binding/slipping observed |
 | Open Challenge | Laps and time | 3 laps | Working: completes 3 laps |
-| OpenMV color detection | Red/green classification accuracy | TODO | TODO |
-| Obstacle Challenge | Obstacle handling and score | TODO | In progress |
-| Parking | Final position and alignment | TODO | TODO |
+| OpenMV color detection | Red/green classification accuracy | Working obstacle detection | Detection working; add formal accuracy test later |
+| Obstacle Challenge | Obstacle handling and score | Working detection and strategy | Strategy ready and working |
+| Parking | Final position and alignment | Not used | Team will not park or start from parking area |
 
 ---
 
