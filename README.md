@@ -142,8 +142,8 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 
 | Subsystem | Design | Reasoning | Evidence |
 | --- | --- | --- | --- |
-| Chassis | LEGO SPIKE Prime / Technic construction | Fast rebuilds, repeatable geometry, simpler maintenance | Add photos and dimensions |
-| Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Add gear ratio, wheel diameter, and speed tests |
+| Chassis | LEGO SPIKE Prime / Technic construction, about 20 cm long x 13.5 cm wide x 22 cm high | Fast rebuilds, repeatable geometry, simpler maintenance, and within the WRO FE 30 cm x 20 cm x 30 cm size limit | [`v-photos/`](./v-photos/), [`models/Robot_Design.io`](./models/Robot_Design.io) |
+| Drive motor | SPIKE Large Angular Motor driving the rear wheels through a differential gear system | Rear-wheel traction with smoother turning between left/right rear wheels | Wheel diameter about 5.5 cm; add gear ratio and speed tests |
 | Steering | SPIKE Medium Angular Motor controlling the front steering linkage | Dedicated steering actuator keeps drive and steering control separate | Add linkage photos, steering limits, and turn radius |
 | Sensors | Left/middle/right ultrasonic sensors, integrated gyro, planned OpenMV H7 | Distance, heading feedback, and future vision/color detection | Add sensor placement and camera mounting diagrams |
 | Mounting | LEGO beams, frames, and pins | Easy iteration and legal reproducibility | Add build photos/model files |
@@ -151,6 +151,20 @@ Use this table as the judge-facing index for the 2026 documentation rubric.
 ### Powertrain
 
 The robot uses rear-wheel drive. A SPIKE Large Angular Motor drives the rear axle through a differential gear system so the left and right rear wheels can rotate at different speeds while turning. Document the gear ratio, wheel diameter, torque/speed tradeoff, and expected field speed after testing.
+
+### Dimensions
+
+| Measurement | Approximate Value | Notes |
+| --- | ---: | --- |
+| Length | 20 cm | Within WRO FE 30 cm maximum length |
+| Width | 13.5 cm | Within WRO FE 20 cm maximum width |
+| Height | 22 cm | Within WRO FE 30 cm maximum height |
+| Wheelbase | 10.3 cm | Front axle center to rear axle center |
+| Front track width | 11.2 cm | Left front wheel center to right front wheel center |
+| Rear track width | 11.2 cm | About the same as front track width |
+| Wheel diameter | 5.5 cm | LEGO wheel/tire diameter |
+
+Current size check: MadBoy fits inside the WRO Future Engineers 2026 maximum robot size of 30 cm length x 20 cm width x 30 cm height.
 
 | Test | Result | What Changed |
 | --- | --- | --- |
@@ -329,7 +343,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 
 - Open [`models/Robot_Design.io`](./models/Robot_Design.io) in Studio 2.0 and follow the included step-by-step building instructions.
 - Add extra step photos to [`models/`](./models/) if a physical assembly step needs more explanation.
-- Record wheelbase, track width, hub position, and sensor heights.
+- Record hub position and sensor heights. Current measured chassis dimensions are documented in the mobility section.
 - Show how the hub is secured and how cables are routed.
 
 ### Step 2: Mount Motors And Steering
@@ -431,7 +445,7 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 - [ ] Vehicle photos show front, back, left, right, top, bottom, wiring/ports, and sensors.
 - [ ] README explains the LEGO SPIKE Prime robot clearly and links to all evidence.
 - [ ] Engineering journal tells the design story and includes reasoning.
-- [ ] Mechanical design includes LEGO model/build files, photos, and dimensions.
+- [x] Mechanical design includes LEGO model/build files, photos, and dimensions.
 - [ ] SPIKE Prime port map and sensor placement diagrams are included.
 - [ ] Ultrasonic sensor calibration is documented.
 - [ ] Integrated gyro heading reset/drift tests are documented.

@@ -9,11 +9,11 @@ The main LEGO design file is `../models/Robot_Design.io`. Open it with Studio 2.
 TODO:
 
 - Open `../models/Robot_Design.io` in Studio 2.0 and follow the included step-by-step instructions.
-- Add LEGO chassis dimensions.
+- Documented LEGO chassis dimensions: about 20 cm long x 13.5 cm wide x 22 cm high.
 - Add SPIKE Large Angular Motor mounting steps for rear-wheel drive.
 - Add rear differential gear system assembly steps.
 - Add SPIKE Medium Angular Motor steering linkage steps.
-- Add wheelbase, track width, and wheel diameter.
+- Documented wheelbase, track width, and wheel diameter.
 - Add ultrasonic sensor mount positions, heights, and angles.
 - Add SPIKE Prime Hub orientation for integrated gyro heading.
 - Print or prepare `../models/openmv-camera-case.stl` for the OpenMV H7 camera.
@@ -37,6 +37,20 @@ Confirmed port map:
 | E | SPIKE Medium Angular Motor for front steering |
 | F | Right ultrasonic sensor |
 | Hub IMU | Integrated gyro/heading |
+
+## Chassis Dimensions
+
+| Measurement | Approximate Value | How It Was Measured |
+| --- | ---: | --- |
+| Length | 20 cm | Front-most point to rear-most point |
+| Width | 13.5 cm | Left-most point to right-most point |
+| Height | 22 cm | Floor to highest point |
+| Wheelbase | 10.3 cm | Front axle center to rear axle center |
+| Front track width | 11.2 cm | Center of left front wheel to center of right front wheel |
+| Rear track width | 11.2 cm | Center of left rear wheel to center of right rear wheel |
+| Wheel diameter | 5.5 cm | Outside tire diameter |
+
+MadBoy fits within the WRO Future Engineers 2026 maximum robot size of 30 cm length x 20 cm width x 30 cm height.
 
 ## Software Upload
 

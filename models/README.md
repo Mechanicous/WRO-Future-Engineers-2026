@@ -28,5 +28,6 @@ Open `Robot_Design.io` with Studio 2.0 to inspect the LEGO design and follow the
 - Add ultrasonic sensor mount photos and measurements.
 - Add SPIKE Prime Hub orientation photos for integrated gyro heading.
 - Add OpenMV H7 camera mount photos, height, angle, field of view, and case installation notes.
+- Current approximate dimensions: length 20 cm, width 13.5 cm, height 22 cm, wheelbase 10.3 cm, front/rear track width 11.2 cm, wheel diameter 5.5 cm.
 - Add wheel, axle, and gearing details.
 - Include enough detail that another team could rebuild the robot.
