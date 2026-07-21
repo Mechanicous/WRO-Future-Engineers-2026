@@ -26,18 +26,17 @@ The current robot uses the LEGO SPIKE Prime Hub, Powered Up motors, three ultras
 
 Keep the port map updated in `../schemes/port-map.md`.
 
-Default working assumption:
+Confirmed port map:
 
 | Port | Device |
 | --- | --- |
 | A | SPIKE Large Angular Motor for rear-wheel drive |
-| B | SPIKE Medium Angular Motor for front steering |
-| C | Left ultrasonic sensor |
+| B | Left ultrasonic sensor |
+| C | OpenMV H7 via PUPRemote/LPF2 |
 | D | Middle/front ultrasonic sensor |
-| E | Right ultrasonic sensor |
-| F | Spare |
+| E | SPIKE Medium Angular Motor for front steering |
+| F | Right ultrasonic sensor |
 | Hub IMU | Integrated gyro/heading |
-| TODO | OpenMV H7 camera |
 
 ## Software Upload
 

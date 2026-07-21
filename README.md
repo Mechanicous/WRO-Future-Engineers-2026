@@ -98,7 +98,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Programming platform | Pybricks MicroPython |
 | Drive system | Rear-wheel drive using a SPIKE Large Angular Motor and rear differential gear system |
 | Steering system | Front steering using a SPIKE Medium Angular Motor |
-| Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, planned OpenMV H7 camera |
+| Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, OpenMV H7 camera |
 | Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
 | Current behavior | Completes 3 laps in the Open Challenge round |
 | Next behavior to implement | Obstacle Challenge sign strategy and course handling |
@@ -183,13 +183,13 @@ Keep the active port map in [`schemes/port-map.md`](./schemes/port-map.md).
 
 | Device | Current Port | Purpose | Notes |
 | --- | --- | --- | --- |
-| Drive motor | A | SPIKE Large Angular Motor for rear-wheel drive | TODO: confirm port |
-| Steering motor | B | SPIKE Medium Angular Motor for front steering | TODO: confirm port |
-| Left ultrasonic sensor | C | Measure left wall distance | TODO: confirm |
-| Middle/front ultrasonic sensor | D | Measure front path and obstacle distance | TODO: confirm |
-| Right ultrasonic sensor | E | Measure right wall distance | TODO: confirm |
+| Drive motor | A | SPIKE Large Angular Motor for rear-wheel drive | Confirmed |
+| Steering motor | E | SPIKE Medium Angular Motor for front steering | Confirmed |
+| Left ultrasonic sensor | B | Measure left wall distance | Confirmed |
+| Middle/front ultrasonic sensor | D | Measure front path and obstacle distance | Confirmed |
+| Right ultrasonic sensor | F | Measure right wall distance | Confirmed |
 | Integrated gyro/IMU | SPIKE Prime Hub | Heading and turn feedback | Built into hub |
-| OpenMV H7 camera | TODO | Vision and obstacle color detection | Planned integration |
+| OpenMV H7 camera | C | Vision and obstacle color detection | Confirmed |
 
 ### Power Distribution
 

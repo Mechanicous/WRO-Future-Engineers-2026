@@ -4,14 +4,13 @@ Keep this file synchronized with `../src/pybricks/main.py`.
 
 | Port | Device | Purpose | Status |
 | --- | --- | --- | --- |
-| A | SPIKE Large Angular Motor | Rear-wheel drive through differential gear system | TODO: confirm |
-| B | SPIKE Medium Angular Motor | Front steering linkage | TODO: confirm |
-| C | Left ultrasonic sensor | Left wall distance | TODO: confirm |
-| D | Middle/front ultrasonic sensor | Front obstacle/path distance | TODO: confirm |
-| E | Right ultrasonic sensor | Right wall distance | TODO: confirm |
-| F | Spare | Future LEGO device if needed | TODO |
+| A | SPIKE Large Angular Motor | Rear-wheel drive through differential gear system | Confirmed |
+| B | Left ultrasonic sensor | Left wall distance | Confirmed |
+| C | OpenMV H7 via PUPRemote/LPF2 | Red/green pillar vision data | Confirmed |
+| D | Middle/front ultrasonic sensor | Front obstacle/path distance | Confirmed |
+| E | SPIKE Medium Angular Motor | Front steering linkage | Confirmed |
+| F | Right ultrasonic sensor | Right wall distance | Confirmed |
 | Hub IMU | SPIKE Prime integrated gyro/IMU | Heading and turn feedback | Built in |
-| TODO | OpenMV H7 camera | Vision and red/green obstacle detection | Communication method TBD |
 
 ## Sensor Placement Notes
 
@@ -24,7 +23,7 @@ Add measurements after the build is finalized:
 - Right ultrasonic height from floor: TODO.
 - Right ultrasonic angle relative to robot centerline: TODO.
 - SPIKE Prime Hub orientation and top/front direction: TODO.
-- OpenMV H7 camera height, angle, and field of view: TODO.
+- OpenMV H7 camera height, angle, field of view, and Port C LPF2 cable path: TODO.
 
 ## Diagram TODO
 

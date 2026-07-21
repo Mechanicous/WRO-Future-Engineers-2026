@@ -25,14 +25,14 @@ from pybricks.tools import StopWatch, wait
 # Port assignments
 # ---------------------------------------------------------------------------
 
-# TODO: Confirm these match the real robot and keep schemes/port-map.md in sync.
+# Keep these matched with the real robot and schemes/port-map.md.
 # The drive motor is the SPIKE Large Angular Motor connected to the rear
 # differential. The steering motor is the SPIKE Medium Angular Motor.
 DRIVE_MOTOR_PORT = Port.A
-STEERING_MOTOR_PORT = Port.B
-LEFT_SENSOR_PORT = Port.C
+STEERING_MOTOR_PORT = Port.E
+LEFT_SENSOR_PORT = Port.B
 FRONT_SENSOR_PORT = Port.D
-RIGHT_SENSOR_PORT = Port.E
+RIGHT_SENSOR_PORT = Port.F
 
 
 # ---------------------------------------------------------------------------

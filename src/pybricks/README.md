@@ -14,7 +14,7 @@ The current starter code assumes:
   - Left sensor.
   - Middle/front sensor.
   - Right sensor.
-- OpenMV H7 planned for vision/color detection.
+- OpenMV H7 for vision/color detection.
 
 The robot uses a rear differential gear system in the drivetrain. This is a mechanical differential, not differential steering.
 
@@ -25,11 +25,11 @@ Confirm these constants before running:
 | Device | Default Port |
 | --- | --- |
 | SPIKE Large Angular Motor, rear-wheel drive | A |
-| SPIKE Medium Angular Motor, steering | B |
-| Left ultrasonic sensor | C |
+| SPIKE Medium Angular Motor, steering | E |
+| Left ultrasonic sensor | B |
 | Middle/front ultrasonic sensor | D |
-| Right ultrasonic sensor | E |
-| OpenMV H7 | TODO |
+| Right ultrasonic sensor | F |
+| OpenMV H7 via PUPRemote/LPF2 | C |
 
 The judge-facing port map is in `../../schemes/port-map.md`.
 
