@@ -1,6 +1,7 @@
 # Pybricks Program
 
-The active robot program is `main.py`.
+The active robot program is `main.py`. Separate templates are also provided for
+the two WRO Future Engineers challenge modes.
 
 ## Hardware
 
@@ -39,6 +40,14 @@ The judge-facing port map is in `../../schemes/port-map.md`.
 6. Check that steering centers correctly.
 7. If steering turns the wrong way, flip `STEERING_SIGN` in `main.py`.
 8. Start with low `DRIVE_POWER` before track testing.
+
+## Program Files
+
+| File | Purpose |
+| --- | --- |
+| `main.py` | Current active starter program used for testing |
+| `open_round.py` | Open Round template using gyro heading correction plus left/right/front ultrasonic distance correction |
+| `obstacle_course.py` | Obstacle Course template with OpenMV result hooks and structure for the final red/green obstacle strategy |
 
 ## OpenMV H7
 
