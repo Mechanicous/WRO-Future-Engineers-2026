@@ -345,36 +345,11 @@ Detailed decision records belong in [`docs/decisions.md`](./docs/decisions.md).
 
 ## Robot Construction Guide
 
-Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another team can reproduce the robot.
+The complete mechanical construction guide is stored in [`models/Robot_Design.io`](./models/Robot_Design.io). Open it with Studio 2.0 to view the full MadBoy model and follow the included step-by-step building instructions. No separate written LEGO assembly guide is needed because the Studio file is the official build reference.
 
-### Step 1: Build The LEGO Chassis
+Additional setup notes are in [`docs/build-instructions.md`](./docs/build-instructions.md), including dimensions, port wiring, sensor placement, software upload, and the pre-run checklist.
 
-- Open [`models/Robot_Design.io`](./models/Robot_Design.io) in Studio 2.0 and follow the included step-by-step building instructions.
-- Add extra step photos to [`models/`](./models/) if a physical assembly step needs more explanation.
-- Record hub position. Current measured chassis dimensions and sensor heights are documented in the mobility and sensor sections.
-- Show how the hub is secured and how cables are routed.
-
-### Step 2: Mount Motors And Steering
-
-- Mount the SPIKE Large Angular Motor for rear-wheel drive and document its port.
-- Mount the rear differential gear system: the motor drives a 20-tooth double bevel gear into the 28-tooth differential gear, and the differential contains three 12-tooth bevel gears.
-- Mount the SPIKE Medium Angular Motor for steering: the motor drives a 12-tooth gear into a 20-tooth gear that moves the steering arm linkage.
-- Check that wheels and steering move freely.
-
-### Step 3: Mount Ultrasonic Sensors
-
-- Left ultrasonic sensor faces the left wall.
-- Middle/front ultrasonic sensor faces forward.
-- Right ultrasonic sensor faces the right wall.
-- Side ultrasonic sensors are about 5 cm from the floor and face outward. The middle/front ultrasonic sensor is about 6 cm from the floor and faces forward.
-
-### Step 4: Mount OpenMV H7
-
-- Mount the OpenMV H7 with the lens about 17.5 cm from the floor and tilted about 5 degrees.
-- Record camera field of view after calibration.
-- Communicate from OpenMV H7 to the SPIKE Prime Hub on port C using the UART protocol, with PUPRemote/LPF2 libraries handling the message interface.
-
-### Step 5: Upload Pybricks Code
+### Upload Pybricks Code
 
 1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
 2. Open [Pybricks Code](https://code.pybricks.com/) in a browser.

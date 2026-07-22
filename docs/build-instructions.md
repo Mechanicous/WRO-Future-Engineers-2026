@@ -1,22 +1,21 @@
 # Build Instructions
 
-Use this document to make the LEGO SPIKE Prime robot reproducible.
+The complete LEGO construction guide for MadBoy is stored in `../models/Robot_Design.io`.
 
-The main LEGO design file is `../models/Robot_Design.io`. Open it with Studio 2.0 to view the MadBoy model and follow the included step-by-step building instructions.
+Open `../models/Robot_Design.io` with Studio 2.0 to view the full 3D model and follow the included step-by-step building instructions. This Studio file is the official mechanical construction reference for the robot, including the chassis, motor mounts, steering linkage, sensor positions, OpenMV mount, and rear differential drivetrain.
 
-## Mechanical Assembly
+The remaining notes in this document summarize the measurements, wiring, and pre-run checks needed after building the robot from the Studio file.
 
-- Open `../models/Robot_Design.io` in Studio 2.0 and follow the included step-by-step instructions.
-- Documented LEGO chassis dimensions: about 20 cm long x 13.5 cm wide x 22 cm high.
-- Mount the SPIKE Large Angular Motor on port A for rear-wheel drive.
-- Documented rear differential gear system: 20-tooth double bevel drive gear into 28-tooth differential gear, with three 12-tooth bevel gears inside the differential.
-- Documented SPIKE Medium Angular Motor steering linkage: 12-tooth gear into 20-tooth gear, moving an arm linkage.
-- Documented wheelbase, track width, and wheel diameter.
-- Documented ultrasonic sensor mount heights and facing directions.
-- Documented SPIKE Prime Hub orientation for integrated gyro heading.
-- `../models/openmv-camera-case.stl` is stored for the OpenMV H7 camera case.
-- Documented OpenMV H7 camera lens height and tilt angle. Field of view will be measured during later vision calibration.
-- Keep the Studio 2.0 model in `../models/` synchronized with the physical robot.
+## Mechanical Construction Source
+
+| Item | Construction Evidence |
+| --- | --- |
+| Full LEGO model | `../models/Robot_Design.io` |
+| Step-by-step build instructions | Included inside `../models/Robot_Design.io` |
+| OpenMV H7 camera case | `../models/openmv-camera-case.stl` |
+| Vehicle photos | `../v-photos/` |
+
+Keep `../models/Robot_Design.io` synchronized with the physical robot whenever the build changes.
 
 ## Electronics And Ports
 
