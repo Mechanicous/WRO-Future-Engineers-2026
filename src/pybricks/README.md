@@ -1,7 +1,6 @@
 # Pybricks Program
 
-The active robot program is `main.py`. Separate templates are also provided for
-the two WRO Future Engineers challenge modes.
+This folder contains one program file for each WRO Future Engineers stage.
 
 ## Hardware
 
@@ -33,21 +32,20 @@ The judge-facing port map is in `../../schemes/port-map.md`.
 ## First Run Checklist
 
 1. Put the robot on blocks so the wheels can spin safely.
-2. Run the program.
+2. Run the program for the current stage.
 3. Confirm all three ultrasonic readings are printed.
 4. Confirm the heading value is printed and near 0 after the start button is pressed.
 5. Check that the drive motor direction is correct.
 6. Check that steering centers correctly.
-7. If steering turns the wrong way, flip `STEERING_SIGN` in `main.py`.
+7. If steering turns the wrong way, flip `STEERING_SIGN` in the stage program being tested.
 8. Start with low `DRIVE_POWER` before track testing.
 
 ## Program Files
 
 | File | Purpose |
 | --- | --- |
-| `main.py` | Current active starter program used for testing |
-| `open_round.py` | Open Round template using gyro heading correction plus left/right/front ultrasonic distance correction |
-| `obstacle_course.py` | Obstacle Course template with OpenMV result hooks and structure for the final red/green obstacle strategy |
+| `open_round.py` | Open Challenge / Open Round program using gyro heading correction plus left/right/front ultrasonic distance correction |
+| `obstacle_course.py` | Obstacle Challenge program location; currently marked `#soon` until the team publishes this stage code |
 
 ## OpenMV H7
 

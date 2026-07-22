@@ -2,11 +2,12 @@
 
 This project now uses LEGO SPIKE Prime with Pybricks MicroPython.
 
-## Active Program
+## Stage Programs
 
-Source file:
+Source files:
 
-`../src/pybricks/main.py`
+- `../src/pybricks/open_round.py` is used for the Open Challenge / Open Round stage.
+- `../src/pybricks/obstacle_course.py` is reserved for the Obstacle Challenge stage and currently contains `#soon` until the team publishes that code.
 
 Current control flow:
 
@@ -42,7 +43,7 @@ flowchart TD
 
 | Area | Current Implementation | Next Work |
 | --- | --- | --- |
-| Hardware setup | Port constants and Pybricks device objects in `main.py` | Confirm Large Angular Motor and Medium Angular Motor ports |
+| Hardware setup | Port constants and Pybricks device objects in `open_round.py` | Confirm Large Angular Motor and Medium Angular Motor ports |
 | Distance reading | `read_distance()` validates ultrasonic readings | Add smoothing if needed |
 | Heading reading | `hub.imu.reset_heading()` and `hub.imu.heading()` use the integrated gyro | Test drift and hub orientation |
 | Front safety | Stop/resume thresholds with hysteresis | Tune thresholds on track |

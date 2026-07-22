@@ -99,7 +99,7 @@ Official rubric: [WRO 2026 Future Engineers Documentation Rubric](https://wro-as
 | Drive system | Rear-wheel drive using a SPIKE Large Angular Motor and rear differential gear system |
 | Steering system | Front steering using a SPIKE Medium Angular Motor |
 | Sensors | 3x LEGO ultrasonic sensors, SPIKE Prime integrated gyro/IMU, OpenMV H7 camera |
-| Active source code | [`src/pybricks/main.py`](./src/pybricks/main.py) |
+| Stage source code | Open Round: [`src/pybricks/open_round.py`](./src/pybricks/open_round.py); Obstacle Course: [`src/pybricks/obstacle_course.py`](./src/pybricks/obstacle_course.py) |
 | Current behavior | Completes 3 laps in the Open Challenge round; Obstacle Challenge detection and strategy are working |
 | Next behavior to implement | Improve consistency, tune steering center/wall centering, and add more test evidence |
 
@@ -174,7 +174,7 @@ Current size check: MadBoy fits inside the WRO Future Engineers 2026 maximum rob
 
 ### Steering
 
-The robot uses a SPIKE Medium Angular Motor for steering. The motor drives a 12-tooth gear, which drives a 20-tooth gear connected to an arm linkage. Moving this arm moves the steering system and turns the front wheels. The maximum steering range is about 45 degrees left and 45 degrees right, which matches the `STEERING_LEFT_LIMIT_DEG = -45` and `STEERING_RIGHT_LIMIT_DEG = 45` limits in [`src/pybricks/main.py`](./src/pybricks/main.py).
+The robot uses a SPIKE Medium Angular Motor for steering. The motor drives a 12-tooth gear, which drives a 20-tooth gear connected to an arm linkage. Moving this arm moves the steering system and turns the front wheels. The maximum steering range is about 45 degrees left and 45 degrees right, which matches the `STEERING_LEFT_LIMIT_DEG = -45` and `STEERING_RIGHT_LIMIT_DEG = 45` limits in [`src/pybricks/open_round.py`](./src/pybricks/open_round.py).
 
 ### Chassis
 
@@ -245,11 +245,14 @@ The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART com
 
 ## Software Architecture And Obstacle Strategy
 
-### Current Code
+### Stage Code
 
-The active robot software is [`src/pybricks/main.py`](./src/pybricks/main.py).
+The robot software is organized by stage:
 
-It currently:
+- [`src/pybricks/open_round.py`](./src/pybricks/open_round.py) is used for the Open Challenge / Open Round stage.
+- [`src/pybricks/obstacle_course.py`](./src/pybricks/obstacle_course.py) is reserved for the Obstacle Challenge stage and currently contains `#soon` until the team publishes that code.
+
+The Open Round program currently:
 
 - Runs on a LEGO SPIKE Prime Hub using Pybricks MicroPython.
 - Reads three ultrasonic sensors: left, middle/front, and right.
@@ -311,7 +314,7 @@ Judges look for the reasoning behind the design, not only the final robot.
 | Decision | Options Compared | Chosen Option | Why | Test Evidence |
 | --- | --- | --- | --- | --- |
 | Controller platform | Arduino custom electronics vs LEGO SPIKE Prime | LEGO SPIKE Prime | Faster iteration, integrated battery, robust ports, Pybricks support | Current robot completes 3 Open Challenge laps |
-| Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | Active code in `src/pybricks/main.py` |
+| Programming language | Arduino C++ vs Pybricks MicroPython | Pybricks MicroPython | Cleaner high-level motor/sensor APIs and easier tuning | Stage code in `src/pybricks/open_round.py` and `src/pybricks/obstacle_course.py` |
 | Distance sensing | VL53L1X ToF vs LEGO ultrasonic | Three LEGO ultrasonic sensors | Matches new LEGO build and simple wall-distance measurements | 20 cm calibration recorded |
 | Heading feedback | External IMU vs SPIKE Prime integrated gyro | SPIKE Prime integrated gyro | Built into the hub and available through Pybricks | Orientation documented; MadBoy drift measurement still needed |
 | Vision sensor | No camera vs OpenMV H7 | OpenMV H7 | Supports red/green obstacle detection with onboard vision processing and UART communication to the SPIKE Hub using PUPRemote/LPF2 libraries | Obstacle detection and strategy working |
@@ -376,7 +379,7 @@ Complete [`docs/build-instructions.md`](./docs/build-instructions.md) so another
 1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
 2. Open [Pybricks Code](https://code.pybricks.com/) in a browser.
 3. Connect the SPIKE Prime Hub.
-4. Open [`src/pybricks/main.py`](./src/pybricks/main.py).
+4. Open the program for the current stage: [`src/pybricks/open_round.py`](./src/pybricks/open_round.py) for Open Round, or [`src/pybricks/obstacle_course.py`](./src/pybricks/obstacle_course.py) when the Obstacle Course code is published.
 5. Confirm the port constants match the real robot.
 6. Upload/run the program.
 7. Start at low speed and verify steering direction before full-speed tests.

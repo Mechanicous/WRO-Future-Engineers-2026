@@ -1,6 +1,6 @@
 # LEGO SPIKE Prime Port Map
 
-Keep this file synchronized with `../src/pybricks/main.py`.
+Keep this file synchronized with the stage programs in `../src/pybricks/`.
 
 | Port | Device | Purpose | Status |
 | --- | --- | --- | --- |

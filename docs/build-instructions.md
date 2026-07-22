@@ -79,7 +79,7 @@ The OpenMV H7 communicates with the SPIKE Prime Hub on port C using the UART pro
 1. Install Pybricks firmware on the SPIKE Prime Hub if it is not already installed.
 2. Open `https://code.pybricks.com/`.
 3. Connect the SPIKE Prime Hub.
-4. Open `../src/pybricks/main.py`.
+4. Open the program for the current stage: `../src/pybricks/open_round.py` for Open Round, or `../src/pybricks/obstacle_course.py` when the Obstacle Course code is published.
 5. Confirm the port constants match `../schemes/port-map.md`.
 6. Upload or run the program from Pybricks Code.
 7. Start with the robot lifted so wheels can spin safely.

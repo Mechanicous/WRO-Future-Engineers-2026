@@ -46,7 +46,7 @@ Describe the Pybricks software and the robot behavior.
 
 Include:
 
-- Main control loop in `../src/pybricks/main.py`.
+- Stage programs in `../src/pybricks/open_round.py` and `../src/pybricks/obstacle_course.py`.
 - State machine or flowchart.
 - Wall-centering strategy using left/right ultrasonic sensors.
 - Heading feedback from the SPIKE Prime integrated gyro.

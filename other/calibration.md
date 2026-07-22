@@ -27,7 +27,7 @@ Reference sensor values from LEGO and Pybricks are summarized in `../docs/sensor
 - Run at low speed.
 - Place the robot closer to the left wall than the right wall.
 - Confirm it steers away from the left wall.
-- If it steers toward the wall, change `STEERING_SIGN` in `../src/pybricks/main.py`.
+- If it steers toward the wall, change `STEERING_SIGN` in the stage program being tested.
 
 | Date | STEERING_SIGN | Result | Notes |
 | --- | ---: | --- | --- |

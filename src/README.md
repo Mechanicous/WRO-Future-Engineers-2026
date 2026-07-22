@@ -1,10 +1,11 @@
 # Source Code
 
-This folder contains the active robot software.
+This folder contains the stage-specific robot software.
 
-## Active Program
+## Stage Programs
 
-`pybricks/main.py`
+- `pybricks/open_round.py` is used for the Open Challenge / Open Round stage.
+- `pybricks/obstacle_course.py` is reserved for the Obstacle Challenge stage and will be filled when the team is ready to publish that code.
 
 The project now uses:
 
@@ -33,9 +34,8 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 
 | File | Purpose |
 | --- | --- |
-| `pybricks/main.py` | Active robot program |
-| `pybricks/open_round.py` | Open Round template using gyro heading and ultrasonic distance correction |
-| `pybricks/obstacle_course.py` | Obstacle Course template prepared for the final OpenMV obstacle strategy |
+| `pybricks/open_round.py` | Open Challenge / Open Round program using gyro heading and ultrasonic distance correction |
+| `pybricks/obstacle_course.py` | Obstacle Challenge program location; currently reserved until the team publishes this stage code |
 | `pybricks/README.md` | Pybricks setup, port constants, and tuning notes |
 | `openmv/README.md` | OpenMV H7 vision module notes |
 | `openmv/main.py` | OpenMV H7 camera code draft; publish after team review/testing |
