@@ -46,9 +46,12 @@ The judge-facing port map is in `../../schemes/port-map.md`.
 | --- | --- |
 | `open_round.py` | Open Challenge / Open Round program using gyro heading correction plus left/right/front ultrasonic distance correction |
 | `obstacle_course.py` | Obstacle Challenge program location; currently marked `#soon` until the team publishes this stage code |
+| `../lib/pybricks/pupremote_hub.py` | Hub-side PUPRemote library for receiving OpenMV H7 data on port C |
 
 ## OpenMV H7
 
 OpenMV H7 communicates with the SPIKE Prime Hub through UART on port C. PUPRemote/LPF2 are Python libraries used by the code to package messages; they are not the communication protocol.
+
+The hub-side library is stored at `../lib/pybricks/pupremote_hub.py`. Copy it to the SPIKE Prime Hub together with the final stage program that reads OpenMV data.
 
 The final integrated reader/strategy code will be added after team testing is ready to publish.

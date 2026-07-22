@@ -37,6 +37,10 @@ The old Arduino/BMI160/VL53L1X prototype is no longer active. It remains availab
 | `pybricks/open_round.py` | Open Challenge / Open Round program using gyro heading and ultrasonic distance correction |
 | `pybricks/obstacle_course.py` | Obstacle Challenge program location; currently reserved until the team publishes this stage code |
 | `pybricks/README.md` | Pybricks setup, port constants, and tuning notes |
+| `lib/pybricks/pupremote_hub.py` | Hub-side PUPRemote library for reading OpenMV data |
+| `lib/openmv/lpf2.py` | OpenMV-side LPF2 communication library |
+| `lib/openmv/pupremote.py` | OpenMV-side PUPRemote library |
+| `lib/README.md` | Third-party library upload notes and license notice |
 | `openmv/README.md` | OpenMV H7 vision module notes |
 | `openmv/main.py` | OpenMV H7 camera code draft; publish after team review/testing |
 

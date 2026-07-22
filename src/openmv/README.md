@@ -32,3 +32,7 @@ The camera should send obstacle information such as:
 | File | Purpose |
 | --- | --- |
 | `main.py` | OpenMV camera program location; final team-tested code will be added when ready |
+| `../lib/openmv/lpf2.py` | LPF2 communication layer used by the camera side |
+| `../lib/openmv/pupremote.py` | PUPRemote sensor-side helper used by the camera side |
+
+Copy both OpenMV library files to the OpenMV H7 together with `main.py` when the final camera program is ready.

@@ -446,3 +446,6 @@ Sensor reference values from LEGO and Pybricks are summarized in [`docs/sensor-r
 ## License
 
 This project is released under the [MIT License](./LICENSE).
+
+Third-party PUPRemote/LPF2 communication libraries are listed in
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
